@@ -1,3 +1,7 @@
+export const getDomainById = (id: string) => {
+  return domainRoadmaps.find(domain => domain.id === id);
+};
+
 export interface DomainInitiative {
   horizon: "Now" | "Next" | "Later";
   pillars: string[];
@@ -21,541 +25,486 @@ export interface DomainRoadmap {
 
 export const domainRoadmaps: DomainRoadmap[] = [
   {
-    id: "platform",
-    domain: "Platform",
-    icon: "Server",
-    description: "Shared foundation that multiplies value across every product area",
-    overview: "Platform work is treated as shared foundation that multiplies value across every product area. This includes enterprise organization model, shared sustainability graph, cross-product navigation, and ingest/transform services that standardize core data into governed models.",
+    id: "data-ingestion",
+    domain: "Data Ingestion",
+    icon: "Download",
+    description: "Automated data collection from retailers, markets, and aggregators",
+    overview: "Build a robust connector ecosystem that can ingest interval, invoice, offer, and tariff data from retailers, market entities, and aggregator partners worldwide. Implement LOA digitization for global data access authorization.",
     initiatives: [
       {
         horizon: "Now",
-        pillars: ["Unified"],
-        valueDriver: "Enterprise modeling",
-        initiative: "Enterprise org model, groups, and delegated admin",
-        objective: "O2",
-        primaryKR: "KR6",
-        proofMetric: "% customers running cross-product workflows without duplicating setup",
-        aiLeverage: "AI-assisted configuration",
-        customerROI: "Lower onboarding cost"
-      },
-      {
-        horizon: "Now",
-        pillars: ["Unified", "Adaptive"],
-        valueDriver: "Automation and integrations",
-        initiative: "Ingest and transform UX v1 (templates, validation, transformation preview)",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "Time to first decision-grade dataset",
-        aiLeverage: "AI-assisted mapping",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Now",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "Calculation accuracy and coverage",
-        initiative: "EF library v1 and automated EF matching",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "% activity records auto-matched with acceptable confidence",
-        aiLeverage: "AI-assisted matching",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Now",
-        pillars: ["Adaptive", "Unified"],
-        valueDriver: "AI acceleration",
-        initiative: "Agentic platform foundation",
+        pillars: ["Data Foundation"],
+        valueDriver: "Data collection automation",
+        initiative: "Define connector strategy (retailer + aggregator + Deepki-like models)",
         objective: "O3",
-        primaryKR: "KR9",
-        proofMetric: "% workflows enabled with safe AI actions",
-        aiLeverage: "AI-assisted workflows",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Insightful", "Unified"],
-        valueDriver: "Trusted data and auditability",
-        initiative: "End-to-end lineage v1",
-        objective: "O1",
-        primaryKR: "KR4",
-        proofMetric: "% audit questions answered with evidence and lineage",
-        aiLeverage: "AI-assisted tracing",
-        customerROI: "Lower audit cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Unified", "Adaptive"],
-        valueDriver: "Automation",
-        initiative: "Connector expansion (highest leverage sources first)",
-        objective: "O2",
         primaryKR: "KR7",
-        proofMetric: "% reduction in manual uploads",
-        aiLeverage: "AI-assisted integration",
-        customerROI: "Lower sustainability ops cost"
+        proofMetric: "Strategy document approved",
+        aiLeverage: "Pattern analysis for connector prioritization",
+        customerROI: "Reduced manual data collection"
+      },
+      {
+        horizon: "Now",
+        pillars: ["Data Foundation"],
+        valueDriver: "Authorization management",
+        initiative: "LOA/authorization workflow digitization",
+        objective: "O3",
+        primaryKR: "KR7",
+        proofMetric: "Digital LOA issuance live for UK/US",
+        aiLeverage: "Automated renewal reminders",
+        customerROI: "Faster market access"
+      },
+      {
+        horizon: "Now",
+        pillars: ["Data Foundation"],
+        valueDriver: "Data integrity",
+        initiative: "As-received data lake implementation (no mutation at entry)",
+        objective: "O3",
+        primaryKR: "KR8",
+        proofMetric: "Raw data preserved with lineage",
+        aiLeverage: "Automated data classification",
+        customerROI: "Audit trail and trust"
       },
       {
         horizon: "Next",
-        pillars: ["Unified", "Adaptive"],
-        valueDriver: "Workflow and governance",
-        initiative: "Workflow and approvals enablement (platform)",
-        objective: "O1",
-        primaryKR: "KR2",
-        proofMetric: "Time from updated data to approved initiatives",
-        aiLeverage: "AI-assisted approvals",
-        customerROI: "Faster decision cycles"
-      },
-      {
-        horizon: "Later",
-        pillars: ["Unified", "Adaptive"],
-        valueDriver: "Enterprise modeling",
-        initiative: "Configuration packs and standardized integration packs",
-        objective: "O2",
-        primaryKR: "KR6",
-        proofMetric: "Time to roll out a new BU/region to operational",
-        aiLeverage: "AI-assisted guidance",
-        customerROI: "Faster enterprise rollouts"
-      },
-      {
-        horizon: "Later",
-        pillars: ["Adaptive", "Unified"],
-        valueDriver: "AI acceleration",
-        initiative: "AI quality system (eval harness + feedback loop + model/prompt versioning)",
+        pillars: ["Platform Scale"],
+        valueDriver: "Market coverage",
+        initiative: "UK retailer connector expansion",
         objective: "O3",
-        primaryKR: "KR11",
-        proofMetric: "AI recommendation acceptance rate",
-        aiLeverage: "AI-assisted guidance",
-        customerROI: "Higher AI trust and adoption"
+        primaryKR: "KR7",
+        proofMetric: "Top 10 UK retailers connected",
+        aiLeverage: "Format detection and mapping",
+        customerROI: "Reduced manual uploads"
+      },
+      {
+        horizon: "Next",
+        pillars: ["Platform Scale"],
+        valueDriver: "Market coverage",
+        initiative: "US utility connector development",
+        objective: "O3",
+        primaryKR: "KR7",
+        proofMetric: "Top 5 US utilities connected",
+        aiLeverage: "Schema inference",
+        customerROI: "Faster US onboarding"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Platform Scale"],
+        valueDriver: "Partnership ecosystem",
+        initiative: "Aggregator partnerships (Deepki model evaluation)",
+        objective: "O3",
+        primaryKR: "KR8",
+        proofMetric: "1+ aggregator partner live",
+        aiLeverage: "Data quality scoring",
+        customerROI: "Accelerated EU coverage"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Platform Scale"],
+        valueDriver: "Global scale",
+        initiative: "EU market connector expansion (EAN/POD regions)",
+        objective: "O3",
+        primaryKR: "KR7",
+        proofMetric: "3+ EU markets connected",
+        aiLeverage: "Cross-market format mapping",
+        customerROI: "Global operations support"
       }
     ]
   },
   {
-    id: "emissions-measurement",
-    domain: "Emissions Measurement",
-    icon: "BarChart2",
-    description: "Audit-ready Scope 1-3 inventory in weeks with governed calculations",
-    overview: "Build trusted baselines fast with audit-ready traceability and less manual work. Ingest and transform core data with AI-assisted mapping and validation, then calculate emissions with governed methodologies and full lineage.",
+    id: "identity-governance",
+    domain: "Identity & Governance",
+    icon: "Key",
+    description: "Global identity registry and data governance framework",
+    overview: "Establish a single source of truth for meter↔account↔site identity across all markets. Create a schema registry and governance framework that ensures data quality, ownership clarity, and auditability.",
     initiatives: [
       {
         horizon: "Now",
-        pillars: ["Unified", "Adaptive"],
-        valueDriver: "Automation and integrations",
-        initiative: "Ingest and transform UX v1 (templates, validation, transformation preview)",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "Time to first decision-grade dataset",
-        aiLeverage: "AI-assisted mapping",
-        customerROI: "Lower sustainability ops cost"
+        pillars: ["Data Foundation"],
+        valueDriver: "Identity resolution",
+        initiative: "Define identity mapping approach (MPAN first)",
+        objective: "O3",
+        primaryKR: "KR7",
+        proofMetric: "Identity strategy document approved",
+        aiLeverage: "Pattern matching for identity hints",
+        customerROI: "Reduced reconciliation effort"
       },
       {
         horizon: "Now",
-        pillars: ["Insightful", "Adaptive"],
-        valueDriver: "Calculation accuracy and coverage",
-        initiative: "Scope 1-3 calculation engine (MLP coverage)",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "Time to first audit-ready Scope 1-3 inventory",
-        aiLeverage: "AI-assisted calculations",
-        customerROI: "Lower sustainability ops cost"
+        pillars: ["Data Foundation"],
+        valueDriver: "Data ownership",
+        initiative: "Establish portfolio single ownership",
+        objective: "O3",
+        primaryKR: "KR9",
+        proofMetric: "Single owner per portfolio assigned",
+        aiLeverage: "Conflict detection",
+        customerROI: "Clear accountability"
       },
       {
         horizon: "Now",
-        pillars: ["Insightful"],
-        valueDriver: "Data quality at scale",
-        initiative: "Data quality toolkit v1",
-        objective: "O1",
+        pillars: ["Data Foundation"],
+        valueDriver: "Data governance",
+        initiative: "Target data model definition (schema v0.9)",
+        objective: "O3",
+        primaryKR: "KR8",
+        proofMetric: "Schema approved by architecture",
+        aiLeverage: "Schema validation automation",
+        customerROI: "Consistent data structure"
+      },
+      {
+        horizon: "Next",
+        pillars: ["Data Foundation"],
+        valueDriver: "Identity resolution",
+        initiative: "UK identity registry MVP (MPAN-based)",
+        objective: "O3",
+        primaryKR: "KR7",
+        proofMetric: ">98% MPAN resolution accuracy",
+        aiLeverage: "Fuzzy matching for edge cases",
+        customerROI: "Automated reconciliation"
+      },
+      {
+        horizon: "Next",
+        pillars: ["Data Foundation"],
+        valueDriver: "Contract consolidation",
+        initiative: "Contract data single source of truth",
+        objective: "O3",
+        primaryKR: "KR9",
+        proofMetric: "Contract data migrated from 5+ sources",
+        aiLeverage: "Duplicate detection",
+        customerROI: "Reduced data conflicts"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Platform Scale"],
+        valueDriver: "Global identity",
+        initiative: "EAN/POD identity expansion (EU markets)",
+        objective: "O3",
+        primaryKR: "KR7",
+        proofMetric: "3+ EU markets with identity resolution",
+        aiLeverage: "Cross-market identity inference",
+        customerROI: "Global operations support"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Data Foundation"],
+        valueDriver: "Regulatory completeness",
+        initiative: "Regulatory content service with proactive management",
+        objective: "O2",
         primaryKR: "KR5",
-        proofMetric: "% inventories meeting quality threshold",
-        aiLeverage: "AI-assisted validation",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Now",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "Calculation accuracy and coverage",
-        initiative: "EF matching UX and governance touchpoints",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "% activity records auto-matched with acceptable confidence",
-        aiLeverage: "AI-assisted matching",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "Data quality at scale",
-        initiative: "Scope 3 gap-filling (prioritized slices)",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "% customers reaching reportable Scope 3 completion",
-        aiLeverage: "AI-assisted gap filling",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Adaptive", "Unified"],
-        valueDriver: "Enterprise modeling flexibility",
-        initiative: "Mapping precedence UX and workflows",
-        objective: "O3",
-        primaryKR: "KR10",
-        proofMetric: "Hours saved per reporting cycle per customer",
-        aiLeverage: "AI-assisted mapping",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Later",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "Calculation accuracy and coverage",
-        initiative: "Coverage expansion for prioritized datasets and methods",
-        objective: "O2",
-        primaryKR: "KR6",
-        proofMetric: "Lead time to support a new requirement",
-        aiLeverage: "AI-assisted configuration",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Unified", "Insightful"],
-        valueDriver: "Sustainability performance expansion",
-        initiative: "Expanded emissions measurement to sustainability performance (broader activity data, reuse across domains)",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "% customers tracking sustainability metrics beyond carbon",
-        aiLeverage: "AI-assisted data mapping",
-        customerROI: "Lower sustainability ops cost"
+        proofMetric: ">90% tariff coverage for budgeting",
+        aiLeverage: "Change detection and alerting",
+        customerROI: "Faster budgets"
       }
     ]
   },
   {
-    id: "strategy",
-    domain: "Strategy",
-    icon: "Target",
-    description: "Targets, scenarios, and initiative planning with financial analysis",
-    overview: "Turn governed data into decisions: hotspots, targets, scenarios and dashboards that optimize cost and carbon. Enable customers to create targets, compare pathways, and approve initiatives with clear financial impact.",
+    id: "invoice-automation",
+    domain: "Invoice Automation",
+    icon: "FileCheck",
+    description: "Pseudo-bill generation and automated invoice validation",
+    overview: "Generate pseudo-bills at D+1 using interval + contract + tariff data, then automatically validate against retailer invoices when they arrive. Reduce the 160,000 issue backlog through intelligent triage and automated tolerance checks.",
     initiatives: [
       {
         horizon: "Now",
-        pillars: ["Insightful"],
-        valueDriver: "Decisioning and planning",
-        initiative: "Targets, BAU baseline, and scenarios v1",
+        pillars: ["Automation"],
+        valueDriver: "Journey mapping",
+        initiative: "Frame end-to-end invoice validation journey",
         objective: "O1",
-        primaryKR: "KR2",
-        proofMetric: "% customers approving at least one plan",
-        aiLeverage: "AI-assisted guidance",
-        customerROI: "Lower sustainability ops cost"
+        primaryKR: "KR1",
+        proofMetric: "Journey documented and approved",
+        aiLeverage: "Process mining insights",
+        customerROI: "Clear automation roadmap"
       },
       {
         horizon: "Next",
-        pillars: ["Insightful"],
-        valueDriver: "Decisioning and planning",
-        initiative: "Initiative library and financial analysis (capex, opex, NPV)",
+        pillars: ["Automation"],
+        valueDriver: "Proactive validation",
+        initiative: "Pseudo-bill MVP for UK market",
         objective: "O1",
-        primaryKR: "KR2",
-        proofMetric: "Time from updated data to approved initiatives",
-        aiLeverage: "AI-assisted analysis",
-        customerROI: "Lower sustainability ops cost"
+        primaryKR: "KR3",
+        proofMetric: ">95% accuracy vs actual invoices",
+        aiLeverage: "Anomaly pre-detection",
+        customerROI: "Earlier issue identification"
       },
       {
         horizon: "Next",
-        pillars: ["Insightful", "Unified"],
-        valueDriver: "Workflow and governance",
-        initiative: "Approvals expansion for targets, scenarios, and initiatives",
+        pillars: ["Automation"],
+        valueDriver: "Backlog reduction",
+        initiative: "Adaptive invoice variance detection and triage",
+        objective: "O1",
+        primaryKR: "KR1",
+        proofMetric: "50% backlog reduction in pilot",
+        aiLeverage: "Priority scoring for issues",
+        customerROI: "Focus on high-value issues"
+      },
+      {
+        horizon: "Next",
+        pillars: ["Automation"],
+        valueDriver: "Efficiency",
+        initiative: "Automated tolerance check elimination",
         objective: "O1",
         primaryKR: "KR2",
-        proofMetric: "Approval cycle time",
-        aiLeverage: "AI-assisted approvals",
-        customerROI: "Faster decision cycles"
+        proofMetric: "80% reduction in manual tolerance checks",
+        aiLeverage: "Rule-based automation",
+        customerROI: "Reduced manual effort"
       },
       {
         horizon: "Later",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "AI acceleration",
-        initiative: "Prescriptive planning with AI recommendations",
-        objective: "O3",
-        primaryKR: "KR11",
-        proofMetric: "AI recommendation acceptance rate",
-        aiLeverage: "AI-driven recommendations",
-        customerROI: "Lower sustainability ops cost"
+        pillars: ["Automation"],
+        valueDriver: "Scale",
+        initiative: "Pseudo-bill expansion to US market",
+        objective: "O1",
+        primaryKR: "KR3",
+        proofMetric: "US pseudo-bill accuracy >95%",
+        aiLeverage: "Cross-market learning",
+        customerROI: "US operations efficiency"
       },
       {
-        horizon: "Now",
-        pillars: ["Insightful", "Adaptive"],
-        valueDriver: "Decisioning and planning",
-        initiative: "Emissions carbon strategy and scenarios",
+        horizon: "Later",
+        pillars: ["Automation"],
+        valueDriver: "Accuracy",
+        initiative: "Dispute accuracy improvement system",
+        objective: "O1",
+        primaryKR: "KR3",
+        proofMetric: "Dispute win rate +20%",
+        aiLeverage: "Evidence compilation",
+        customerROI: "Higher dispute success"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Automation"],
+        valueDriver: "Document processing",
+        initiative: "IDP/Blair agent enhancement for invoice capture",
         objective: "O1",
         primaryKR: "KR2",
-        proofMetric: "% customers with active decarbonization scenarios",
-        aiLeverage: "AI-assisted scenario modeling",
-        customerROI: "Faster decision cycles"
+        proofMetric: ">90% extraction accuracy",
+        aiLeverage: "Deep learning OCR",
+        customerROI: "Faster invoice processing"
       }
     ]
   },
   {
-    id: "analytics",
-    domain: "Analytics & Benchmarking",
+    id: "budgeting-forecasting",
+    domain: "Budgeting & Forecasting",
     icon: "TrendingUp",
-    description: "Self-serve insights with data explorer, dashboards, and benchmarking",
-    overview: "Query builder with natural language allowing customers to create their own queries. Templates and reuse through standard governance views and Data Stories, allowing analytics objects and narrative text to be embedded into flexible reports.",
+    description: "Real-time budgets and site-level forecasting",
+    overview: "Cut budget creation from ~8 weeks to under 2 weeks by automating tariff ingestion and enabling real-time reforecasting. Improve forecast accuracy with weather integration and site-level granularity.",
     initiatives: [
       {
         horizon: "Now",
-        pillars: ["Insightful"],
-        valueDriver: "Self-serve insights",
-        initiative: "Data explorer and dashboards v1 (share, export)",
-        objective: "O1",
-        primaryKR: "KR3",
-        proofMetric: "% customers with recurring governance usage",
-        aiLeverage: "AI-assisted exploration",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Insightful", "Unified"],
-        valueDriver: "Self-serve insights",
-        initiative: "Templates and reuse (standard governance views)",
-        objective: "O1",
-        primaryKR: "KR3",
-        proofMetric: "% customers with recurring governance usage",
-        aiLeverage: "AI-assisted templates",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Insightful", "Unified"],
-        valueDriver: "Trusted data and auditability",
-        initiative: "Why this number - drill-down explanations",
-        objective: "O1",
-        primaryKR: "KR4",
-        proofMetric: "% audit questions answered",
-        aiLeverage: "AI-assisted explanations",
-        customerROI: "Lower audit cost"
-      },
-      {
-        horizon: "Later",
-        pillars: ["Insightful", "Adaptive"],
-        valueDriver: "Self-serve insights",
-        initiative: "Proactive anomaly detection with SERA",
-        objective: "O1",
-        primaryKR: "KR3",
-        proofMetric: "Time to detect and explain material variance",
-        aiLeverage: "AI-driven detection",
-        customerROI: "Lower sustainability ops cost"
-      }
-    ]
-  },
-  {
-    id: "disclosures",
-    domain: "Disclosures",
-    icon: "FileText",
-    description: "Auditor-ready report packs tied to governed data",
-    overview: "Disclosure alignment ensures narrative and quantitative reporting stay tied to the same underlying inventory, strategy, and risk data. AI-assisted drafting reduces manual effort while maintaining full traceability.",
-    initiatives: [
-      {
-        horizon: "Later",
-        pillars: ["Insightful", "Unified"],
-        valueDriver: "Trusted data and auditability",
-        initiative: "Disclosure report builder with data lineage",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "Time to produce an auditor-ready report pack",
-        aiLeverage: "AI-assisted drafting",
-        customerROI: "Lower sustainability ops cost"
-      }
-    ]
-  },
-  {
-    id: "supply-chain",
-    domain: "Supply Chain",
-    icon: "Link2",
-    description: "Supplier engagement and Scope 3 data collection at scale",
-    overview: "Reduce friction in supplier workflows, make supplier engagement repeatable, and increase data capture via integrations. AI auto-filler for suppliers reduces reporting effort through automation with confidence scoring.",
-    initiatives: [
-      {
-        horizon: "Now",
-        pillars: ["Unified"],
-        valueDriver: "Reduce friction in supplier workflows",
-        initiative: "Platform migrations with improved UX",
+        pillars: ["Automation"],
+        valueDriver: "Tariff completeness",
+        initiative: "Tariff data completeness audit and gap analysis",
         objective: "O2",
-        primaryKR: "KR7",
-        proofMetric: "Reduce support tickets by 30%; time-to complete key flows",
-        aiLeverage: "AI-ready shared components",
-        customerROI: "Lower sustainability ops cost"
+        primaryKR: "KR5",
+        proofMetric: "Gap analysis complete for UK/US",
+        aiLeverage: "Pattern detection for missing data",
+        customerROI: "Clear improvement roadmap"
       },
       {
-        horizon: "Now",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "Reduce reporting effort through automation",
-        initiative: "AI auto-filler for suppliers (RA+)",
-        objective: "O3",
-        primaryKR: "KR9",
-        proofMetric: "Fields auto-filled with ≥70% acceptance; hours saved per campaign",
-        aiLeverage: "Agent-assisted completion with confidence scoring",
-        customerROI: "Lower sustainability ops cost"
+        horizon: "Next",
+        pillars: ["Automation"],
+        valueDriver: "Speed",
+        initiative: "Real-time budget generation for pilot portfolios",
+        objective: "O2",
+        primaryKR: "KR4",
+        proofMetric: "Budget cycle <2 weeks for pilot",
+        aiLeverage: "Automated calculation pipelines",
+        customerROI: "Faster client delivery"
       },
       {
-        horizon: "Now",
-        pillars: ["Unified"],
-        valueDriver: "Make supplier engagement repeatable",
-        initiative: "Zeigo + RA+ integration",
+        horizon: "Next",
+        pillars: ["Automation"],
+        valueDriver: "Flexibility",
+        initiative: "Reforecast automation capability",
         objective: "O2",
         primaryKR: "KR6",
-        proofMetric: "Reduce campaign setup time by 25%; supplier response rate",
-        aiLeverage: "Shared data context across workflows",
-        customerROI: "Faster supplier engagement"
+        proofMetric: "On-demand reforecast enabled",
+        aiLeverage: "Incremental calculation",
+        customerROI: "Responsive planning"
       },
       {
-        horizon: "Now",
-        pillars: ["Unified", "Adaptive"],
-        valueDriver: "Increase data capture via integrations",
-        initiative: "ZCP integrations",
+        horizon: "Next",
+        pillars: ["Automation"],
+        valueDriver: "Accuracy",
+        initiative: "Weather integration for load forecasting",
         objective: "O2",
-        primaryKR: "KR7",
-        proofMetric: "% data via integrations; data error rate",
-        aiLeverage: "Connector-assisted mapping and AI QA",
-        customerROI: "Lower sustainability ops cost"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Insightful", "Adaptive"],
-        valueDriver: "Focus effort on highest-impact suppliers",
-        initiative: "AI pre-invitation analytics (RA+)",
-        objective: "O1",
-        primaryKR: "KR2",
-        proofMetric: "+15% on-time supplier responses",
-        aiLeverage: "AI prioritization and completion-risk prediction",
-        customerROI: "Faster supplier responses"
-      },
-      {
-        horizon: "Next",
-        pillars: ["Unified"],
-        valueDriver: "Remove duplicate Scope 3 workflows",
-        initiative: "RA+ emissions measurement integration",
-        objective: "O1",
-        primaryKR: "KR1",
-        proofMetric: "Reduce duplicate uploads by 30%; time to inventory update",
-        aiLeverage: "Shared semantic model across supplier",
-        customerROI: "Lower sustainability ops cost"
+        primaryKR: "KR6",
+        proofMetric: "Forecast accuracy +15%",
+        aiLeverage: "Weather-load correlation",
+        customerROI: "Better predictions"
       },
       {
         horizon: "Later",
-        pillars: ["Insightful", "Adaptive"],
-        valueDriver: "Convert insights into savings",
-        initiative: "AI-powered take-action page (RA+)",
-        objective: "O1",
-        primaryKR: "KR2",
-        proofMetric: "Identify and track $X savings per customer",
-        aiLeverage: "Agentic recommendations tied to cost & carbon",
-        customerROI: "Operational cost savings"
+        pillars: ["Automation"],
+        valueDriver: "Granularity",
+        initiative: "Site-level forecast capability",
+        objective: "O2",
+        primaryKR: "KR6",
+        proofMetric: "Site-level forecasts available",
+        aiLeverage: "Disaggregation modeling",
+        customerROI: "Detailed planning"
       },
       {
         horizon: "Later",
-        pillars: ["Adaptive"],
-        valueDriver: "Scale productivity",
-        initiative: "SERA integration across supplier journeys",
-        objective: "O3",
-        primaryKR: "KR9",
-        proofMetric: "≥60% assist rate; time saved per workflow",
-        aiLeverage: "Governed, context-aware in-product assistant",
-        customerROI: "Lower sustainability ops cost"
+        pillars: ["Platform Scale"],
+        valueDriver: "Integration",
+        initiative: "Budget/Forecast integration into RA+ modules",
+        objective: "O2",
+        primaryKR: "KR4",
+        proofMetric: "Full module integration live",
+        aiLeverage: "Cross-module data flow",
+        customerROI: "Unified experience"
       }
     ]
   },
   {
-    id: "sera-agentic",
-    domain: "SERA & Agentic AI",
-    icon: "Bot",
-    description: "AI-native workflows with human control and traceability",
-    overview: "AI is part of the core design so manual work is automated, guidance improves over time, and agentic workflows can take action with human control. Includes SERA for onboarding, EF mapping, gap-filling, anomaly investigation, recommendations, and disclosure drafting.",
+    id: "sourcing-risk",
+    domain: "Sourcing & Risk",
+    icon: "ShieldCheck",
+    description: "Automated sourcing workflows and dynamic risk insights",
+    overview: "Revive the Codex vision with automated offer ingestion and normalization. Enable dynamic risk insights down to site level and automate PPA advisory workflows.",
     initiatives: [
       {
         horizon: "Now",
-        pillars: ["Adaptive", "Unified"],
-        valueDriver: "AI acceleration",
-        initiative: "SERA assistant foundation",
+        pillars: ["Automation"],
+        valueDriver: "Requirements clarity",
+        initiative: "Complete offer PRDs (Kevin)",
         objective: "O3",
-        primaryKR: "KR9",
-        proofMetric: "% workflows completed with AI assistance",
-        aiLeverage: "AI-assisted guidance",
-        customerROI: "Lower sustainability ops cost"
+        primaryKR: "KR7",
+        proofMetric: "PRD approved by stakeholders",
+        aiLeverage: "Requirement analysis",
+        customerROI: "Clear product direction"
       },
       {
         horizon: "Next",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "AI acceleration",
-        initiative: "AI-guided onboarding",
-        objective: "O3",
-        primaryKR: "KR9",
-        proofMetric: "Time to first inventory completion with AI guidance",
-        aiLeverage: "AI-assisted onboarding",
-        customerROI: "Faster time-to-value"
+        pillars: ["Automation"],
+        valueDriver: "Offer processing",
+        initiative: "Offer ingestion and normalization MVP",
+        objective: "O1",
+        primaryKR: "KR2",
+        proofMetric: "Offers normalized from 5+ formats",
+        aiLeverage: "Format detection and mapping",
+        customerROI: "Faster offer comparison"
       },
       {
         horizon: "Later",
-        pillars: ["Insightful", "Adaptive"],
-        valueDriver: "Self-serve insights",
-        initiative: "Anomaly explanations with AI",
-        objective: "O3",
-        primaryKR: "KR9",
-        proofMetric: "Time to detect and explain material variance with AI guidance",
-        aiLeverage: "AI-driven explanations",
-        customerROI: "Lower sustainability ops cost"
+        pillars: ["Automation"],
+        valueDriver: "Workflow automation",
+        initiative: "Automated sourcing workflows (Codex 2.0)",
+        objective: "O1",
+        primaryKR: "KR2",
+        proofMetric: "End-to-end sourcing automation",
+        aiLeverage: "Decision support",
+        customerROI: "Reduced sourcing effort"
       },
       {
         horizon: "Later",
-        pillars: ["Adaptive", "Insightful"],
-        valueDriver: "AI acceleration",
-        initiative: "Planning support with AI recommendations",
-        objective: "O3",
-        primaryKR: "KR11",
-        proofMetric: "AI recommendation acceptance rate",
-        aiLeverage: "AI-driven recommendations",
-        customerROI: "Lower sustainability ops cost"
+        pillars: ["Automation"],
+        valueDriver: "Risk visibility",
+        initiative: "Dynamic risk insights at site level",
+        objective: "O2",
+        primaryKR: "KR6",
+        proofMetric: "Site-level risk dashboards live",
+        aiLeverage: "Risk pattern detection",
+        customerROI: "Proactive risk management"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Automation"],
+        valueDriver: "PPA support",
+        initiative: "PPA advisory automation",
+        objective: "O1",
+        primaryKR: "KR2",
+        proofMetric: "PPA analysis time -50%",
+        aiLeverage: "Contract analysis",
+        customerROI: "Faster PPA decisions"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Automation"],
+        valueDriver: "Financial accuracy",
+        initiative: "Accruals automation",
+        objective: "O1",
+        primaryKR: "KR2",
+        proofMetric: "Accruals generated automatically",
+        aiLeverage: "Calculation automation",
+        customerROI: "Reduced month-end effort"
       }
     ]
   },
   {
-    id: "climate-risk",
-    domain: "Climate Risk",
-    icon: "Shield",
-    description: "Climate risk baseline and dashboards tied to assets and business entities",
-    overview: "Climate risk assessment connected to physical assets and business entities. Risk dashboards used in governance forums provide visibility into climate-related financial risks and opportunities.",
+    id: "client-experience",
+    domain: "Client Experience",
+    icon: "Users",
+    description: "Self-serve portal and client data enrichment",
+    overview: "Shift from 'we fix everything for the client' to 'we give clients the tools and data to resolve with us.' Enable client self-serve for occupancy/production data and provide real-time data transparency.",
     initiatives: [
       {
-        horizon: "Later",
-        pillars: ["Insightful", "Unified"],
-        valueDriver: "Trusted data and auditability",
-        initiative: "Climate risk baseline ingestion",
-        objective: "O1",
-        primaryKR: "KR3",
-        proofMetric: "% customers reviewing climate risk insights quarterly",
-        aiLeverage: "AI-assisted risk assessment",
-        customerROI: "Lower risk exposure"
-      },
-      {
-        horizon: "Later",
-        pillars: ["Insightful", "Adaptive"],
-        valueDriver: "Self-serve insights",
-        initiative: "Climate risk dashboards",
-        objective: "O1",
-        primaryKR: "KR3",
-        proofMetric: "% customers using risk dashboards in governance forums tied to assets",
-        aiLeverage: "AI-assisted insights",
-        customerROI: "Lower risk exposure"
+        horizon: "Next",
+        pillars: ["Platform Scale"],
+        valueDriver: "Client empowerment",
+        initiative: "Client mini-portal for data review",
+        objective: "O3",
+        primaryKR: "KR9",
+        proofMetric: "Portal live for pilot clients",
+        aiLeverage: "Guided data review",
+        customerROI: "Transparency and trust"
       },
       {
         horizon: "Next",
-        pillars: ["Unified", "Insightful"],
-        valueDriver: "Compliance integration",
-        initiative: "Climate risk integrated with Compliance & Reporting",
+        pillars: ["Platform Scale"],
+        valueDriver: "Context enrichment",
+        initiative: "Occupancy/production data capture portal",
         objective: "O1",
-        primaryKR: "KR4",
-        proofMetric: "% climate risk insights linked to disclosure outputs",
-        aiLeverage: "AI-assisted compliance mapping",
-        customerROI: "Lower compliance risk"
+        primaryKR: "KR3",
+        proofMetric: "5+ clients providing context data",
+        aiLeverage: "Data validation",
+        customerROI: "Improved accuracy"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Platform Scale"],
+        valueDriver: "Enterprise integration",
+        initiative: "ERP/BMS API integration for client context",
+        objective: "O1",
+        primaryKR: "KR3",
+        proofMetric: "SAP/BMS integration live",
+        aiLeverage: "Data transformation",
+        customerROI: "Automated context data"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Platform Scale"],
+        valueDriver: "Real-time insights",
+        initiative: "Near-real-time load insights for demand response",
+        objective: "O1",
+        primaryKR: "KR2",
+        proofMetric: "Real-time dashboards live",
+        aiLeverage: "Pattern detection",
+        customerROI: "Demand response savings"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Platform Scale"],
+        valueDriver: "Efficiency optimization",
+        initiative: "Microgrid optimization integration",
+        objective: "O1",
+        primaryKR: "KR2",
+        proofMetric: "Microgrid module integrated",
+        aiLeverage: "Optimization algorithms",
+        customerROI: "Energy cost reduction"
+      },
+      {
+        horizon: "Later",
+        pillars: ["Platform Scale"],
+        valueDriver: "Platform expansion",
+        initiative: "Third-party consultant SaaS platform",
+        objective: "O3",
+        primaryKR: "KR7",
+        proofMetric: "Platform ready for external consultants",
+        aiLeverage: "Multi-tenant capabilities",
+        customerROI: "New revenue stream"
       }
     ]
   }
 ];
-
-export const getDomainById = (id: string): DomainRoadmap | undefined => {
-  return domainRoadmaps.find(domain => domain.id === id);
-};
