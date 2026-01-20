@@ -57,34 +57,34 @@ export const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">2026 Product Roadmap Playbook</span>
+            <span className="text-sm font-medium text-primary">Energy & Supply Transformation</span>
           </div>
 
           {/* Main headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-            <span className="gradient-text">Turn sustainability data</span>
+            <span className="gradient-text">Energy & Supply</span>
             <br />
-            <span className="text-foreground">into action.</span>
+            <span className="text-foreground">Transformation with RA+</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Trusted data. Faster, confident decisions. Measurable savings in weeks. Powered by AI on one unified platform.
+            Unified data platform. Automated operations. 90%+ Managed Services automation. Budget cycles in weeks, not months.
           </p>
 
           {/* Key pillars preview */}
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg glass-card">
               <Target className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Unified</span>
+              <span className="text-sm font-medium">Data Foundation</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg glass-card">
               <Zap className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Proactive</span>
+              <span className="text-sm font-medium">Automation</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg glass-card">
               <Sparkles className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Adaptive</span>
+              <span className="text-sm font-medium">Platform Scale</span>
             </div>
           </div>
 
@@ -95,7 +95,7 @@ export const HeroSection = () => {
             className="bg-primary hover:bg-primary/90 text-primary-foreground animate-fade-in-up"
             style={{ animationDelay: "0.6s" }}
           >
-            Explore the Roadmap
+            Explore the Strategy
           </Button>
         </div>
       </div>
