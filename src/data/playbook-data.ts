@@ -207,7 +207,7 @@ export const domainInitiatives = [
 export const roiLevers = [
   {
     lever: "Operational Cost Reduction",
-    description: "Reduce high headcount and manual data collection effort across managed services",
+    description: "Reduce manual data collection effort across managed services",
     metrics: ["FTE reduction", "Hours saved per cycle", "Cost per invoice processed"],
     icon: "TrendingDown",
   },
