@@ -10,6 +10,7 @@ import { ObjectivesSection } from "@/components/playbook/ObjectivesSection";
 import { RoadmapTimeline } from "@/components/playbook/RoadmapTimeline";
 import { InitiativesDomain } from "@/components/playbook/InitiativesDomain";
 import { ValueProofSection } from "@/components/playbook/ValueProofSection";
+import { ROIChartsSection } from "@/components/playbook/ROIChartsSection";
 import { StartStopMatrix } from "@/components/playbook/StartStopMatrix";
 import { ExecutiveNarrativeSection } from "@/components/playbook/ExecutiveNarrativeSection";
 import { AppendixSection } from "@/components/playbook/AppendixSection";
@@ -42,6 +43,7 @@ const Index = () => {
       <RoadmapTimeline />
       <InitiativesDomain />
       <ValueProofSection />
+      <ROIChartsSection />
       <StartStopMatrix />
       <ExecutiveNarrativeSection />
       <AppendixSection />

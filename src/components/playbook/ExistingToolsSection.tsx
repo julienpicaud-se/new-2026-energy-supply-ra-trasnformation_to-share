@@ -111,7 +111,6 @@ export const ExistingToolsSection = () => {
               <p className="text-lg text-foreground italic">
                 "Once the data foundation is solved, <span className="text-primary font-semibold">90%+ of Managed Services can be automated.</span>"
               </p>
-              <p className="text-sm text-muted-foreground mt-2">— Kevin's estimate</p>
             </CardContent>
           </Card>
         </div>
