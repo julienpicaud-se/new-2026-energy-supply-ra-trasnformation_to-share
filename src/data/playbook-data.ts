@@ -99,7 +99,7 @@ export const objectives = [
     title: "Establish unified data platform for global operations",
     linkedPillar: "data-foundation",
     customerOutcome: "Single source of truth for energy data across all markets, reducing data conflicts and reconciliation effort.",
-    businessValue: "Lower operational overhead; reduced Mexico headcount dependency; scalable operations.",
+    businessValue: "Lower operational overhead; reduced headcount dependency; scalable operations.",
     keyResults: [
       { id: "KR7", title: "Markets with unified identity mapping", metric: "UK + US + 2 EU", roiMetric: "Operational scalability" },
       { id: "KR8", title: "Reduction in duplicate data feeds", metric: "60%+", roiMetric: "Data management cost" },
@@ -207,7 +207,7 @@ export const domainInitiatives = [
 export const roiLevers = [
   {
     lever: "Operational Cost Reduction",
-    description: "Reduce high headcount in Mexico and manual data collection effort across managed services",
+    description: "Reduce high headcount and manual data collection effort across managed services",
     metrics: ["FTE reduction", "Hours saved per cycle", "Cost per invoice processed"],
     icon: "TrendingDown",
   },
@@ -311,7 +311,7 @@ export const valuePillars = [
 ];
 
 export const strategicContext = {
-  summary: "Managed Services carries high operational cost and headcount, especially in Mexico, because core services depend heavily on manual data collection, reconciliation, and reformatting across thousands of fragmented data sources worldwide. Most process inefficiency comes from data heterogeneity, not functional complexity.",
+  summary: "Managed Services carries high operational cost and headcount because core services depend heavily on manual data collection, reconciliation, and reformatting across thousands of fragmented data sources worldwide. Most process inefficiency comes from data heterogeneity, not functional complexity.",
   northStar: "Build a unified, global energy data platform that enables 90%+ automation of Managed Services, cutting budget cycles to under 2 weeks and reducing the invoice validation backlog by 50%+.",
 };
 
