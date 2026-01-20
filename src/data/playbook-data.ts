@@ -311,7 +311,7 @@ export const valuePillars = [
 ];
 
 export const strategicContext = {
-  summary: "Managed Services carries high operational cost and headcount because core services depend heavily on manual data collection, reconciliation, and reformatting across thousands of fragmented data sources worldwide. Most process inefficiency comes from data heterogeneity, not functional complexity.",
+  summary: "Managed Services carries high operational cost because core services depend heavily on manual data collection, reconciliation, and reformatting across thousands of fragmented data sources worldwide. Most process inefficiency comes from data heterogeneity, not functional complexity.",
   northStar: "Build a unified, global energy data platform that enables 90%+ automation of Managed Services, cutting budget cycles to under 2 weeks and reducing the invoice validation backlog by 50%+.",
 };
 
