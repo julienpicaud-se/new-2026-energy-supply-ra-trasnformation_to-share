@@ -14,6 +14,8 @@ import {
   RadialBar,
   Legend,
   Tooltip,
+  ComposedChart,
+  Line,
 } from "recharts";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 
@@ -40,9 +42,49 @@ const economicImpactData = [
   { name: "Automation Target", value: 90, fill: "hsl(var(--chart-4))" },
 ];
 
+// Before vs After comparison data
+const beforeAfterData = [
+  { 
+    metric: "Budget Cycle", 
+    before: 8, 
+    after: 2, 
+    unit: "weeks",
+    improvement: "75%"
+  },
+  { 
+    metric: "Invoice Backlog", 
+    before: 160, 
+    after: 80, 
+    unit: "K issues",
+    improvement: "50%"
+  },
+  { 
+    metric: "Manual Touches", 
+    before: 100, 
+    after: 60, 
+    unit: "% baseline",
+    improvement: "40%"
+  },
+  { 
+    metric: "Automation", 
+    before: 20, 
+    after: 90, 
+    unit: "% coverage",
+    improvement: "350%"
+  },
+];
+
 const chartConfig = {
   value: {
     label: "Target",
+  },
+  before: {
+    label: "Current State",
+    color: "hsl(var(--muted-foreground))",
+  },
+  after: {
+    label: "Target State",
+    color: "hsl(var(--primary))",
   },
   fteReduction: {
     label: "FTE Reduction",
@@ -177,6 +219,92 @@ export const ROIChartsSection = () => {
             </CardContent>
           </Card>
         </div>
+
+        {/* Before vs After Comparison Chart */}
+        <Card className="glass-card border-border/50 mb-12">
+          <CardHeader>
+            <CardTitle className="text-lg font-semibold text-center">Transformation Impact: Before vs After</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ChartContainer config={chartConfig} className="h-[350px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart 
+                  data={beforeAfterData} 
+                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                  barGap={8}
+                >
+                  <XAxis 
+                    dataKey="metric" 
+                    tick={{ fontSize: 12 }}
+                    tickLine={false}
+                  />
+                  <YAxis 
+                    tickFormatter={(v) => `${v}`}
+                    tick={{ fontSize: 12 }}
+                  />
+                  <Tooltip 
+                    content={({ payload, label }) => {
+                      if (payload && payload.length > 0) {
+                        const data = payload[0].payload;
+                        return (
+                          <div className="bg-background border border-border rounded-lg p-4 shadow-lg">
+                            <p className="font-semibold text-foreground mb-2">{label}</p>
+                            <div className="space-y-1">
+                              <p className="text-muted-foreground text-sm">
+                                Before: <span className="font-medium text-foreground">{data.before} {data.unit}</span>
+                              </p>
+                              <p className="text-primary text-sm">
+                                After: <span className="font-medium">{data.after} {data.unit}</span>
+                              </p>
+                              <p className="text-emerald-500 text-sm font-semibold mt-2">
+                                ↓ {data.improvement} improvement
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      }
+                      return null;
+                    }}
+                  />
+                  <Bar 
+                    dataKey="before" 
+                    fill="hsl(var(--muted-foreground))" 
+                    radius={[4, 4, 0, 0]}
+                    name="Current State"
+                  />
+                  <Bar 
+                    dataKey="after" 
+                    fill="hsl(var(--primary))" 
+                    radius={[4, 4, 0, 0]}
+                    name="Target State"
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </ChartContainer>
+            <div className="mt-6 flex justify-center gap-8">
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 rounded bg-muted-foreground" />
+                <span className="text-sm text-muted-foreground">Current State</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 rounded bg-primary" />
+                <span className="text-sm text-muted-foreground">Target State</span>
+              </div>
+            </div>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {beforeAfterData.map((item, i) => (
+                <div key={i} className="bg-muted/50 rounded-lg p-4 text-center border border-border/50">
+                  <p className="text-xs text-muted-foreground mb-1">{item.metric}</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-muted-foreground line-through">{item.before}</span>
+                    <span className="text-primary font-bold">→ {item.after}</span>
+                  </div>
+                  <p className="text-xs text-emerald-500 font-medium mt-1">{item.improvement} better</p>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Economic Impact Pie Chart */}
         <Card className="glass-card border-border/50 max-w-2xl mx-auto">
