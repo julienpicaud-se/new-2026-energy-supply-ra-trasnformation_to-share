@@ -21,14 +21,14 @@ import {
 
 const navItems = [
   { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
-  { id: "scope-expansion", label: "Scope Expansion", shortLabel: "Scope" },
+  { id: "key-challenges", label: "Challenges", shortLabel: "Challenges" },
+  { id: "data-requirements", label: "Data Requirements", shortLabel: "Data" },
+  { id: "existing-tools", label: "Current Tools", shortLabel: "Tools" },
   { id: "strategic-pillars", label: "Strategic Pillars", shortLabel: "Pillars" },
   { id: "objectives", label: "OKRs", shortLabel: "OKRs" },
   { id: "roadmap", label: "Roadmap", shortLabel: "Roadmap" },
   { id: "initiatives", label: "Initiatives", shortLabel: "Initiatives" },
-  { id: "value-proof", label: "Value Proof", shortLabel: "Value" },
-  { id: "start-stop", label: "Changes", shortLabel: "Changes" },
-  { id: "appendix", label: "Appendix", shortLabel: "Appendix" },
+  { id: "executive-narrative", label: "Executive Narrative", shortLabel: "Exec" },
   { id: "domains", label: "Domains", shortLabel: "Domains", isDropdown: true },
 ];
 
