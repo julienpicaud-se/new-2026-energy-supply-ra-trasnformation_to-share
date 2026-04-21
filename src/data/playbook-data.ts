@@ -116,7 +116,6 @@ export const roadmapBets = {
     { title: "Identity mapping approach", pillar: "data-foundation", outcome: "Strategy for meter↔account↔site resolution globally", objective: "O3", kr: "KR7" },
     { title: "Connector strategy design", pillar: "platform-scale", outcome: "Retailer + aggregator + Deepki-like model evaluation", objective: "O3", kr: "KR8" },
     { title: "LOA/authorization workflow", pillar: "platform-scale", outcome: "Digital LOA issuance and renewal with audit trail", objective: "O3", kr: "KR7" },
-    { title: "Budget management MVP", pillar: "automation", outcome: "Pilot real-time budget generation and reforecast for initial portfolio", objective: "O2", kr: "KR4" },
   ],
   next: [
     { title: "Centralized raw data lake", pillar: "data-foundation", outcome: "Immutable as-received data storage operational", objective: "O3", kr: "KR8" },
@@ -125,6 +124,7 @@ export const roadmapBets = {
     { title: "Pseudo-bill MVP (UK or US)", pillar: "automation", outcome: "Generate pseudo-bills at D+1 for pilot market", objective: "O1", kr: "KR3" },
     { title: "Adaptive invoice variance & triage", pillar: "automation", outcome: "Automated anomaly detection and prioritization", objective: "O1", kr: "KR1" },
     { title: "No-mutation-at-entry policy", pillar: "data-foundation", outcome: "Raw data preserved; transformations downstream only", objective: "O3", kr: "KR8" },
+    { title: "Budget management MVP", pillar: "automation", outcome: "Pilot real-time budget generation and reforecast for initial portfolio", objective: "O2", kr: "KR4" },
   ],
   later: [
     { title: "Expand connectors & retailer integrations", pillar: "platform-scale", outcome: "Automated data collection from major retailers", objective: "O3", kr: "KR7" },
