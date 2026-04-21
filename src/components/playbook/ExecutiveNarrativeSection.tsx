@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { executiveNarrative, timeline } from "@/data/playbook-data";
+import { executiveNarrative } from "@/data/playbook-data";
 import { 
   FileText, 
   AlertCircle, 
@@ -202,39 +202,6 @@ export const ExecutiveNarrativeSection = () => {
               </ul>
             </CardContent>
           </Card>
-
-          {/* Timeline */}
-          <div className="mt-12">
-            <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-primary" />
-              Timeline
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {Object.entries(timeline).map(([key, phase], index) => (
-                <Card 
-                  key={key} 
-                  className={`border-border/50 ${index === 0 ? 'ring-2 ring-primary/30' : ''}`}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className={`w-3 h-3 rounded-full ${
-                        index === 0 ? 'bg-primary' : index === 1 ? 'bg-amber-400' : 'bg-muted-foreground'
-                      }`} />
-                      <h4 className="font-semibold text-foreground">{phase.title}</h4>
-                    </div>
-                    <ul className="space-y-2">
-                      {phase.items.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <CheckCircle2 className="w-4 h-4 text-primary/60 shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
