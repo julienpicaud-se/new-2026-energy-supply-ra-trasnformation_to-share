@@ -34,6 +34,7 @@ const Index = () => {
         onClose={() => setIsPresentationMode(false)} 
       />
       <HeroSection />
+      <ExecutiveNarrativeSection />
       <ExecutiveSummary />
       <KeyChallengesSection />
       <DataRequirementsSection />
@@ -45,7 +46,6 @@ const Index = () => {
       <ValueProofSection />
       <ROIChartsSection />
       <StartStopMatrix />
-      <ExecutiveNarrativeSection />
       <AppendixSection />
       <ExecutiveTakeaway />
     </div>
