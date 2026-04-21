@@ -617,7 +617,7 @@ export const executiveNarrative = {
 
 export const timeline = {
   q1: {
-    title: "Q1: Plan & Foundations",
+    title: "Q2: Plan & Foundations",
     items: [
       "Architecture design",
       "Schema definition",
@@ -628,7 +628,7 @@ export const timeline = {
     ],
   },
   q2: {
-    title: "Q2: MVP Live",
+    title: "Q3: MVP Live",
     items: [
       "Pseudo-bill v1",
       "Adaptive invoice triage",
