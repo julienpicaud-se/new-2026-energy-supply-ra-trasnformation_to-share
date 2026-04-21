@@ -1,12 +1,12 @@
 import { roadmapBets } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, ArrowRight, Calendar } from "lucide-react";
+import { Database, Zap, Network, Layers, ArrowRight, Calendar } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState } from "react";
 
 const pillarIcons = {
-  unified: Layers,
-  proactive: TrendingUp,
-  adaptive: Sparkles,
+  "data-foundation": Database,
+  automation: Zap,
+  "platform-scale": Network,
 };
 
 const timeframes = [
@@ -17,9 +17,9 @@ const timeframes = [
 
 const filterOptions = [
   { key: "all", label: "All Pillars", icon: null },
-  { key: "unified", label: "Unified", icon: Layers },
-  { key: "proactive", label: "Proactive", icon: TrendingUp },
-  { key: "adaptive", label: "Adaptive", icon: Sparkles },
+  { key: "data-foundation", label: "Data Foundation", icon: Database },
+  { key: "automation", label: "Automation", icon: Zap },
+  { key: "platform-scale", label: "Platform Scale", icon: Network },
 ];
 
 export const RoadmapTimeline = () => {
