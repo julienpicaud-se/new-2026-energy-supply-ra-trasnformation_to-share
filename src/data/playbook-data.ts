@@ -116,6 +116,7 @@ export const roadmapBets = {
     { title: "Identity mapping approach", pillar: "data-foundation", outcome: "Strategy for meter↔account↔site resolution globally", objective: "O3", kr: "KR7" },
     { title: "Connector strategy design", pillar: "platform-scale", outcome: "Retailer + aggregator + Deepki-like model evaluation", objective: "O3", kr: "KR8" },
     { title: "LOA/authorization workflow", pillar: "platform-scale", outcome: "Digital LOA issuance and renewal with audit trail", objective: "O3", kr: "KR7" },
+    { title: "Budget management MVP", pillar: "automation", outcome: "Pilot real-time budget generation and reforecast for initial portfolio", objective: "O2", kr: "KR4" },
   ],
   next: [
     { title: "Centralized raw data lake", pillar: "data-foundation", outcome: "Immutable as-received data storage operational", objective: "O3", kr: "KR8" },
