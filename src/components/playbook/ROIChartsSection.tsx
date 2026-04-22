@@ -74,9 +74,13 @@ const beforeAfterData = [
   },
 ];
 
+// Chart config keys MUST match Recharts `dataKey` values used below
+// (`value` for the ROI bar chart, `before`/`after` for the comparison chart).
+// Per-metric colors are carried on the data itself via `color`/`fill`.
 const chartConfig = {
   value: {
     label: "Target",
+    color: "hsl(var(--primary))",
   },
   before: {
     label: "Current State",
@@ -86,23 +90,7 @@ const chartConfig = {
     label: "Target State",
     color: "hsl(var(--primary))",
   },
-  fteReduction: {
-    label: "Productivity Gains",
-    color: "hsl(var(--primary))",
-  },
-  backlog: {
-    label: "Backlog Cleared",
-    color: "hsl(var(--chart-2))",
-  },
-  cycleTime: {
-    label: "Cycle Time",
-    color: "hsl(var(--chart-3))",
-  },
-  errorReduction: {
-    label: "Error Reduction",
-    color: "hsl(var(--chart-4))",
-  },
-};
+} as const;
 
 export const ROIChartsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
