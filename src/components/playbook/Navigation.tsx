@@ -21,6 +21,7 @@ import {
 
 const navItems = [
   { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
+  { id: "market-context", label: "Market Context", shortLabel: "Market" },
   { id: "key-challenges", label: "Challenges", shortLabel: "Challenges" },
   { id: "data-requirements", label: "Data Requirements", shortLabel: "Data" },
   { id: "existing-tools", label: "Current Tools", shortLabel: "Tools" },
