@@ -69,7 +69,7 @@ export const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Unified data platform. Automated operations. 90%+ Managed Services automation. Budget cycles in weeks, not months.
+            Experts supported by software. A unified data platform powering 90%+ Managed Services automation across procurement, risk, bill management, and decarbonization.
           </p>
 
           {/* Key pillars preview */}

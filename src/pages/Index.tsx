@@ -3,6 +3,7 @@ import { Navigation } from "@/components/playbook/Navigation";
 import { HeroSection } from "@/components/playbook/HeroSection";
 import { ExecutiveSummary } from "@/components/playbook/ExecutiveSummary";
 import { KeyChallengesSection } from "@/components/playbook/KeyChallengesSection";
+import { MarketContextSection } from "@/components/playbook/MarketContextSection";
 import { DataRequirementsSection } from "@/components/playbook/DataRequirementsSection";
 import { ExistingToolsSection } from "@/components/playbook/ExistingToolsSection";
 import { StrategicPillars } from "@/components/playbook/StrategicPillars";
@@ -36,6 +37,7 @@ const Index = () => {
       <HeroSection />
       <ExecutiveNarrativeSection />
       <ExecutiveSummary />
+      <MarketContextSection />
       <KeyChallengesSection />
       <DataRequirementsSection />
       <ExistingToolsSection />
