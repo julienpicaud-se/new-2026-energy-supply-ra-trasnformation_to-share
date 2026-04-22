@@ -78,7 +78,7 @@ export const objectives = [
     businessValue: "Cut invoice validation errors significantly; reduce manual tolerance checks; clear backlog.",
     keyResults: [
       { id: "KR1", title: "Invoice validation backlog reduction", metric: "50%+", roiMetric: "Hours saved; error rate reduction" },
-      { id: "KR2", title: "Touches per bill reduction", metric: "40%", roiMetric: "FTE savings; cost reduction" },
+      { id: "KR2", title: "Touches per bill reduction", metric: "40%", roiMetric: "Productivity gains; cost reduction" },
       { id: "KR3", title: "Pseudo-bill accuracy vs actual invoice", metric: ">95%", roiMetric: "Dispute accuracy improvement" },
     ],
   },
@@ -209,7 +209,7 @@ export const roiLevers = [
   {
     lever: "Operational Cost Reduction",
     description: "Reduce manual data collection effort across managed services",
-    metrics: ["FTE reduction", "Hours saved per cycle", "Cost per invoice processed"],
+    metrics: ["Productivity gains", "Hours saved per cycle", "Cost per invoice processed"],
     icon: "TrendingDown",
   },
   {
@@ -227,7 +227,7 @@ export const roiLevers = [
   {
     lever: "Scale & Reach",
     description: "Enable global operations without linear headcount growth; platform for third-party consultants",
-    metrics: ["Markets supported", "Revenue per FTE", "Third-party platform revenue"],
+    metrics: ["Markets supported", "Productivity per analyst", "Third-party platform revenue"],
     icon: "BarChart3",
   },
 ];
@@ -326,7 +326,7 @@ export const supportingScorecard = [
 ];
 
 export const roiScorecard = [
-  { metric: "FTE Reduction", definition: "Operational headcount savings", target: "30-40%" },
+  { metric: "Productivity Gains", definition: "Operational productivity improvement", target: "30-40%" },
   { metric: "Backlog Cleared", definition: "Invoice validation issues resolved", target: "80,000+" },
   { metric: "Cycle Time", definition: "Budget creation acceleration", target: "75% faster" },
   { metric: "Error Reduction", definition: "Validation and dispute errors", target: "50% fewer" },
@@ -387,7 +387,7 @@ export const appendixPillars = [
     valueProof: [
       "Invoice validation backlog reduction",
       "Budget cycle time improvement",
-      "FTE savings in operational roles",
+      "Productivity gains in operational roles",
     ],
   },
   {
@@ -412,7 +412,7 @@ export const appendixPillars = [
     ],
     valueProof: [
       "Number of markets supported",
-      "Revenue per FTE improvement",
+      "Productivity per analyst improvement",
       "Client satisfaction scores",
     ],
   },
@@ -485,7 +485,7 @@ export const roadmapSummary = {
       valueProof: [
         "Invoice validation backlog reduction",
         "Budget cycle time improvement",
-        "FTE savings in operational roles",
+        "Productivity gains in operational roles",
       ],
     },
     {
@@ -511,7 +511,7 @@ export const roadmapSummary = {
       ],
       valueProof: [
         "Number of markets supported",
-        "Revenue per FTE improvement",
+        "Productivity per analyst improvement",
         "Client satisfaction scores",
       ],
     },

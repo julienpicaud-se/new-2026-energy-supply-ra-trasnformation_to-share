@@ -21,7 +21,7 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 
 // Transform ROI data for bar chart
 const roiChartData = [
-  { name: "FTE Reduction", value: 35, target: "30-40%", color: "hsl(var(--primary))" },
+  { name: "Productivity Gains", value: 35, target: "30-40%", color: "hsl(var(--primary))" },
   { name: "Backlog Cleared", value: 80, target: "80,000+", color: "hsl(var(--chart-2))" },
   { name: "Cycle Time", value: 75, target: "75% faster", color: "hsl(var(--chart-3))" },
   { name: "Error Reduction", value: 50, target: "50% fewer", color: "hsl(var(--chart-4))" },
@@ -87,7 +87,7 @@ const chartConfig = {
     color: "hsl(var(--primary))",
   },
   fteReduction: {
-    label: "FTE Reduction",
+    label: "Productivity Gains",
     color: "hsl(var(--primary))",
   },
   backlog: {
