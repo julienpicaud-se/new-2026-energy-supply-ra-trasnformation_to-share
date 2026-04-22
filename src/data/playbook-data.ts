@@ -648,3 +648,105 @@ export const timeline = {
     ],
   },
 };
+
+export const marketDynamics = {
+  intro: "Clients face the most challenging energy landscape in a generation. These pressures define where managed services and the platform must deliver.",
+  forces: [
+    {
+      id: "demand-grid",
+      title: "Demand Surge & Grid Strain",
+      description: "Global electricity demand is surging while grids and transmission are constrained, creating procurement complexity and reliability risk for every region.",
+      icon: "Zap",
+    },
+    {
+      id: "price-volatility",
+      title: "Price Volatility & Supply Shocks",
+      description: "Geopolitical events and commodity swings are pushing energy budgets under immediate pressure. Capacity and peak-demand charges are now dominant cost drivers.",
+      icon: "TrendingUp",
+    },
+    {
+      id: "portfolio-procurement",
+      title: "Integrated Portfolio Procurement",
+      description: "Sophisticated buyers want physical supply, PPAs, EACs, budgets, and bill management viewed together over time and scenario-tested against market risk.",
+      icon: "Layers",
+    },
+    {
+      id: "digitization",
+      title: "Digitization & AI Expectations",
+      description: "Clients now expect AI-driven load optimization, automated tendering, SaaS portfolio management, real-time scenario analysis, and automated invoice intake.",
+      icon: "Sparkles",
+    },
+    {
+      id: "decarbonization",
+      title: "Decarbonization Mandates",
+      description: "Carbon commitments, scope 2 and scope 3 obligations, and tax credit opportunities are accelerating demand for execution—not just advisory.",
+      icon: "Leaf",
+    },
+    {
+      id: "resilience",
+      title: "Resilience & Continuity",
+      description: "Energy resilience is no longer optional. Clients need supply risk modeling, continuity planning, and on-site generation strategies to absorb shocks.",
+      icon: "Shield",
+    },
+  ],
+};
+
+export const competitiveLandscape = {
+  intro: "Serious players exist across the value chain. Our differentiator is experts supported by software—pairing global advisory depth with automation and AI at scale.",
+  positioning: "Not just a consultancy. Not just a platform. A unified offer that combines deep advisory, global delivery, and a data + automation platform that compounds value with every client.",
+  competitors: [
+    {
+      name: "Energy Impact",
+      scope: "Global",
+      strength: "Full utility bill management lifecycle for 14,500+ customers, including payments and workflow execution.",
+    },
+    {
+      name: "NUS Consulting",
+      scope: "Global",
+      strength: "90 years of multi-geography energy expertise across 19 offices and complex regulatory environments.",
+    },
+    {
+      name: "Trio (Edison Energy)",
+      scope: "Global",
+      strength: "Locked-in enterprise relationships with comprehensive software and advisory.",
+    },
+    {
+      name: "South Pole",
+      scope: "Renewables",
+      strength: "Dominant position in corporate sustainability programs and decarbonization advisory.",
+    },
+    {
+      name: "Ameresco",
+      scope: "Regional",
+      strength: "Comprehensive supply management and utility bill processing across North America.",
+    },
+  ],
+  differentiators: [
+    "Experts + software + AI working together as collaborative intelligence",
+    "Truly global footprint with regional regulatory depth and local language coverage",
+    "Integrated offer across utility bill management, procurement, risk, and decarbonization execution",
+    "Industrialized data operations: 20B+ data points per year, 1,500+ unique custom integrations",
+    "Largest energy buyer in the world—unmatched supplier intelligence and negotiating leverage",
+  ],
+};
+
+export const clientTriggers = [
+  {
+    id: "decarb",
+    trigger: "We need to meet our carbon commitments",
+    response: "Renewable energy procurement (PPAs, VPPAs, EACs), tax credit transfers, and supply chain decarbonization programs.",
+    icon: "Leaf",
+  },
+  {
+    id: "cost",
+    trigger: "Energy costs are rising faster than expected",
+    response: "Risk-managed procurement strategies with layered hedging, market intelligence, forecasting, and utility bill management for visibility and control.",
+    icon: "TrendingDown",
+  },
+  {
+    id: "resilience",
+    trigger: "We are worried about supply resilience",
+    response: "Energy supply consulting assessments, supply risk modeling, continuity plans, and on-site generation and backup strategies.",
+    icon: "Shield",
+  },
+];
