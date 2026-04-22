@@ -63,9 +63,9 @@ export const EngagementPlaysSection = () => {
                           {stage.examples.map((ex, i) => (
                             <li
                               key={i}
-                              className="text-xs text-foreground/85 italic leading-relaxed before:content-['\u201C'] after:content-['\u201D']"
+                              className="text-xs text-foreground/85 italic leading-relaxed"
                             >
-                              {ex}
+                              “{ex}”
                             </li>
                           ))}
                         </ul>
