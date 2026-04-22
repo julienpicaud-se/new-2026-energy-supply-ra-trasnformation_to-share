@@ -593,8 +593,8 @@ export const marketConstraints = [
 ];
 
 export const executiveNarrative = {
-  whatsHappening: "Our managed services business carries significant operating cost and manual effort because we lack a single, authoritative way to ingest, standardize, and use the data that powers every offer: budgeting, invoice validation, sourcing, risk management, accruals, and PPA advisory. Teams spend outsized time reconciling interval, contract, invoice, tariff, and offer data across thousands of formats and retailer portals. The result: long budget cycles (~8 weeks), a ballooning invoice validation queue (~160k issues), and duplicated portfolio work across multiple teams.",
-  trueProblem: "The challenge is not the service logic; it's the data foundation. When interval and contract data are available and mapped to sites/accounts, we can compute what a bill should be and automate downstream workflows. Where we fail is identity (meter↔account↔site mapping outside the UK), reactive regulatory content, market delays (D+15), and fragmented ingestion that sometimes mutates invoices on entry—undermining trust.",
+  whatsHappening: "Clients are navigating the most challenging energy landscape in a generation: surging demand, constrained grids, geopolitical price shocks, decarbonization mandates, and rising expectations for AI-driven optimization. At the same time, our managed services business carries significant operating cost because we lack a single, authoritative way to ingest, standardize, and use the data that powers every offer—budgeting, invoice validation, sourcing, risk management, accruals, and PPA advisory. Teams spend outsized time reconciling interval, contract, invoice, tariff, and offer data across thousands of formats and retailer portals. The result: long budget cycles (~8 weeks), a ballooning invoice validation queue (~160k issues), and duplicated portfolio work across multiple teams.",
+  trueProblem: "The challenge is not the service logic; it's the data foundation. Clients want integrated answers across decarbonization, cost, and resilience—but our ability to deliver at speed and scale is throttled by data fragmentation. When interval and contract data are available and mapped to sites/accounts, we can compute what a bill should be and automate downstream workflows. Where we fail is identity (meter↔account↔site mapping outside the UK), reactive regulatory content, market delays (D+15), and fragmented ingestion that sometimes mutates invoices on entry—undermining trust.",
   northStar: "We will build a unified energy data platform inside RA+: an as-received data lake with provenance, a schema registry, an identity registry that resolves global meter/account/site keys (MPAN first, expanding to EAN/POD, etc.), a regulatory content service with proactive completeness management, and APIs that power budgeting, forecasts, sourcing, invoice validation, and risk modules. Clients can securely contribute occupancy/production (or connect ERP/BMS) to enhance accuracy.",
   pragmaticWay: "We'll 'do more with less': start with Interval + Contract + Tariffs to generate pseudo-bills at D+1 (end of month), then reconcile with the retailer's invoice when it arrives. This avoids the D+15 market dependency and eliminates today's brittle tolerance checks. Adding weather (easy) and optional occupancy/production (via portal or API) dramatically reduces false positives. We will also stop mutating invoice data at entry—transformations will only happen downstream, with lineage.",
   economicImpact: [
@@ -602,7 +602,7 @@ export const executiveNarrative = {
     "Cut the budget cycle to <2 weeks for pilot portfolios, with further reduction to <1 week as coverage expands",
     "Improve dispute accuracy, enable earlier detection of anomalies, and unlock near-real-time actions for Efficiency/Microgrid",
   ],
-  strategicUpside: "Once the platform is operating reliably, RA+ can power not only our services but also third-party consultants globally—a step-change in TAM similar to how Octopus commercialized Kraken for utilities. Our differentiator remains data + risk expertise and a truly global footprint of regulatory content and identity mapping.",
+  strategicUpside: "Once the platform is operating reliably, RA+ powers not only our services but also third-party consultants globally—a step-change in TAM similar to how Octopus commercialized Kraken for utilities. Combined with our experts-plus-software model, integrated offer across utility bill management, procurement, risk, and decarbonization execution, and a truly global footprint of regulatory content and identity mapping, we widen the gap on competitors who lead with consultancy alone or software alone.",
   risks: [
     { risk: "Connector coverage & LOA complexity", mitigation: "Partner where it's faster; digitize LOA issuance/renewals with audit trail; prioritize UK/US + 1–2 EU markets first" },
     { risk: "Identity mapping outside the UK", mitigation: "Build the registry with progressive coverage; select pilots where identifiers are achievable" },
@@ -610,9 +610,9 @@ export const executiveNarrative = {
     { risk: "Client context (occupancy/production)", mitigation: "Provide both lightweight portal capture and enterprise APIs into SAP/BMS" },
   ],
   needsNow: [
-    "Approve staffing: 2–3 SMEs full-time + 1 senior architect (via Dan)",
+    "Approve staffing for SME and senior architect coverage to anchor the platform build",
     "Approve schema v0.9, identity approach, no-mutation policy, and connector/LOA strategy",
-    "Select pilot cohort (e.g., Accor in UK/US) and schedule a one-day workshop (with Jeff Floyd, Tim, Alice, Jessica, Josh, Robbie)",
+    "Select pilot cohort and schedule a one-day workshop with cross-functional leads from data ops, risk, sourcing, and analytics",
   ],
 };
 
