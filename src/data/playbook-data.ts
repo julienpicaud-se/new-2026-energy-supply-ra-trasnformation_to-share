@@ -750,3 +750,201 @@ export const clientTriggers = [
     icon: "Shield",
   },
 ];
+
+// Integrated service catalog — the COE's full service surface
+export const serviceCatalog = {
+  intro:
+    "An integrated set of service lines delivered as one practice — clients enter at one door and unlock the full surface as their needs evolve.",
+  services: [
+    {
+      id: "advisory",
+      title: "Strategic Energy Advisory",
+      tagline: "Set the strategy, prove the business case",
+      description:
+        "Decarbonization roadmaps, net-zero strategy, scenario modeling, target setting, and board-level reporting tied to financial outcomes.",
+      offerings: [
+        "Decarbonization & net-zero roadmaps",
+        "Scope 1/2/3 baseline & target setting",
+        "Climate risk & scenario analysis",
+        "Board-ready disclosures (CSRD, SEC, CDP)",
+      ],
+      icon: "Compass",
+    },
+    {
+      id: "sourcing",
+      title: "Sourcing & Procurement",
+      tagline: "Buy energy smarter, hedge with intent",
+      description:
+        "Risk-managed procurement across retail supply, PPAs, VPPAs, EACs, and tax credit transfers — globally orchestrated, locally executed.",
+      offerings: [
+        "Retail supply sourcing & contracting",
+        "PPA / VPPA structuring & negotiation",
+        "EAC & RECs portfolio strategy",
+        "Tax credit transfers & monetization",
+      ],
+      icon: "ShoppingCart",
+    },
+    {
+      id: "managed-services",
+      title: "Managed Services",
+      tagline: "Run the day-to-day, free the client to lead",
+      description:
+        "Utility bill management, invoice validation, budgeting, accruals, and reporting — automated where possible, expert-handled where it matters.",
+      offerings: [
+        "Utility bill management & validation",
+        "Budgeting, forecasting & accruals",
+        "Tariff & regulatory monitoring",
+        "Portfolio reporting & analytics",
+      ],
+      icon: "Settings",
+    },
+    {
+      id: "sustainability",
+      title: "Sustainability Programs",
+      tagline: "Operationalize the commitment",
+      description:
+        "Supply chain decarbonization, efficiency programs, renewable execution, and sustainability data infrastructure that holds up under audit.",
+      offerings: [
+        "Supply chain & Scope 3 programs",
+        "Energy efficiency & retrofits",
+        "On-site & off-site renewables execution",
+        "Sustainability data & assurance readiness",
+      ],
+      icon: "Leaf",
+    },
+    {
+      id: "resilience",
+      title: "Resilience & On-Site",
+      tagline: "Keep the lights on, on your terms",
+      description:
+        "Supply risk modeling, continuity planning, microgrids, on-site generation, storage, and demand response to harden operations.",
+      offerings: [
+        "Supply risk & continuity assessments",
+        "Microgrid & on-site generation design",
+        "Battery storage & demand response",
+        "Backup strategy & critical-load planning",
+      ],
+      icon: "Shield",
+    },
+    {
+      id: "data-tech",
+      title: "Data & Technology",
+      tagline: "The platform under everything",
+      description:
+        "RA+ unified data platform, agentic AI assistants, and connectors that make every other service faster, cheaper, and more accurate.",
+      offerings: [
+        "RA+ platform & analytics",
+        "Agentic AI (Vera, Blair, Codex)",
+        "Retailer & aggregator connectors",
+        "Identity registry & data governance",
+      ],
+      icon: "Database",
+    },
+  ],
+};
+
+// Operating model — experts supported by software / collaborative intelligence
+export const operatingModel = {
+  intro:
+    "We are not a software vendor and we are not a pure consultancy. We are experts supported by software — humans on point for judgment, software on point for scale.",
+  layers: [
+    {
+      id: "expertise",
+      title: "Expert Practitioners",
+      role: "Judgment, strategy, client relationships",
+      description:
+        "Senior advisors, traders, sustainability strategists, and managed-services leads who own the outcome and the conversation.",
+      icon: "Users",
+    },
+    {
+      id: "agents",
+      title: "Agentic AI Assistants",
+      role: "Co-pilots that compress hours into seconds",
+      description:
+        "Vera (advisory), Blair (invoice intelligence), Codex (sourcing) — purpose-built agents that draft, validate, and explain so experts focus on decisions.",
+      icon: "Bot",
+    },
+    {
+      id: "automation",
+      title: "Automation Engine",
+      role: "Lights-out execution at scale",
+      description:
+        "Pseudo-bills, validations, budgets, forecasts, and reporting generated automatically from interval, contract, and tariff data.",
+      icon: "Zap",
+    },
+    {
+      id: "platform",
+      title: "Unified Data Platform",
+      role: "One source of truth, globally",
+      description:
+        "RA+ ingests as-received data, resolves identity across markets, and exposes APIs that power every service line and every agent.",
+      icon: "Database",
+    },
+  ],
+  principles: [
+    "Software absorbs the repeatable work; experts own the judgment calls",
+    "Every service line shares the same data spine — no swivel-chair handoffs",
+    "Agents are accountable to humans; humans are accountable to clients",
+    "Automation targets 90%+ of managed-services touches over the horizon",
+  ],
+};
+
+// Engagement plays — how clients enter and expand
+export const engagementPlays = {
+  intro:
+    "Clients rarely buy the full practice on day one. They enter through a sharp, urgent problem — and expand as we earn the right to do more.",
+  stages: [
+    {
+      id: "entry",
+      stage: "Entry",
+      title: "Land on a sharp pain",
+      examples: [
+        "Utility bill chaos across hundreds of sites",
+        "Net-zero commitment with no credible path",
+        "PPA decision pending, no in-house expertise",
+        "Energy budget blew up; CFO wants answers",
+      ],
+      typicalServices: ["Managed Services", "Strategic Advisory", "Sourcing"],
+      icon: "DoorOpen",
+    },
+    {
+      id: "prove",
+      stage: "Prove",
+      title: "Deliver visible wins in 90 days",
+      examples: [
+        "Validated bills with recovered overcharges",
+        "Decarb roadmap signed off by the board",
+        "PPA executed at favorable terms",
+        "Real-time budget vs actuals dashboard live",
+      ],
+      typicalServices: ["RA+ deployment", "Vera/Blair onboarding", "Quick-win audits"],
+      icon: "Target",
+    },
+    {
+      id: "expand",
+      stage: "Expand",
+      title: "Connect adjacent services",
+      examples: [
+        "Add sourcing to existing managed services",
+        "Layer sustainability reporting onto bill management",
+        "Bring resilience planning into procurement scope",
+        "Roll out from one region to global portfolio",
+      ],
+      typicalServices: ["Sustainability Programs", "Resilience", "Multi-region rollout"],
+      icon: "Network",
+    },
+    {
+      id: "embed",
+      stage: "Embed",
+      title: "Become the energy operating system",
+      examples: [
+        "Multi-year managed services contract",
+        "Embedded advisory at exec/board level",
+        "RA+ as the client's system of record for energy",
+        "Joint roadmap for decarb + cost + resilience",
+      ],
+      typicalServices: ["Full COE engagement", "Strategic partnership", "Platform-as-service"],
+      icon: "Anchor",
+    },
+  ],
+};
