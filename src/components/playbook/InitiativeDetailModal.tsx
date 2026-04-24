@@ -55,7 +55,7 @@ const pillarColors: Record<string, string> = {
 const horizonDescriptions = {
   Now: "Q2–Q3 2026",
   Next: "Q4 2026 – Q1 2027",
-  Later: "2027+",
+  Later: "Q2 2027+",
 };
 
 // Find related initiatives based on shared pillars, value drivers, or explicit dependencies
