@@ -15,7 +15,7 @@ const TEXT_MUTED = "A1A1AA";
 // Quarterly roadmap data
 const quarterlyRoadmap = {
   Q1: {
-    title: "Q1 2026",
+    title: "Q1 2027",
     initiatives: [
       "Initial emissions measurement",
       "Emissions carbon strategy and scenarios",
@@ -28,7 +28,7 @@ const quarterlyRoadmap = {
     ],
   },
   Q2: {
-    title: "Q2 2026",
+    title: "Q1 2027",
     initiatives: [
       "Carbon measurement hardening (quality, coverage, audit readiness)",
       "Carbon strategy and scenarios hardening (analytics-driven approvals, repeatable decision workflows)",
@@ -41,7 +41,7 @@ const quarterlyRoadmap = {
     ],
   },
   Q3: {
-    title: "Q3 2026",
+    title: "Q1 2027",
     initiatives: [
       "Expanded carbon measurement to sustainability performance (broader activity data, reuse across domains)",
       "Expanded carbon strategy and scenarios (stronger what-if comparison, levers, analytics-supported approvals)",
@@ -56,7 +56,7 @@ const quarterlyRoadmap = {
     ],
   },
   Q4: {
-    title: "Q4 2026",
+    title: "Q1 2027",
     initiatives: [
       "Initial emissions measurement",
       "Emissions carbon strategy and scenarios",
@@ -108,22 +108,22 @@ const semesterRoadmap = {
 // Simple quarterly overview (12-Month Roadmap Overview)
 const simpleQuarterlyOverview = [
   {
-    quarter: "Q1 2026",
+    quarter: "Q1 2027",
     summary:
       "Shared platform foundations with unified data, analytics, and data quality, initial carbon Scope 1–3 measurement and decarbonization strategy, and supply chain Scope 3 readiness.",
   },
   {
-    quarter: "Q2 2026",
+    quarter: "Q1 2027",
     summary:
       "Turn sustainability data into decisions through advanced carbon accounting, smart insights, climate risk, and analytics-driven workflows.",
   },
   {
-    quarter: "Q3 2026",
+    quarter: "Q1 2027",
     summary:
       "Scale sustainability with efficiency and control through compliance, supplier actions, hybrid data collection, and advanced analytics.",
   },
   {
-    quarter: "Q4 2026",
+    quarter: "Q1 2027",
     summary:
       "Deliver energy-driven savings at scale by linking interval insights to ECM execution, realized savings, and faster site and corporate budget decisions.",
   },
@@ -132,7 +132,7 @@ const simpleQuarterlyOverview = [
 // 12-month roadmap as value drivers (by quarter)
 const valueDriversRoadmap = {
   Q1: {
-    title: "Q1 2026",
+    title: "Q1 2027",
     theme: "Establish a trusted platform foundation",
     valueDrivers: [
       "Platform foundations with unified data, analytics, and built-in data quality, including data ingestion, transformation, and lineage, enabling multiple products to run on the same experience",
@@ -143,7 +143,7 @@ const valueDriversRoadmap = {
     whyItMatters: "Creates a trusted baseline quickly and establishes shared platform engines to serve multiple products with a consistent experience.",
   },
   Q2: {
-    title: "Q2 2026",
+    title: "Q1 2027",
     theme: "Turn sustainability data into decisions",
     valueDrivers: [
       "Platform intelligence expanded with advanced user management and strong data handling and governance, including data gap filling and extrapolation",
@@ -157,7 +157,7 @@ const valueDriversRoadmap = {
     whyItMatters: "Transforms sustainability from a reporting exercise into a decision engine, accelerating decarbonization and cost savings while reducing operational friction and increasing confidence.",
   },
   Q3: {
-    title: "Q3 2026",
+    title: "Q1 2027",
     theme: "Scale sustainability with efficiency and control",
     valueDrivers: [
       "Platform governance strengthened with smart validation workflows",
@@ -172,7 +172,7 @@ const valueDriversRoadmap = {
     whyItMatters: "Lowers the cost and risk of scaling sustainability while embedding expertise directly into the platform for consistent, repeatable execution.",
   },
   Q4: {
-    title: "Q4 2026",
+    title: "Q1 2027",
     theme: "Scale value creation through energy intelligence",
     valueDrivers: [
       "Energy management introduced with interval data management and connection with BMS on the shared platform foundation",
@@ -188,7 +188,7 @@ const valueDriversRoadmap = {
 // 12-month roadmap as value drivers (board view)
 const boardViewRoadmap = [
   {
-    quarter: "Q1 2026",
+    quarter: "Q1 2027",
     theme: "Foundation",
     highlights: [
       "Shared platform foundations with unified data, analytics, data quality, ingestion, and lineage across products",
@@ -198,7 +198,7 @@ const boardViewRoadmap = [
     outcome: "Trusted baseline and common platform experience across products",
   },
   {
-    quarter: "Q2 2026",
+    quarter: "Q1 2027",
     theme: "Decisions",
     highlights: [
       "Advanced emissions accounting and decarbonization workflows",
@@ -209,7 +209,7 @@ const boardViewRoadmap = [
     outcome: "Sustainability becomes decision-grade, enabling faster decarbonization and savings",
   },
   {
-    quarter: "Q3 2026",
+    quarter: "Q1 2027",
     theme: "Scale",
     highlights: [
       "Compliance and reporting on the same data foundation",
@@ -220,7 +220,7 @@ const boardViewRoadmap = [
     outcome: "Lower cost and risk to scale sustainability with consistent execution",
   },
   {
-    quarter: "Q4 2026",
+    quarter: "Q1 2027",
     theme: "Energy Value",
     highlights: [
       "Energy management with interval data and BMS connectivity",
