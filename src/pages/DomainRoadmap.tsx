@@ -144,7 +144,7 @@ const DomainRoadmap = () => {
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xs">SE</span>
               </div>
-              <span className="text-sm font-medium text-foreground hidden sm:block">2026 Playbook</span>
+              <span className="text-sm font-medium text-foreground hidden sm:block">Energy & Supply Transformation</span>
             </div>
           </div>
         </div>
