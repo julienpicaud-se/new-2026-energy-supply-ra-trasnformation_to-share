@@ -44,11 +44,21 @@ export const StrategicPillars = () => {
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
 
+                {/* Sub-theme badge */}
+                {pillar.subTheme && (
+                  <span className="inline-flex self-start items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20 mb-3">
+                    {pillar.subTheme}
+                  </span>
+                )}
+
                 {/* Title & Tagline */}
                 <h3 className="text-2xl font-bold text-foreground mb-2">
                   {pillar.title}
                 </h3>
-                <p className="text-primary font-medium mb-6">{pillar.tagline}</p>
+                <p className="text-primary font-medium mb-2">{pillar.tagline}</p>
+                {pillar.subThemeDescription && (
+                  <p className="text-muted-foreground text-sm mb-6">{pillar.subThemeDescription}</p>
+                )}
 
                 {/* Promise Quote */}
                 <div className="bg-muted rounded-lg p-4 mb-6">
