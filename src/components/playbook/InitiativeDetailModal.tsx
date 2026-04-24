@@ -53,8 +53,8 @@ const pillarColors: Record<string, string> = {
 };
 
 const horizonDescriptions = {
-  Now: "Q1-Q2 2026",
-  Next: "Q3-Q4 2026",
+  Now: "Q2–Q3 2026",
+  Next: "Q4 2026 – Q1 2027",
   Later: "2027+",
 };
 

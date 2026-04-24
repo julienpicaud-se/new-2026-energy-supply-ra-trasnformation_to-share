@@ -305,7 +305,7 @@ export const exportToPptx = async () => {
   });
   
   const timeframes = ["now", "next", "later"] as const;
-  const timeframeLabels = { now: "Now (Q1-Q2)", next: "Next (Q3-Q4)", later: "Later (2027+)" };
+  const timeframeLabels = { now: "Now (Q2–Q3 2026)", next: "Next (Q4 2026 – Q1 2027)", later: "Later (Q2 2027+)" };
   
   timeframes.forEach((tf, colIndex) => {
     const xPos = 0.5 + colIndex * 3.2;

@@ -5,6 +5,8 @@ export const strategicPillars = [
     id: "data-foundation",
     title: "Data Foundation",
     tagline: "Unified, global energy data platform",
+    subTheme: "Unified",
+    subThemeDescription: "One trusted, governed view of energy data across markets, meters, and contracts.",
     promise: "A central layer that ingests as-received interval, invoice, offer, tariff, contract data and enables automation at scale.",
     description: "Build a unified energy data platform inside RA+: an as-received data lake with provenance, a schema registry, an identity registry that resolves global meter/account/site keys (MPAN first, expanding to EAN/POD, etc.), and APIs that power budgeting, forecasts, sourcing, invoice validation, and risk modules.",
     whatLivesHere: [
@@ -27,6 +29,8 @@ export const strategicPillars = [
     id: "automation",
     title: "Automation",
     tagline: "Do more with less data",
+    subTheme: "Proactive",
+    subThemeDescription: "Compute pseudo-bills, budgets, forecasts, and validations ahead of invoices, not after.",
     promise: "Generate pseudo-bills, budgets, forecasts, and validation results with minimal human intervention using interval + contract + tariff data.",
     description: "Shift from reactive manual processing to proactive automation. If we have interval + contract, we can compute pseudo bills, budgets, forecasts, and validations without waiting for invoices. Clients enrich data where needed (occupancy/production).",
     whatLivesHere: [
@@ -49,6 +53,8 @@ export const strategicPillars = [
     id: "platform-scale",
     title: "Platform Scale",
     tagline: "Beyond Schneider",
+    subTheme: "Adaptive",
+    subThemeDescription: "Absorbs new markets, retailers, and regulations through configuration — not rebuilds.",
     promise: "Once functional, RA+ can become a consultant platform: sell Managed Services capabilities as SaaS to third-party consultants globally.",
     description: "The platform can absorb new regulations, retailers, and market structures through configuration. Our differentiator remains data + risk expertise and a truly global footprint of regulatory content and identity mapping.",
     whatLivesHere: [
@@ -110,10 +116,12 @@ export const objectives = [
 
 export const roadmapBets = {
   now: [
+    { title: "Budget management MVP (pilot portfolio)", pillar: "data-foundation", outcome: "First real-time budget vs actuals view live for a pilot portfolio with <2-week refresh cycle", objective: "O2", kr: "KR4" },
     { title: "Complete offer PRDs", pillar: "data-foundation", outcome: "Clear requirements for offer ingestion and normalization", objective: "O3", kr: "KR7" },
-    { title: "Frame end-to-end journey", pillar: "automation", outcome: "Documented data flow from ingestion to service delivery", objective: "O1", kr: "KR1" },
     { title: "Define target data model", pillar: "data-foundation", outcome: "Schema for interval, contract, tariff, portfolio data", objective: "O3", kr: "KR7" },
     { title: "Identity mapping approach", pillar: "data-foundation", outcome: "Strategy for meter↔account↔site resolution globally", objective: "O3", kr: "KR7" },
+    { title: "Frame end-to-end journey", pillar: "automation", outcome: "Documented data flow from ingestion to service delivery", objective: "O1", kr: "KR1" },
+    { title: "Invoice triage rules baseline", pillar: "automation", outcome: "First automated tolerance and exception rules running on pilot accounts", objective: "O1", kr: "KR1" },
     { title: "Connector strategy design", pillar: "platform-scale", outcome: "Retailer + aggregator + Deepki-like model evaluation", objective: "O3", kr: "KR8" },
     { title: "LOA/authorization workflow", pillar: "platform-scale", outcome: "Digital LOA issuance and renewal with audit trail", objective: "O3", kr: "KR7" },
   ],
@@ -121,16 +129,20 @@ export const roadmapBets = {
     { title: "Centralized raw data lake", pillar: "data-foundation", outcome: "Immutable as-received data storage operational", objective: "O3", kr: "KR8" },
     { title: "Contract & portfolio single source of truth", pillar: "data-foundation", outcome: "One authoritative system for contract data", objective: "O3", kr: "KR9" },
     { title: "Tariff/regulatory ingestion model", pillar: "data-foundation", outcome: "Proactive tariff data collection vs reactive", objective: "O2", kr: "KR5" },
+    { title: "No-mutation-at-entry policy", pillar: "data-foundation", outcome: "Raw data preserved; transformations downstream only", objective: "O3", kr: "KR8" },
     { title: "Pseudo-bill MVP (UK or US)", pillar: "automation", outcome: "Generate pseudo-bills at D+1 for pilot market", objective: "O1", kr: "KR3" },
     { title: "Adaptive invoice variance & triage", pillar: "automation", outcome: "Automated anomaly detection and prioritization", objective: "O1", kr: "KR1" },
-    { title: "No-mutation-at-entry policy", pillar: "data-foundation", outcome: "Raw data preserved; transformations downstream only", objective: "O3", kr: "KR8" },
-    { title: "Budget management MVP", pillar: "automation", outcome: "Pilot real-time budget generation and reforecast for initial portfolio", objective: "O2", kr: "KR4" },
+    { title: "Budget management v1 (multi-portfolio)", pillar: "automation", outcome: "Real-time budget and reforecast generalized across portfolios", objective: "O2", kr: "KR4" },
+    { title: "First retailer connectors live", pillar: "platform-scale", outcome: "Automated ingestion from priority UK & US retailers", objective: "O3", kr: "KR8" },
+    { title: "Client mini-portal for enrichment", pillar: "platform-scale", outcome: "Lightweight portal for occupancy/production data capture", objective: "O3", kr: "KR7" },
   ],
   later: [
-    { title: "Expand connectors & retailer integrations", pillar: "platform-scale", outcome: "Automated data collection from major retailers", objective: "O3", kr: "KR7" },
+    { title: "Global identity registry expansion", pillar: "data-foundation", outcome: "Identity coverage extended beyond UK/US to priority EU markets", objective: "O3", kr: "KR7" },
+    { title: "Regulatory content service", pillar: "data-foundation", outcome: "Continuous, machine-readable regulatory updates feeding tariffs and compliance", objective: "O2", kr: "KR5" },
     { title: "Normalize offers (Codex 2.0)", pillar: "automation", outcome: "Automated sourcing workflow from offer ingestion", objective: "O1", kr: "KR2" },
     { title: "Improve forecasting (region → site)", pillar: "automation", outcome: "Site-level dynamic risk insights and forecasts", objective: "O2", kr: "KR6" },
     { title: "Integrate into RA+ modules", pillar: "automation", outcome: "Budget, Forecast, Sourcing powered by unified data", objective: "O2", kr: "KR4" },
+    { title: "Expand connectors & retailer integrations", pillar: "platform-scale", outcome: "Automated data collection from major retailers globally", objective: "O3", kr: "KR7" },
     { title: "Near-real-time load insights", pillar: "platform-scale", outcome: "Enable demand response, efficiency, microgrid optimization", objective: "O1", kr: "KR2" },
     { title: "Third-party consultant platform", pillar: "platform-scale", outcome: "RA+ as SaaS for external consultants", objective: "O3", kr: "KR7" },
   ],
@@ -618,7 +630,7 @@ export const executiveNarrative = {
 
 export const timeline = {
   q1: {
-    title: "Q3: Plan & Foundations",
+    title: "Q4: Plan & Foundations",
     items: [
       "Architecture design",
       "Schema definition",
@@ -629,7 +641,7 @@ export const timeline = {
     ],
   },
   q2: {
-    title: "Q4: MVP Live",
+    title: "Q1 2027: MVP Live",
     items: [
       "Pseudo-bill v1",
       "Adaptive invoice triage",
