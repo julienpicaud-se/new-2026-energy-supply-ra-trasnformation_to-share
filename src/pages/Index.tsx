@@ -49,12 +49,12 @@ const Index = () => {
       <ExistingToolsSection />
       <StrategicPillars />
       <ObjectivesSection />
-      <RoadmapTimeline />
-      <InitiativesDomain />
       <ValueProofSection />
       <ROIChartsSection />
       <StartStopMatrix />
       <AppendixSection />
+      <RoadmapTimeline />
+      <InitiativesDomain />
       <ExecutiveTakeaway />
     </div>
   );
