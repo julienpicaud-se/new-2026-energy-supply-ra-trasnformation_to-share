@@ -16,10 +16,10 @@ const timeframes = [
 ];
 
 const filterOptions = [
-  { key: "all", label: "All Pillars", icon: null },
-  { key: "data-foundation", label: "Data Foundation", icon: Database },
-  { key: "automation", label: "Automation", icon: Zap },
-  { key: "platform-scale", label: "Platform Scale", icon: Network },
+  { key: "all", label: "All Pillars", subTheme: "Whole portfolio", icon: null },
+  { key: "data-foundation", label: "Data Foundation", subTheme: "Unified", icon: Database },
+  { key: "automation", label: "Automation", subTheme: "Proactive", icon: Zap },
+  { key: "platform-scale", label: "Platform Scale", subTheme: "Adaptive", icon: Network },
 ];
 
 export const RoadmapTimeline = () => {
@@ -52,7 +52,7 @@ export const RoadmapTimeline = () => {
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12 px-2">
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-4 sm:mb-6 px-2">
           {filterOptions.map((option) => {
             const Icon = option.icon;
             const isActive = activeFilter === option.key;
@@ -67,11 +67,17 @@ export const RoadmapTimeline = () => {
                 }`}
               >
                 {Icon && <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
-                {option.label}
+                <span>{option.label}</span>
+                <span className={`hidden sm:inline text-[10px] uppercase tracking-wider ${isActive ? "text-primary-foreground/80" : "text-primary/70"}`}>
+                  · {option.subTheme}
+                </span>
               </button>
             );
           })}
         </div>
+        <p className="text-center text-xs text-muted-foreground mb-8 sm:mb-12 px-4">
+          Filter by pillar — each pillar carries a sub-theme: <span className="text-foreground font-medium">Unified</span>, <span className="text-foreground font-medium">Proactive</span>, <span className="text-foreground font-medium">Adaptive</span>.
+        </p>
 
         {/* Timeline - Horizontal scroll on mobile, grid on desktop */}
         <div className="lg:hidden overflow-x-auto -mx-4 px-4 pb-4 scrollbar-hide">
