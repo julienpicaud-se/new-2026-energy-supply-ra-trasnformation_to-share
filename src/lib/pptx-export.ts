@@ -305,25 +305,39 @@ export const exportToPptx = async () => {
   });
   
   const timeframes = ["now", "next", "later"] as const;
-  const timeframeLabels = { now: "Now (Q2–Q3 2026)", next: "Next (Q4 2026 – Q1 2027)", later: "Later (Q2 2027+)" };
-  
+  const timeframeLabels: Record<typeof timeframes[number], { label: string; date: string }> = {
+    now: { label: "Now", date: "Q2–Q3 2026" },
+    next: { label: "Next", date: "Q4 2026 – Q1 2027" },
+    later: { label: "Later", date: "Q2 2027+" },
+  };
+
   timeframes.forEach((tf, colIndex) => {
     const xPos = 0.5 + colIndex * 3.2;
-    slide6.addText(timeframeLabels[tf], {
+    slide6.addText(timeframeLabels[tf].label, {
       x: xPos,
       y: 1,
       w: 3,
       h: 0.4,
-      fontSize: 14,
+      fontSize: 18,
       bold: true,
       color: BRAND_GREEN,
+      charSpacing: 1,
     });
-    
+    slide6.addText(timeframeLabels[tf].date, {
+      x: xPos,
+      y: 1.4,
+      w: 3,
+      h: 0.3,
+      fontSize: 11,
+      color: TEXT_MUTED,
+      charSpacing: 0.5,
+    });
+
     const items = roadmapBets[tf] || [];
     items.slice(0, 4).forEach((item: { title: string }, itemIndex: number) => {
       slide6.addText(`• ${item.title}`, {
         x: xPos,
-        y: 1.5 + itemIndex * 0.8,
+        y: 1.9 + itemIndex * 0.8,
         w: 3,
         h: 0.7,
         fontSize: 10,
