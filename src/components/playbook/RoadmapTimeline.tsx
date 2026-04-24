@@ -10,9 +10,9 @@ const pillarIcons = {
 };
 
 const timeframes = [
-  { key: "now", label: "Now", date: "Q2-Q3 2026", active: true },
-  { key: "next", label: "Next", date: "Q4 2026 - Q1 2027", active: true },
-  { key: "later", label: "Later", date: "2027+", active: false },
+  { key: "now", label: "Now", date: "Q2–Q3 2026", active: true },
+  { key: "next", label: "Next", date: "Q4 2026 – Q1 2027", active: true },
+  { key: "later", label: "Later", date: "Q2 2027+", active: false },
 ];
 
 const filterOptions = [

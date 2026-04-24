@@ -309,7 +309,7 @@ const DomainComparison = () => {
                     <div className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Calendar className="w-3 h-3" />
                       <span>
-                        {horizon === "Now" ? "Q1-Q2 2026" : horizon === "Next" ? "Q3-Q4 2026" : "2027+"}
+                        {horizon === "Now" ? "Q2–Q3 2026" : horizon === "Next" ? "Q4 2026 – Q1 2027" : "Q2 2027+"}
                       </span>
                     </div>
                     <span className="text-xs text-muted-foreground ml-auto">
