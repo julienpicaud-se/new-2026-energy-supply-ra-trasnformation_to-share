@@ -35,13 +35,13 @@ export const ExecutiveTakeaway = () => {
 
           {/* Main Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8 text-foreground">
-            Energy & Sustainability as a{" "}
+            Energy & Supply Transformation as a{" "}
             <span className="text-primary">repeatable source</span> of efficiency, savings, and risk reduction.
           </h2>
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10 sm:mb-12">
-            By unifying the platform, elevating insights into decisions, and embedding AI at the core of execution, the roadmap positions energy & sustainability as a repeatable source of efficiency, savings, and risk reduction, not a compliance obligation. One unified platform. Proactive insights. AI-native by design.
+            By unifying the platform, elevating insights into decisions, and embedding AI at the core of execution, the roadmap positions Energy & Supply Transformation as a repeatable source of efficiency, savings, and risk reduction, not a compliance obligation. One unified platform. Proactive insights. AI-native by design.
           </p>
 
           {/* Back to Top Button */}
