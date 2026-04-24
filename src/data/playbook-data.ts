@@ -5,6 +5,8 @@ export const strategicPillars = [
     id: "data-foundation",
     title: "Data Foundation",
     tagline: "Unified, global energy data platform",
+    subTheme: "Unified",
+    subThemeDescription: "One trusted, governed view of energy data across markets, meters, and contracts.",
     promise: "A central layer that ingests as-received interval, invoice, offer, tariff, contract data and enables automation at scale.",
     description: "Build a unified energy data platform inside RA+: an as-received data lake with provenance, a schema registry, an identity registry that resolves global meter/account/site keys (MPAN first, expanding to EAN/POD, etc.), and APIs that power budgeting, forecasts, sourcing, invoice validation, and risk modules.",
     whatLivesHere: [
@@ -27,6 +29,8 @@ export const strategicPillars = [
     id: "automation",
     title: "Automation",
     tagline: "Do more with less data",
+    subTheme: "Proactive",
+    subThemeDescription: "Compute pseudo-bills, budgets, forecasts, and validations ahead of invoices, not after.",
     promise: "Generate pseudo-bills, budgets, forecasts, and validation results with minimal human intervention using interval + contract + tariff data.",
     description: "Shift from reactive manual processing to proactive automation. If we have interval + contract, we can compute pseudo bills, budgets, forecasts, and validations without waiting for invoices. Clients enrich data where needed (occupancy/production).",
     whatLivesHere: [
@@ -49,6 +53,8 @@ export const strategicPillars = [
     id: "platform-scale",
     title: "Platform Scale",
     tagline: "Beyond Schneider",
+    subTheme: "Adaptive",
+    subThemeDescription: "Absorbs new markets, retailers, and regulations through configuration — not rebuilds.",
     promise: "Once functional, RA+ can become a consultant platform: sell Managed Services capabilities as SaaS to third-party consultants globally.",
     description: "The platform can absorb new regulations, retailers, and market structures through configuration. Our differentiator remains data + risk expertise and a truly global footprint of regulatory content and identity mapping.",
     whatLivesHere: [
