@@ -273,10 +273,10 @@ const DetailedRoadmap = () => {
         { title: "Q1 2027 Details", slide: 7 },
         { title: "Semester Overview", slide: 8 },
         { title: "Board View", slide: 9 },
-        { title: "Q1 Value Drivers", slide: 10 },
-        { title: "Q2 Value Drivers", slide: 11 },
-        { title: "Q3 Value Drivers", slide: 12 },
-        { title: "Q4 Value Drivers", slide: 13 },
+        { title: "Q2 2026 Value Drivers", slide: 10 },
+        { title: "Q3 2026 Value Drivers", slide: 11 },
+        { title: "Q4 2026 Value Drivers", slide: 12 },
+        { title: "Q1 2027 Value Drivers", slide: 13 },
         { title: "Executive Takeaway", slide: 14 },
       ];
 
