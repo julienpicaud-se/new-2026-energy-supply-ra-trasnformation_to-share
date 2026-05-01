@@ -56,13 +56,13 @@ export const strategicPillars = [
     subTheme: "Adaptive",
     subThemeDescription: "Absorbs new markets, retailers, and regulations through configuration — not rebuilds.",
     promise: "Once functional, RA+ can become a consultant platform: sell Managed Services capabilities as SaaS to third-party consultants globally.",
-    description: "The platform can absorb new regulations, retailers, and market structures through configuration. Our differentiator remains data + risk expertise and a truly global footprint of regulatory content and identity mapping.",
+    description: "The platform can absorb new regulations, retailers, and market structures through configuration. Our differentiator remains data + risk expertise and a truly global footprint and identity mapping.",
     whatLivesHere: [
       "Connector ecosystem for retailers and aggregators",
       "LOA / authorization workflow digitization",
       "Client self-serve portal for data enrichment",
       "Third-party consultant SaaS capabilities",
-      "Global regulatory content and identity mapping",
+      "Global footprint and identity mapping",
     ],
     successMetrics: [
       "Number of markets supported",
@@ -614,7 +614,7 @@ export const executiveNarrative = {
     "Cut the budget cycle to <2 weeks for pilot portfolios, with further reduction to <1 week as coverage expands",
     "Improve dispute accuracy, enable earlier detection of anomalies, and unlock near-real-time actions for Efficiency/Microgrid",
   ],
-  strategicUpside: "Once the platform is operating reliably, RA+ powers not only our services but also third-party consultants globally—a step-change in TAM similar to how Octopus commercialized Kraken for utilities. Combined with our experts-plus-software model, integrated offer across utility bill management, procurement, risk, and decarbonization execution, and a truly global footprint of regulatory content and identity mapping, we widen the gap on competitors who lead with consultancy alone or software alone.",
+  strategicUpside: "Once the platform is operating reliably, RA+ powers not only our services but also third-party consultants globally—a step-change in TAM similar to how Octopus commercialized Kraken for utilities. Combined with our experts-plus-software model, integrated offer across utility bill management, procurement, risk, and decarbonization execution, and a truly global footprint and identity mapping, we widen the gap on competitors who lead with consultancy alone or software alone.",
   risks: [
     { risk: "Connector coverage & LOA complexity", mitigation: "Partner where it's faster; digitize LOA issuance/renewals with audit trail; prioritize UK/US + 1–2 EU markets first" },
     { risk: "Identity mapping outside the UK", mitigation: "Build the registry with progressive coverage; select pilots where identifiers are achievable" },
