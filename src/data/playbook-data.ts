@@ -13,7 +13,7 @@ export const strategicPillars = [
       "Centralized raw data lake with immutable storage",
       "Contract & portfolio single source of truth",
       "Identity mappings across markets (meter↔account↔site)",
-      "Tariff/regulatory ingestion model (ACT integration)",
+      "Tariff ingestion model (ACT integration)",
       "Schema registry for data governance",
     ],
     successMetrics: [
@@ -54,9 +54,9 @@ export const strategicPillars = [
     title: "Platform Scale",
     tagline: "Beyond Schneider",
     subTheme: "Adaptive",
-    subThemeDescription: "Absorbs new markets, retailers, and regulations through configuration — not rebuilds.",
+    subThemeDescription: "Absorbs new markets, retailers, and market structures through configuration — not rebuilds.",
     promise: "Once functional, RA+ can become a consultant platform: sell Managed Services capabilities as SaaS to third-party consultants globally.",
-    description: "The platform can absorb new regulations, retailers, and market structures through configuration. Our differentiator remains data + risk expertise and a truly global footprint and identity mapping.",
+    description: "The platform can absorb new markets, retailers, and market structures through configuration. Our differentiator remains data + risk expertise and a truly global footprint and identity mapping.",
     whatLivesHere: [
       "Connector ecosystem for retailers and aggregators",
       "LOA / authorization workflow digitization",
@@ -128,7 +128,7 @@ export const roadmapBets = {
   next: [
     { title: "Centralized raw data lake", pillar: "data-foundation", outcome: "Immutable as-received data storage operational", objective: "O3", kr: "KR8" },
     { title: "Contract & portfolio single source of truth", pillar: "data-foundation", outcome: "One authoritative system for contract data", objective: "O3", kr: "KR9" },
-    { title: "Tariff/regulatory ingestion model", pillar: "data-foundation", outcome: "Proactive tariff data collection vs reactive", objective: "O2", kr: "KR5" },
+    { title: "Tariff ingestion model", pillar: "data-foundation", outcome: "Proactive tariff data collection vs reactive", objective: "O2", kr: "KR5" },
     { title: "No-mutation-at-entry policy", pillar: "data-foundation", outcome: "Raw data preserved; transformations downstream only", objective: "O3", kr: "KR8" },
     { title: "Pseudo-bill MVP (UK or US)", pillar: "automation", outcome: "Generate pseudo-bills at D+1 for pilot market", objective: "O1", kr: "KR3" },
     { title: "Adaptive invoice variance & triage", pillar: "automation", outcome: "Automated anomaly detection and prioritization", objective: "O1", kr: "KR1" },
@@ -138,7 +138,7 @@ export const roadmapBets = {
   ],
   later: [
     { title: "Global identity registry expansion", pillar: "data-foundation", outcome: "Identity coverage extended beyond UK/US to priority EU markets", objective: "O3", kr: "KR7" },
-    { title: "Regulatory content service", pillar: "data-foundation", outcome: "Continuous, machine-readable regulatory updates feeding tariffs and compliance", objective: "O2", kr: "KR5" },
+    { title: "Tariff content service", pillar: "data-foundation", outcome: "Continuous, machine-readable tariff updates feeding budgets and validation", objective: "O2", kr: "KR5" },
     { title: "Normalize offers (Codex 2.0)", pillar: "automation", outcome: "Automated sourcing workflow from offer ingestion", objective: "O1", kr: "KR2" },
     { title: "Improve forecasting (region → site)", pillar: "automation", outcome: "Site-level dynamic risk insights and forecasts", objective: "O2", kr: "KR6" },
     { title: "Integrate into RA+ modules", pillar: "automation", outcome: "Budget, Forecast, Sourcing powered by unified data", objective: "O2", kr: "KR4" },
@@ -168,7 +168,7 @@ export const domainInitiatives = [
       "Portfolio single ownership establishment",
       "Schema registry and data governance",
       "Contract data consolidation",
-      "Regulatory content service with proactive management",
+      "Tariff content service with proactive management",
     ],
   },
   {
@@ -368,7 +368,7 @@ export const appendixPillars = [
       "Centralized raw data lake implementation",
       "Identity registry (MPAN → EAN/POD expansion)",
       "Contract & portfolio consolidation",
-      "Regulatory content service with ACT integration",
+      "Tariff content service with ACT integration",
     ],
     valueProof: [
       "Reduction in manual data collection hours",
@@ -465,7 +465,7 @@ export const roadmapSummary = {
         "Centralized raw data lake",
         "Identity registry expansion",
         "Contract & portfolio consolidation",
-        "Regulatory content service",
+        "Tariff content service",
       ],
       valueProof: [
         "Reduction in manual data collection hours",
@@ -536,7 +536,7 @@ export const keyChallenges = [
     title: "Data Fragmentation",
     issues: [
       "Offers, invoices, and interval data arrive in thousands of formats",
-      "Contract, portfolio, regulatory, and account data scattered across ACT, CBMS, RA Classic, RA+, spreadsheets, retailer sites, and internal teams",
+      "Contract, portfolio, tariff, and account data scattered across ACT, CBMS, RA Classic, RA+, spreadsheets, retailer sites, and internal teams",
       "Data often conflicts or is incomplete",
     ],
   },
@@ -575,8 +575,8 @@ export const dataNeeded = [
   { name: "Contract Data", description: "Terms, rates, and conditions" },
   { name: "Commodity Rates", description: "Current and forward pricing" },
   { name: "Non-Commodity Elements", description: "Network charges, capacity" },
-  { name: "Taxes + Riders", description: "Regulatory charges and levies" },
-  { name: "Tariffs & Regulatory Data", description: "ACT today, future rates" },
+  { name: "Taxes + Riders", description: "Charges and levies" },
+  { name: "Tariffs Data", description: "ACT today, future rates" },
   { name: "Portfolio Data", description: "Sites, meters, accounts mapping" },
   { name: "Forecast Data", description: "Load and price projections" },
 ];
@@ -588,7 +588,7 @@ export const optionalClientContext = [
 
 export const existingTools = [
   { name: "IDM", description: "Scraping-based interval collection", limitation: "Works in UK; fails elsewhere" },
-  { name: "ACT", description: "Tariff & regulatory calculator", limitation: "Manual maintenance" },
+  { name: "ACT", description: "Tariff calculator", limitation: "Manual maintenance" },
   { name: "CBMS", description: "Managed Services operations", limitation: "Fragmented workflows" },
   { name: "RA Classic", description: "Budget calculation (digitized interface)", limitation: "Legacy integration" },
   { name: "IDP / Blair Agent", description: "Invoice capture from PDFs/images", limitation: "Accuracy varies" },
@@ -599,7 +599,7 @@ export const marketConstraints = [
   "Retailers are not obligated to share interval or invoices quickly",
   "Interval data availability varies widely by country",
   "Market identifiers like MPAN (UK) don't exist in many regions",
-  "Tariffs and regulatory data are numerous, volatile, and maintained manually",
+  "Tariff data is numerous, volatile, and maintained manually",
   "LOA / authorization flows must be digitized for global data access",
   "May need to replicate or partner with connector ecosystems like Deepki",
 ];
@@ -645,7 +645,7 @@ export const timeline = {
     items: [
       "Pseudo-bill v1",
       "Adaptive invoice triage",
-      "Regulatory service v1",
+      "Tariff service v1",
       "Client mini-portal",
     ],
   },
@@ -715,7 +715,7 @@ export const competitiveLandscape = {
     {
       name: "NUS Consulting",
       scope: "Global",
-      strength: "90 years of multi-geography energy expertise across 19 offices and complex regulatory environments.",
+      strength: "90 years of multi-geography energy expertise across 19 offices and complex market environments.",
     },
     {
       name: "Trio (Edison Energy)",
@@ -735,7 +735,7 @@ export const competitiveLandscape = {
   ],
   differentiators: [
     "Experts + software + AI working together as collaborative intelligence",
-    "Truly global footprint with regional regulatory depth and local language coverage",
+    "Truly global footprint with regional market depth and local language coverage",
     "Integrated offer across utility bill management, procurement, risk, and decarbonization execution",
     "Industrialized data operations: 20B+ data points per year, 1,500+ unique custom integrations",
     "Largest energy buyer in the world—unmatched supplier intelligence and negotiating leverage",
@@ -805,7 +805,7 @@ export const serviceCatalog = {
       offerings: [
         "Utility bill management & validation",
         "Budgeting, forecasting & accruals",
-        "Tariff & regulatory monitoring",
+        "Tariff monitoring",
         "Portfolio reporting & analytics",
       ],
       icon: "Settings",

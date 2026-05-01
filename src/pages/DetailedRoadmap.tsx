@@ -99,7 +99,7 @@ const semesterRoadmap = {
     outcomes: [
       "Faster, more confident decisions",
       "Measurable savings through energy and supply chain levers",
-      "Reduced audit and regulatory risk",
+      "Reduced audit and compliance risk",
       "Scalable path to full sustainability management",
     ],
   },

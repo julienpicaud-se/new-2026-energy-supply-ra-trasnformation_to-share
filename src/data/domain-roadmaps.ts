@@ -186,8 +186,8 @@ export const domainRoadmaps: DomainRoadmap[] = [
       {
         horizon: "Later",
         pillars: ["Data Foundation"],
-        valueDriver: "Regulatory completeness",
-        initiative: "Regulatory content service with proactive management",
+        valueDriver: "Tariff completeness",
+        initiative: "Tariff content service with proactive management",
         objective: "O2",
         primaryKR: "KR5",
         proofMetric: ">90% tariff coverage for budgeting",
