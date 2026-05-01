@@ -691,7 +691,7 @@ export const marketDynamics = {
     {
       id: "decarbonization",
       title: "Decarbonization Mandates",
-      description: "Carbon commitments, scope 2 and scope 3 obligations, and tax credit opportunities are accelerating demand for execution—not just advisory.",
+      description: "Scope 2 commitments, clean electricity targets, and tax credit opportunities are accelerating demand for execution—matching every kWh to a verified low-carbon source, not just advisory.",
       icon: "Leaf",
     },
     {
