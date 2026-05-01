@@ -21,7 +21,7 @@ const iconMap: Record<string, React.ElementType> = {
   "Commodity Rates": DollarSign,
   "Non-Commodity Elements": Receipt,
   "Taxes + Riders": Percent,
-  "Tariffs & Regulatory Data": BookOpen,
+  "Tariffs Data": BookOpen,
   "Portfolio Data": Building2,
   "Forecast Data": TrendingUp,
   "Occupancy": Users,
