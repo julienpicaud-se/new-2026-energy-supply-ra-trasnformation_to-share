@@ -12,7 +12,7 @@ import { ExistingToolsSection } from "@/components/playbook/ExistingToolsSection
 import { StrategicPillars } from "@/components/playbook/StrategicPillars";
 import { ObjectivesSection } from "@/components/playbook/ObjectivesSection";
 import { ValueProofSection } from "@/components/playbook/ValueProofSection";
-import { ROIChartsSection } from "@/components/playbook/ROIChartsSection";
+
 import { StartStopMatrix } from "@/components/playbook/StartStopMatrix";
 import { ExecutiveNarrativeSection } from "@/components/playbook/ExecutiveNarrativeSection";
 import { AppendixSection } from "@/components/playbook/AppendixSection";
