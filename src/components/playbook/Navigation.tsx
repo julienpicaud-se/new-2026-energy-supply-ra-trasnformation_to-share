@@ -20,18 +20,17 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const navItems = [
+  { id: "executive-narrative", label: "Executive Narrative", shortLabel: "Narrative" },
   { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
+  { id: "market-context", label: "Market Context", shortLabel: "Market" },
+  { id: "key-challenges", label: "Challenges", shortLabel: "Challenges" },
   { id: "energy-supply-transformation", label: "Transformation", shortLabel: "Transform" },
   { id: "energy-supply-jtbd", label: "Jobs to Be Done", shortLabel: "JTBD" },
-  { id: "market-context", label: "Market Context", shortLabel: "Market" },
   { id: "service-catalog", label: "Services", shortLabel: "Services" },
   { id: "operating-model", label: "Operating Model", shortLabel: "Model" },
   { id: "engagement-plays", label: "Client Journey", shortLabel: "Journey" },
-  { id: "key-challenges", label: "Challenges", shortLabel: "Challenges" },
   { id: "strategic-pillars", label: "Strategic Pillars", shortLabel: "Pillars" },
-  { id: "roadmap", label: "Roadmap", shortLabel: "Roadmap" },
-  { id: "initiatives", label: "Initiatives", shortLabel: "Initiatives" },
-  { id: "executive-narrative", label: "Executive Narrative", shortLabel: "Exec" },
+  { id: "value-proof", label: "Success Metrics", shortLabel: "Success" },
   { id: "domains", label: "Domains", shortLabel: "Domains", isDropdown: true },
 ];
 
