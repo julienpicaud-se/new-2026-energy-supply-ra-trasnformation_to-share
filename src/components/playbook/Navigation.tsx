@@ -23,6 +23,7 @@ const navItems = [
   { id: "executive-narrative", label: "Executive Narrative", shortLabel: "Narrative" },
   { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
   { id: "market-context", label: "Market Context", shortLabel: "Market" },
+  { id: "service-catalog", label: "Services", shortLabel: "Services" },
   { id: "key-challenges", label: "Challenges", shortLabel: "Challenges" },
   { id: "energy-supply-transformation", label: "Transformation", shortLabel: "Transform" },
   { id: "energy-supply-personas", label: "Personas", shortLabel: "Personas" },
