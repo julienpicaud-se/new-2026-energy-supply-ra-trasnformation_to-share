@@ -270,7 +270,7 @@ export const AppendixSection = () => {
       categoryColor: "text-primary",
       title: "DRAFT Example of Roadmap Timeline",
       icon: CalendarRange,
-      content: <RoadmapTimeline title="DRAFT Example of Roadmap Timeline" hideHeader />,
+      content: <RoadmapTimeline title="DRAFT Example of Roadmap Timeline" />,
     },
   ];
 
