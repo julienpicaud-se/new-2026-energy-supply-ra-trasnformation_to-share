@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, roadmapSummary } from "@/data/playbook-data";
 import { Layers, LineChart, Sparkles, Target, CheckCircle2, TrendingUp, Calendar, Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -8,6 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { RoadmapTimeline } from "./RoadmapTimeline";
+import { InitiativesDomain } from "./InitiativesDomain";
 
 const pillarIcons: Record<string, React.ElementType> = {
   Unified: Layers,
@@ -281,6 +283,26 @@ export const AppendixSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 my-16">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+          <div className="w-2 h-2 rounded-full bg-primary/50" />
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+
+        {/* DRAFT Example of Roadmap Timeline */}
+        <RoadmapTimeline title="DRAFT Example of Roadmap Timeline" />
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 my-16">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+          <div className="w-2 h-2 rounded-full bg-primary/50" />
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+
+        {/* Initiatives by Domain */}
+        <InitiativesDomain />
       </div>
     </section>
   );

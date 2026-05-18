@@ -22,7 +22,7 @@ const filterOptions = [
   { key: "platform-scale", label: "Platform Scale", subTheme: "Adaptive", icon: Network },
 ];
 
-export const RoadmapTimeline = () => {
+export const RoadmapTimeline = ({ title, subtitle }: { title?: string; subtitle?: string }) => {
   const { ref, isVisible } = useScrollAnimation();
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -41,10 +41,10 @@ export const RoadmapTimeline = () => {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-            Delivery Horizons
+            {subtitle ?? "Delivery Horizons"}
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            Roadmap Timeline
+            {title ?? "Roadmap Timeline"}
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto px-2">
             Our strategic bets organized by delivery horizon. Each initiative is linked to a strategic pillar.
