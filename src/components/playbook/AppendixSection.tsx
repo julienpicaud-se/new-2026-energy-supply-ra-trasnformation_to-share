@@ -283,6 +283,26 @@ export const AppendixSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 my-16">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+          <div className="w-2 h-2 rounded-full bg-primary/50" />
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+
+        {/* DRAFT Example of Roadmap Timeline */}
+        <RoadmapTimeline title="DRAFT Example of Roadmap Timeline" />
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 my-16">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+          <div className="w-2 h-2 rounded-full bg-primary/50" />
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+
+        {/* Initiatives by Domain */}
+        <InitiativesDomain />
       </div>
     </section>
   );
