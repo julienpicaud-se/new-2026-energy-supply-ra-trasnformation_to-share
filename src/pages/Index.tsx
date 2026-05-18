@@ -20,6 +20,7 @@ import { ExecutiveTakeaway } from "@/components/playbook/ExecutiveTakeaway";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { EnergySupplyTransformationSection } from "@/components/playbook/EnergySupplyTransformationSection";
 import { EnergySupplyJTBDSection } from "@/components/playbook/EnergySupplyJTBDSection";
+import { EnergySupplyPhasingSection } from "@/components/playbook/EnergySupplyPhasingSection";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
@@ -42,6 +43,7 @@ const Index = () => {
       <ExecutiveSummary />
       <EnergySupplyTransformationSection />
       <EnergySupplyJTBDSection />
+      <EnergySupplyPhasingSection />
       <MarketContextSection />
       <ServiceCatalogSection />
       <OperatingModelSection />
