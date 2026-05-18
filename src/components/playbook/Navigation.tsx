@@ -22,6 +22,7 @@ import {
 const navItems = [
   { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
   { id: "energy-supply-transformation", label: "Transformation", shortLabel: "Transform" },
+  { id: "energy-supply-jtbd", label: "Jobs to Be Done", shortLabel: "JTBD" },
   { id: "market-context", label: "Market Context", shortLabel: "Market" },
   { id: "service-catalog", label: "Services", shortLabel: "Services" },
   { id: "operating-model", label: "Operating Model", shortLabel: "Model" },
