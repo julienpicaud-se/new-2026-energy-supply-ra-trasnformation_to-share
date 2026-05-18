@@ -54,7 +54,7 @@ const Index = () => {
       <StrategicPillars />
       <ObjectivesSection />
       <ValueProofSection />
-      <ROIChartsSection />
+      
       <StartStopMatrix />
       <AppendixSection />
       <ExecutiveTakeaway />
