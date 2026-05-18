@@ -25,6 +25,7 @@ const navItems = [
   { id: "market-context", label: "Market Context", shortLabel: "Market" },
   { id: "key-challenges", label: "Challenges", shortLabel: "Challenges" },
   { id: "energy-supply-transformation", label: "Transformation", shortLabel: "Transform" },
+  { id: "energy-supply-personas", label: "Personas", shortLabel: "Personas" },
   { id: "energy-supply-jtbd", label: "Jobs to Be Done", shortLabel: "JTBD" },
   { id: "service-catalog", label: "Services", shortLabel: "Services" },
   { id: "operating-model", label: "Operating Model", shortLabel: "Model" },
