@@ -11,8 +11,32 @@ import {
   DollarSign,
   Timer,
   ArrowUpRight,
+  Sparkles,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+const seraSignals = [
+  {
+    title: "Morning briefings consumed",
+    description: "Energy Managers open the daily briefing as part of their routine",
+  },
+  {
+    title: "Anomaly narration accuracy",
+    description: "Sera explanations of anomalies are confirmed as useful by Data Ops",
+  },
+  {
+    title: "Alert top-3 prioritization",
+    description: "Top-3 alerts are acted on, lower-priority noise stays suppressed",
+  },
+  {
+    title: "Target risk prognosis use",
+    description: "Sustainability Leads use forward-looking target risk views in reviews",
+  },
+  {
+    title: "Action plan attainment",
+    description: "Action plans created in Sera reach committed completion rates",
+  },
+];
 
 const leverIcons: Record<string, React.ElementType> = {
   Clock,
@@ -176,6 +200,46 @@ export const ValueProofSection = () => {
             })}
           </div>
         </div>
+
+        {/* Value Pillars tie-in banner */}
+        <Card className="glass-card border-primary/40 glow-border mb-10">
+          <CardContent className="p-6 sm:p-8 text-center">
+            <p className="text-sm sm:text-base text-foreground leading-relaxed">
+              These metrics directly tie to the three value pillars:{" "}
+              <span className="text-primary font-semibold">productivity gains</span>,{" "}
+              <span className="text-primary font-semibold">upsell engine</span>, and{" "}
+              <span className="text-primary font-semibold">recurring RA+ revenue</span>.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Sera Interface Signals */}
+        <div className="mb-20">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary">
+              Sera Interface Signals
+            </h3>
+          </div>
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-3xl">
+            Sera-specific signals confirm that the interface is producing real daily value, not just dashboards.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {seraSignals.map((s) => (
+              <Card
+                key={s.title}
+                className="glass-card border-border/50 hover:border-primary/40 transition-all duration-300"
+              >
+                <CardContent className="p-5">
+                  <h4 className="font-bold text-foreground mb-1.5">{s.title}</h4>
+                  <p className="text-sm text-muted-foreground">{s.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+
 
         {/* ROI Levers */}
         <div className="mb-16">
