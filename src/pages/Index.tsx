@@ -51,8 +51,6 @@ const Index = () => {
       <ROIChartsSection />
       <StartStopMatrix />
       <AppendixSection />
-      <RoadmapTimeline />
-      <InitiativesDomain />
       <ExecutiveTakeaway />
     </div>
   );
