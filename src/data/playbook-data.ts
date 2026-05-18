@@ -1056,17 +1056,16 @@ export const energySupplyJTBD = {
   intro:
     "The jobs clients hire Energy & Supply Managed Services to do. Not features, not deliverables, but outcomes. Operational covers the daily rhythm of validating, sourcing, reporting, and responding. Strategic covers the higher-order work: decarbonization planning, risk management, and portfolio optimization. RA+ and Sera are the primary interface for both.",
   insight:
-    "Cost savings are not a separate job. They are the natural output when jobs 1, 3, and 6 are done well with clean data and agentic execution. Clients do not ask for invoice corrections — they ask Sera to confirm what they owe, flag anomalies, and prove the spend was right.",
+    "Cost savings are not a separate job. They are the natural output when jobs 1, 3, and 5 are done well with clean data and agentic execution. Clients do not ask for invoice corrections — they ask Sera to confirm what they owe, flag anomalies, and prove the spend was right.",
   jobs: [
     { num: 1, type: "Operational", title: "Validate utility spend", description: "When receiving hundreds of utility invoices per month, confirm each charge is accurate and contractually correct, so overpayments are caught and disputes are filed on time." },
     { num: 2, type: "Operational", title: "Reconcile consumption and cost", description: "When closing the books each month, reconcile metered consumption against billed cost across all sites, so finance and operations see one trusted view." },
     { num: 3, type: "Operational", title: "Detect cost and supply anomalies", description: "When monitoring a global portfolio, catch unusual cost spikes, rate changes, or supply disruptions early, so corrective action happens before it compounds." },
     { num: 4, type: "Operational", title: "Manage contracts and renewals", description: "When operating hundreds of supply contracts, track expirations, terms, and obligations, so no contract lapses and renewal leverage is preserved." },
     { num: 5, type: "Operational", title: "Execute sourcing playbooks", description: "When procuring energy across markets, run the right sourcing motion for each site and region, so the best available terms are secured with audit-grade documentation." },
-    { num: 6, type: "Operational", title: "Report on emissions and sustainability", description: "When meeting disclosure obligations and internal targets, produce audit-ready reports on consumption, cost, and emissions, so stakeholders trust the numbers." },
-    { num: 7, type: "Strategic", title: "Plan decarbonization pathways", description: "When committing to Scope 2 targets, model the mix of clean supply, on-site generation, and efficiency needed to hit them, so investment decisions are grounded in evidence." },
-    { num: 8, type: "Strategic", title: "Manage energy risk and resilience", description: "When market volatility or supply risk threatens operations, understand exposure across the portfolio, so hedging and resilience moves are made with confidence." },
-    { num: 9, type: "Strategic", title: "Prioritize across the portfolio", description: "When responsible for many sites and many programs, know where attention, capital, and effort produce the most value, so leadership focus lands where it matters." },
-    { num: 10, type: "Strategic", title: "Package insight into decisions", description: "When an insight is worth acting on, turn it into a clear deliverable for finance, operations, or the board, so action follows analysis without rework." },
+    { num: 6, type: "Strategic", title: "Plan decarbonization pathways", description: "When committing to Scope 2 targets, model the mix of clean supply, on-site generation, and efficiency needed to hit them, so investment decisions are grounded in evidence." },
+    { num: 7, type: "Strategic", title: "Manage energy risk and resilience", description: "When market volatility or supply risk threatens operations, understand exposure across the portfolio, so hedging and resilience moves are made with confidence." },
+    { num: 8, type: "Strategic", title: "Prioritize across the portfolio", description: "When responsible for many sites and many programs, know where attention, capital, and effort produce the most value, so leadership focus lands where it matters." },
+    { num: 9, type: "Strategic", title: "Package insight into decisions", description: "When an insight is worth acting on, turn it into a clear deliverable for finance, operations, or the board, so action follows analysis without rework." },
   ],
 };
