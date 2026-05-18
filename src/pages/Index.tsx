@@ -43,12 +43,12 @@ const Index = () => {
       <ExecutiveNarrativeSection />
       <ExecutiveSummary />
       <MarketContextSection />
+      <ServiceCatalogSection />
       <KeyChallengesSection />
-      <EnergySupplyTransformationSection />
       <EnergySupplyPersonasSection />
       <EnergySupplyJTBDSection />
       <EnergySupplyPhasingSection />
-      <ServiceCatalogSection />
+      <OperatingModelSection />
       <OperatingModelSection />
       <DataRequirementsSection />
       <ExistingToolsSection />
