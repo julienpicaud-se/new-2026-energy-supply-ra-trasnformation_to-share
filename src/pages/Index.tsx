@@ -42,24 +42,23 @@ const Index = () => {
       <HeroSection />
       <ExecutiveNarrativeSection />
       <ExecutiveSummary />
+      <MarketContextSection />
+      <KeyChallengesSection />
       <EnergySupplyTransformationSection />
       <EnergySupplyJTBDSection />
-      <EnergySupplyPhasingSection />
       <EnergySupplyPersonasSection />
-      <MarketContextSection />
+      <EnergySupplyPhasingSection />
       <ServiceCatalogSection />
       <OperatingModelSection />
-      <EngagementPlaysSection />
-      <KeyChallengesSection />
       <DataRequirementsSection />
       <ExistingToolsSection />
+      <EngagementPlaysSection />
       <StrategicPillars />
       <ObjectivesSection />
       <ValueProofSection />
-      
       <StartStopMatrix />
-      <AppendixSection />
       <ExecutiveTakeaway />
+      <AppendixSection />
     </div>
   );
 };
