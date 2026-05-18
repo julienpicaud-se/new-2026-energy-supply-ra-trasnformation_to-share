@@ -49,7 +49,6 @@ const Index = () => {
       <EnergySupplyJTBDSection />
       <EnergySupplyPhasingSection />
       <OperatingModelSection />
-      <OperatingModelSection />
       <DataRequirementsSection />
       <ExistingToolsSection />
       <EngagementPlaysSection />
