@@ -18,6 +18,7 @@ import { ExecutiveNarrativeSection } from "@/components/playbook/ExecutiveNarrat
 import { AppendixSection } from "@/components/playbook/AppendixSection";
 import { ExecutiveTakeaway } from "@/components/playbook/ExecutiveTakeaway";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
+import { EnergySupplyTransformationSection } from "@/components/playbook/EnergySupplyTransformationSection";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
@@ -38,6 +39,7 @@ const Index = () => {
       <HeroSection />
       <ExecutiveNarrativeSection />
       <ExecutiveSummary />
+      <EnergySupplyTransformationSection />
       <MarketContextSection />
       <ServiceCatalogSection />
       <OperatingModelSection />
