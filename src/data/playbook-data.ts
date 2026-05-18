@@ -960,3 +960,93 @@ export const engagementPlays = {
     },
   ],
 };
+
+// Energy & Supply Transformation: Managed Services Classic vs RA+
+export const energySupplyTransformation = {
+  intro:
+    "Today's Managed Services depend on manual workflows, fragmented data sources, and bespoke tooling per client. RA+ collapses those workflows into a single agentic platform where Sera operates the service. This is the shift from people-driven managed services to platform-driven Energy & Supply operations.",
+  classic: {
+    title: "Managed Services Today",
+    tagline: "People-driven, fragmented",
+    points: [
+      "Analysts manually collect, reconcile, and reformat data across hundreds of sources",
+      "Bespoke spreadsheets and tools per client, no shared spine",
+      "Bill validation, sourcing, and sustainability reporting run as separate workstreams",
+      "Insights surface only at monthly or quarterly cadence",
+      "Service quality scales linearly with effort, not with platform leverage",
+    ],
+  },
+  raPlus: {
+    title: "Energy & Supply on RA+",
+    tagline: "Platform-driven, agentic",
+    points: [
+      "One unified data model across bills, meters, contracts, and emissions",
+      "Sera automates ingestion, validation, anomaly detection, and reporting",
+      "Sourcing, sustainability, resilience, and bill management share the same spine",
+      "Near-real-time signals replace monthly reconciliations",
+      "Service capacity scales with the platform, not with effort",
+    ],
+  },
+  thesis:
+    "Every cost pressure in Managed Services stems from manual, fragmented workflows. RA+ replaces those workflows with a shared agentic platform, freeing experts to focus on advisory and outcomes.",
+  bureauAnchor: {
+    title: "What Managed Services Delivers Today",
+    subtitle: "Global Energy & Supply operations across thousands of client sites",
+    lines: [
+      {
+        layer: "Foundation",
+        name: "Data Operations & Bill Management",
+        detail:
+          "Ingestion, validation, and reconciliation across utility bills, meters, and contracts. Highest manual effort, highest automation upside.",
+      },
+      {
+        layer: "Accelerator",
+        name: "Sourcing & Supply Strategy",
+        detail:
+          "Procurement execution, contract management, and market intelligence. RA+ turns playbooks into reusable agentic flows.",
+      },
+      {
+        layer: "Feedback Loop",
+        name: "Sustainability & Performance Reporting",
+        detail:
+          "Audit-grade reporting that closes the loop between sourcing, consumption, and decarbonization outcomes.",
+      },
+    ],
+    soWhat:
+      "RA+ digitizes all three layers. Data Operations becomes a platform capability. Sourcing playbooks become agentic flows. Reporting becomes native to the platform. Managed Services capacity shifts from manual reconciliation to higher-value advisory.",
+  },
+  productScope: {
+    intro:
+      "RA+ organizes Energy & Supply capabilities into two complementary scopes. This playbook covers the Managed Services automation scope. Advisory & strategic engagements remain a distinct discipline that consumes the same platform.",
+    products: [
+      {
+        name: "Managed Services Automation",
+        tag: "This Playbook",
+        summary:
+          "The daily-run service. Bill validation, data operations, sourcing execution, sustainability reporting, and operational anomaly response — all delivered through RA+ and Sera.",
+        capabilities: [
+          "Automated bill ingestion, validation, and dispute workflows",
+          "Unified data quality, gap detection, and audit trails",
+          "Sourcing execution playbooks operated via Sera",
+          "Sustainability and emissions reporting native to RA+",
+          "Anomaly detection across consumption, cost, and contracts",
+          "Self-serve onboarding for new sites and utilities",
+        ],
+      },
+      {
+        name: "Advisory & Strategic Engagements",
+        tag: "Adjacent",
+        summary:
+          "The expert-led scope. Decarbonization strategy, resilience planning, and complex sourcing strategy delivered by COE experts using RA+ as the substrate.",
+        capabilities: [
+          "Decarbonization roadmaps and Scope 2 strategy",
+          "Resilience and risk-management planning",
+          "Complex multi-region sourcing strategy",
+          "Executive advisory and board-level reporting",
+        ],
+      },
+    ],
+    boundary:
+      "These scopes are operationally distinct but technically unified. RA+ ensures advisory experts and managed services teams work from the same data spine, with the same agentic capabilities.",
+  },
+};
