@@ -21,6 +21,7 @@ import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { EnergySupplyTransformationSection } from "@/components/playbook/EnergySupplyTransformationSection";
 import { EnergySupplyJTBDSection } from "@/components/playbook/EnergySupplyJTBDSection";
 import { EnergySupplyPhasingSection } from "@/components/playbook/EnergySupplyPhasingSection";
+import { EnergySupplyPersonasSection } from "@/components/playbook/EnergySupplyPersonasSection";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
@@ -44,6 +45,7 @@ const Index = () => {
       <EnergySupplyTransformationSection />
       <EnergySupplyJTBDSection />
       <EnergySupplyPhasingSection />
+      <EnergySupplyPersonasSection />
       <MarketContextSection />
       <ServiceCatalogSection />
       <OperatingModelSection />
