@@ -11,8 +11,32 @@ import {
   DollarSign,
   Timer,
   ArrowUpRight,
+  Sparkles,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+const seraSignals = [
+  {
+    title: "Morning briefings consumed",
+    description: "Energy Managers open the daily briefing as part of their routine",
+  },
+  {
+    title: "Anomaly narration accuracy",
+    description: "Sera explanations of anomalies are confirmed as useful by Data Ops",
+  },
+  {
+    title: "Alert top-3 prioritization",
+    description: "Top-3 alerts are acted on, lower-priority noise stays suppressed",
+  },
+  {
+    title: "Target risk prognosis use",
+    description: "Sustainability Leads use forward-looking target risk views in reviews",
+  },
+  {
+    title: "Action plan attainment",
+    description: "Action plans created in Sera reach committed completion rates",
+  },
+];
 
 const leverIcons: Record<string, React.ElementType> = {
   Clock,
