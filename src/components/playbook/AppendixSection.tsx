@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, roadmapSummary } from "@/data/playbook-data";
 import { Layers, LineChart, Sparkles, Target, CheckCircle2, TrendingUp, Calendar, Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -8,6 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { RoadmapTimeline } from "./RoadmapTimeline";
+import { InitiativesDomain } from "./InitiativesDomain";
 
 const pillarIcons: Record<string, React.ElementType> = {
   Unified: Layers,
