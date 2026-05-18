@@ -22,7 +22,7 @@ const filterOptions = [
   { key: "platform-scale", label: "Platform Scale", subTheme: "Adaptive", icon: Network },
 ];
 
-export const RoadmapTimeline = () => {
+export const RoadmapTimeline = ({ title, subtitle }: { title?: string; subtitle?: string }) => {
   const { ref, isVisible } = useScrollAnimation();
   const [activeFilter, setActiveFilter] = useState("all");
 
