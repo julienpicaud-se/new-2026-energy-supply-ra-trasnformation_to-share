@@ -183,25 +183,6 @@ export const ExecutiveNarrativeSection = () => {
             </CardContent>
           </Card>
 
-          {/* What We Need Now */}
-          <Card className="border-primary/30 bg-primary/5">
-            <CardContent className="p-6 sm:p-8">
-              <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
-                What We Need Now
-              </h3>
-              <ul className="space-y-3">
-                {executiveNarrative.needsNow.map((need, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-full bg-primary/20 text-primary text-sm font-semibold flex items-center justify-center shrink-0">
-                      {i + 1}
-                    </span>
-                    <span className="text-foreground">{need}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
