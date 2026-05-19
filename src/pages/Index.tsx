@@ -45,6 +45,7 @@ const Index = () => {
       <ExecutiveSummary />
       <MarketContextSection />
       <KeyChallengesSection />
+      <MarketEngagementSection />
       <ServiceCatalogSection />
       <EngagementPlaysSection />
       <EnergySupplyTransformationSection />
