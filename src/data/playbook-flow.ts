@@ -28,6 +28,7 @@ export const playbookFlow: FlowSection[] = [
 
   { id: "existing-tools", label: "Tech Landscape", group: "Delivery" },
   { id: "operating-model", label: "Operating Model", group: "Delivery" },
+  { id: "human-in-the-loop", label: "Human-in-the-Loop", group: "Delivery" },
   { id: "energy-supply-phasing", label: "Phasing", group: "Delivery" },
   { id: "invoice-processing-vision", label: "Invoice Processing 2.0", group: "Delivery" },
   { id: "data-requirements", label: "Data", group: "Delivery" },
