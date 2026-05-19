@@ -59,6 +59,7 @@ const Index = () => {
       <ExistingToolsSection />
       <OperatingModelSection />
       <EnergySupplyPhasingSection />
+      <InvoiceProcessingVisionSection />
       <DataRequirementsSection />
       <ValueProofSection />
       <StartStopMatrix />
