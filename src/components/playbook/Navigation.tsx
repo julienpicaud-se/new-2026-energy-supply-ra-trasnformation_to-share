@@ -21,16 +21,19 @@ import {
 
 const navItems = [
   { id: "executive-narrative", label: "Executive Narrative", shortLabel: "Narrative" },
-  { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
+  { id: "executive-summary", label: "Strategic Context", shortLabel: "Context" },
   { id: "market-context", label: "Market Context", shortLabel: "Market" },
   { id: "key-challenges", label: "Challenges", shortLabel: "Challenges" },
   { id: "service-catalog", label: "Services", shortLabel: "Services" },
+  { id: "engagement-plays", label: "Engagement", shortLabel: "Engagement" },
   { id: "energy-supply-transformation", label: "Transformation", shortLabel: "Transform" },
   { id: "energy-supply-personas", label: "Personas", shortLabel: "Personas" },
   { id: "energy-supply-jtbd", label: "Jobs to Be Done", shortLabel: "JTBD" },
-  { id: "operating-model", label: "Operating Model", shortLabel: "Model" },
-  { id: "engagement-plays", label: "Client Journey", shortLabel: "Journey" },
   { id: "strategic-pillars", label: "Strategic Pillars", shortLabel: "Pillars" },
+  { id: "objectives", label: "Objectives", shortLabel: "Objectives" },
+  { id: "existing-tools", label: "Tech Landscape", shortLabel: "Landscape" },
+  { id: "operating-model", label: "Operating Model", shortLabel: "Model" },
+  { id: "energy-supply-phasing", label: "Phasing", shortLabel: "Phasing" },
   { id: "value-proof", label: "Success Metrics", shortLabel: "Success" },
   { id: "domains", label: "Domains", shortLabel: "Domains", isDropdown: true },
 ];
