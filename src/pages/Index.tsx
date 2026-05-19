@@ -25,6 +25,7 @@ import { EnergySupplyJTBDSection } from "@/components/playbook/EnergySupplyJTBDS
 import { EnergySupplyPhasingSection } from "@/components/playbook/EnergySupplyPhasingSection";
 import { InvoiceProcessingVisionSection } from "@/components/playbook/InvoiceProcessingVisionSection";
 import { EnergySupplyPersonasSection } from "@/components/playbook/EnergySupplyPersonasSection";
+import { HumanInTheLoopSection } from "@/components/playbook/HumanInTheLoopSection";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
@@ -58,6 +59,7 @@ const Index = () => {
       <ObjectivesSection />
       <ExistingToolsSection />
       <OperatingModelSection />
+      <HumanInTheLoopSection />
       <EnergySupplyPhasingSection />
       <InvoiceProcessingVisionSection />
       <DataRequirementsSection />
