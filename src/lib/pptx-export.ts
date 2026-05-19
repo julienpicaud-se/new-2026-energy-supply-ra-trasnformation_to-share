@@ -377,6 +377,16 @@ function renderSectionSlide(pptx: PptxGenJS, group: string, id: string, label: s
       ], { fontSize: 14 });
       break;
 
+    case "invoice-processing-vision":
+      addBullets(slide, [
+        "North Star: every utility bill becomes an enriched, agent-ready context object in RA+",
+        "Core use cases: validation & anomaly detection, pseudo-bills & backlog recovery, cross-functional data reuse",
+        "Engagement profiles: Give Me (self-serve), Help Me (hybrid), Do It For Me (managed)",
+        "Moat: tariff, contract, meter, and site context that pure software players cannot reach",
+        "Principles: agent-native, embedded in the energy workflow, differentiated, anchored on real users",
+      ], { fontSize: 13 });
+      break;
+
     case "data-requirements":
       addBullets(slide, dataNeeded.map((d: any) => `${d.name || d.title || d}${d.description ? " — " + d.description : ""}`).slice(0, 8), { fontSize: 12 });
       break;
