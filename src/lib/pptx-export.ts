@@ -387,6 +387,17 @@ function renderSectionSlide(pptx: PptxGenJS, group: string, id: string, label: s
       ], { fontSize: 13 });
       break;
 
+    case "human-in-the-loop":
+      addBullets(slide, [
+        "AI executes; humans apply judgement — RA+ pairs agent-native execution with expert services",
+        "Two client profiles: 'Give Me the AI' (self-serve) and 'Walk With Me' (expert-guided)",
+        "Four judgement roles: Validation, Interpretation, Risk Translation, Executive Communication",
+        "Shift: RA+ agents handle gather & analysis; experts spend 80%+ on judgement and client dialogue",
+        "Moat: we sell outcomes, not tools — judgement is the visible, billable layer",
+      ], { fontSize: 13 });
+      break;
+
+
     case "data-requirements":
       addBullets(slide, dataNeeded.map((d: any) => `${d.name || d.title || d}${d.description ? " — " + d.description : ""}`).slice(0, 8), { fontSize: 12 });
       break;
