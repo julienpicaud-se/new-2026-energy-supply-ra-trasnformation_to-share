@@ -1,20 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Minimize2, ChevronLeft, ChevronRight, Grid3X3, X } from "lucide-react";
+import { playbookFlow } from "@/data/playbook-flow";
 
-const sections = [
-  { id: "hero", title: "Overview" },
-  { id: "executive-summary", title: "Executive Summary" },
-  { id: "scope-expansion", title: "Scope Expansion" },
-  { id: "strategic-pillars", title: "Strategic Pillars" },
-  { id: "objectives", title: "Objectives" },
-  { id: "roadmap", title: "Roadmap" },
-  { id: "initiatives", title: "Initiatives" },
-  { id: "value-proof", title: "Value Proof" },
-  { id: "start-stop", title: "Start/Stop Matrix" },
-  { id: "appendix", title: "Appendix" },
-  { id: "takeaway", title: "Takeaway" },
-];
+const sections = playbookFlow.map((s) => ({ id: s.id, title: s.label }));
 
 interface PresentationModeProps {
   isActive: boolean;
