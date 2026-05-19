@@ -45,15 +45,16 @@ const Index = () => {
       <MarketContextSection />
       <KeyChallengesSection />
       <ServiceCatalogSection />
+      <EngagementPlaysSection />
+      <EnergySupplyTransformationSection />
       <EnergySupplyPersonasSection />
       <EnergySupplyJTBDSection />
-      <EnergySupplyPhasingSection />
-      <OperatingModelSection />
-      <DataRequirementsSection />
-      <ExistingToolsSection />
-      <EngagementPlaysSection />
       <StrategicPillars />
       <ObjectivesSection />
+      <ExistingToolsSection />
+      <OperatingModelSection />
+      <EnergySupplyPhasingSection />
+      <DataRequirementsSection />
       <ValueProofSection />
       <StartStopMatrix />
       <ExecutiveTakeaway />
