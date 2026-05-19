@@ -276,31 +276,36 @@ function renderSectionSlide(pptx: PptxGenJS, group: string, id: string, label: s
     }
 
     case "engagement-plays": {
-      const plays = (engagementPlays.plays || []).slice(0, 4);
+      const plays = (engagementPlays.stages || []).slice(0, 4);
       plays.forEach((p: any, i: number) => {
         const col = i % 2, row = Math.floor(i / 2);
         const x = 0.5 + col * 6.3, y = 1.7 + row * 2.8;
         slide.addShape("rect" as PptxGenJS.ShapeType, {
           x, y, w: 6, h: 2.6, fill: { color: PANEL_BG }, line: { color: ACCENT_DIM, width: 1 },
         });
-        slide.addText(p.title || p.name || "", { x: x + 0.2, y: y + 0.2, w: 5.6, h: 0.5, fontSize: 14, bold: true, color: BRAND_GREEN });
-        slide.addText(p.description || p.summary || "", { x: x + 0.2, y: y + 0.75, w: 5.6, h: 1.75, fontSize: 11, color: TEXT_WHITE, valign: "top" });
+        slide.addText(`${p.stage} — ${p.title}`, { x: x + 0.2, y: y + 0.2, w: 5.6, h: 0.5, fontSize: 13, bold: true, color: BRAND_GREEN });
+        const ex = (p.examples || []).slice(0, 3).map((t: string) => ({ text: t, options: { bullet: { code: "25CF" }, color: TEXT_WHITE, paraSpaceAfter: 4 } }));
+        slide.addText(ex, { x: x + 0.2, y: y + 0.75, w: 5.6, h: 1.75, fontSize: 10, valign: "top" });
       });
       break;
     }
 
     case "energy-supply-transformation": {
       slide.addText(energySupplyTransformation.intro || "", {
-        x: 0.5, y: 1.7, w: 12.3, h: 0.8, fontSize: 13, color: TEXT_MUTED, italic: true,
+        x: 0.5, y: 1.7, w: 12.3, h: 1.1, fontSize: 12, color: TEXT_MUTED, italic: true,
       });
-      const phases = (energySupplyTransformation.phases || []).slice(0, 3);
-      phases.forEach((p: any, i: number) => {
-        const x = 0.5 + i * 4.25, y = 2.7;
+      const cols = [energySupplyTransformation.classic, energySupplyTransformation.raPlus];
+      cols.forEach((c: any, i: number) => {
+        const x = 0.5 + i * 6.3, y = 3.0;
         slide.addShape("rect" as PptxGenJS.ShapeType, {
-          x, y, w: 4, h: 4.0, fill: { color: PANEL_BG }, line: { color: ACCENT_DIM, width: 1 },
+          x, y, w: 6, h: 3.8,
+          fill: { color: PANEL_BG },
+          line: { color: i === 0 ? ACCENT_DIM : BRAND_GREEN, width: 1 },
         });
-        slide.addText(p.title || `Phase ${i + 1}`, { x: x + 0.2, y: y + 0.2, w: 3.6, h: 0.5, fontSize: 13, bold: true, color: BRAND_GREEN });
-        slide.addText(p.description || "", { x: x + 0.2, y: y + 0.75, w: 3.6, h: 3.0, fontSize: 10, color: TEXT_WHITE, valign: "top" });
+        slide.addText(c.title, { x: x + 0.2, y: y + 0.2, w: 5.6, h: 0.4, fontSize: 14, bold: true, color: i === 0 ? TEXT_MUTED : BRAND_GREEN });
+        slide.addText(c.tagline, { x: x + 0.2, y: y + 0.6, w: 5.6, h: 0.3, fontSize: 10, italic: true, color: TEXT_MUTED });
+        const pts = (c.points || []).slice(0, 5).map((t: string) => ({ text: t, options: { bullet: { code: "25CF" }, color: TEXT_WHITE, paraSpaceAfter: 4 } }));
+        slide.addText(pts, { x: x + 0.2, y: y + 1.05, w: 5.6, h: 2.6, fontSize: 10, valign: "top" });
       });
       break;
     }
