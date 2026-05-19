@@ -94,7 +94,7 @@ export function InvoiceProcessingVisionSection() {
   return (
     <section id="invoice-processing-vision" className="py-24 px-6">
       <div
-        ref={ref}
+        ref={ref as React.RefObject<HTMLDivElement>}
         className={`max-w-7xl mx-auto transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
