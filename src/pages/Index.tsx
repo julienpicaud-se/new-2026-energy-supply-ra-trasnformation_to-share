@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/playbook/HeroSection";
 import { ExecutiveSummary } from "@/components/playbook/ExecutiveSummary";
 import { KeyChallengesSection } from "@/components/playbook/KeyChallengesSection";
 import { MarketContextSection } from "@/components/playbook/MarketContextSection";
+import { MarketEngagementSection } from "@/components/playbook/MarketEngagementSection";
 import { ServiceCatalogSection } from "@/components/playbook/ServiceCatalogSection";
 import { OperatingModelSection } from "@/components/playbook/OperatingModelSection";
 import { EngagementPlaysSection } from "@/components/playbook/EngagementPlaysSection";
