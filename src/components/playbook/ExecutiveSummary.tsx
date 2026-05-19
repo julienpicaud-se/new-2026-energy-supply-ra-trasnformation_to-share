@@ -26,7 +26,7 @@ export const ExecutiveSummary = () => {
               Strategic Context
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-              Energy & Supply value is bottlenecked by knowledge and data, not opportunity
+              Energy & Supply value is unlocked through connected knowledge and data
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
               {strategicContext.summary}
