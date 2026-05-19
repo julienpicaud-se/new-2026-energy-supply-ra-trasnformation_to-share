@@ -23,6 +23,7 @@ import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { EnergySupplyTransformationSection } from "@/components/playbook/EnergySupplyTransformationSection";
 import { EnergySupplyJTBDSection } from "@/components/playbook/EnergySupplyJTBDSection";
 import { EnergySupplyPhasingSection } from "@/components/playbook/EnergySupplyPhasingSection";
+import { InvoiceProcessingVisionSection } from "@/components/playbook/InvoiceProcessingVisionSection";
 import { EnergySupplyPersonasSection } from "@/components/playbook/EnergySupplyPersonasSection";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
