@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { marketDynamics, competitiveLandscape, clientTriggers } from "@/data/playbook-data";
+import { marketDynamics } from "@/data/playbook-data";
 import {
   Zap,
   TrendingUp,
@@ -8,9 +8,6 @@ import {
   Leaf,
   Shield,
   TrendingDown,
-  Building2,
-  Check,
-  ArrowRight,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
