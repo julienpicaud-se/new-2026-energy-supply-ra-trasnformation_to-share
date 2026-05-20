@@ -90,8 +90,8 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
             </div>
           </div>
 
-          {/* Desktop Navigation - Grouped Dropdowns */}
-          <div className="hidden lg:flex items-center gap-1 bg-muted/50 rounded-full p-1 border border-border/30">
+          {/* Desktop Navigation - Simple grouped pills */}
+          <div className="hidden lg:flex items-center gap-1">
             {playbookGroups.map((group) => {
               const isActive = activeGroup === group.name;
               return (
@@ -101,7 +101,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1 ${
                         isActive
                           ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
+                          : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
                       {group.name}
