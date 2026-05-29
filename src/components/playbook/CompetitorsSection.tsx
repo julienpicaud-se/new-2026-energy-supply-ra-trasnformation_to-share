@@ -139,7 +139,10 @@ const competitors: Competitor[] = [
     delivery: "Pure SaaS, full operating system for utilities, AI-enabled operations",
     capabilities:
       "Utility-facing operating system (billing, CIS, CRM, meter data, AI comms, flexibility, field ops). Adjacent to RA+: aimed at utilities, not corporate energy buyers.",
-    scale: "$500M contracted ARR · $8.65B valuation · 70M+ utility accounts · 27 countries",
+    scale: "$500M+ contracted ARR · $8.65B valuation · 70M+ utility accounts · 27 countries",
+    sources: "Confirmed directly from Kraken's Global Press Archive.",
+    verification:
+      "Financial performance and capital figures sourced directly from the official demerger announcement (Octopus Energy Group to spin out Kraken at valuation of $8.65bn). Confirms the $1 Billion standalone investment round led by D1 Capital Partners, Fidelity International, and Ontario Teachers' Pension Plan, plus contracted revenue exceeding $500 Million ARR managing 70+ million accounts worldwide.",
   },
 ];
 
