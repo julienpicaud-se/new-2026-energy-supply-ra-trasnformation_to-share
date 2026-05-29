@@ -14,6 +14,7 @@ export const playbookFlow: FlowSection[] = [
   { id: "market-context", label: "Market Forces", group: "Problem" },
   { id: "key-challenges", label: "Challenges", group: "Problem" },
   { id: "market-engagement", label: "Engagement", group: "Problem" },
+  { id: "competitors", label: "Competitors", group: "Problem" },
 
   { id: "what-if-you-could", label: "What If You Could", group: "Vision" },
   { id: "strategic-pillars", label: "Pillars", group: "Vision" },
