@@ -359,6 +359,83 @@ export const CompetitorsSection = () => {
             })}
           </div>
         </div>
+
+        {/* Strategic Displacement Matrix */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 mb-3">
+              <Swords className="w-5 h-5 text-primary" />
+              <span className="text-primary text-xs font-semibold uppercase tracking-wider">
+                Strategic Displacement Matrix
+              </span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+              How RA+ outmaneuvers adjacent incumbents
+            </h3>
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+              EnergyCAP, IBM Envizi and Spacewell own large enterprise budgets, but none of them execute on
+              the wholesale market. Each row is the counter-pitch when RA+ meets them in a deal.
+            </p>
+          </div>
+
+          <div className="grid gap-4">
+            {[
+              {
+                type: "Pure Utility Accounting (EnergyCAP)",
+                hook: "Financial-grade auditing and seamless ERP general ledger pipelines.",
+                blindspot:
+                  "Total lack of wholesale market sourcing, supplier bidding networks or hedging. Tracks the financial bleeding, cannot stop it.",
+                pitch:
+                  "We don't just audit historical billing mistakes. We use live load data to structure future supplier contracts that lower your baseline rate.",
+              },
+              {
+                type: "Enterprise ESG Suites (IBM Envizi)",
+                hook: "Deep executive IT relationships and standardised Scope 1/2/3 carbon reporting bundled with IBM.",
+                blindspot:
+                  "Zero native commodity procurement desks or deregulated market expertise. Reports emissions, cannot price or contract the energy that creates them.",
+                pitch:
+                  "Keep IBM for static compliance reporting to the board. Use RA+ to run the live bidding marketplace that actually drives down your energy contract spend.",
+              },
+              {
+                type: "Real-Time Operational AI (Spacewell / Enersee)",
+                hook: "Instant 15-minute interval data and automated sub-meter anomaly alarms across building portfolios.",
+                blindspot:
+                  "Excellent at local facility waste, completely disconnected from wholesale grid trading and contract structuring.",
+                pitch:
+                  "Alarms only tell you that you're wasting power. RA+ pairs consumption shifts with market price curves to execute optimal spot-market purchases and hedges.",
+              },
+            ].map((row) => (
+              <Card key={row.type} className="bg-card border-border/50">
+                <CardContent className="p-6 grid md:grid-cols-4 gap-4">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
+                      Competitor type
+                    </p>
+                    <p className="text-sm font-semibold text-foreground leading-snug">{row.type}</p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                      Their strongest hook
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug">{row.hook}</p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-amber-400 font-semibold mb-1">
+                      Critical blindspot
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug">{row.blindspot}</p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
+                      RA+ counter-pitch
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug italic">"{row.pitch}"</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
