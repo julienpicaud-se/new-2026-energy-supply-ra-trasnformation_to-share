@@ -258,11 +258,25 @@ export const CompetitorsSection = () => {
                     </div>
                   </div>
 
-                  <div className="mt-auto pt-3 border-t border-border/40">
-                    <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
-                      Scale signals
-                    </p>
-                    <p className="text-xs text-muted-foreground leading-snug">{c.scale}</p>
+                  <div className="mt-auto pt-3 border-t border-border/40 space-y-3">
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
+                        Scale signals
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-snug">{c.scale}</p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                        Sources
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-snug">{c.sources}</p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                        Verification
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-snug">{c.verification}</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
