@@ -10,6 +10,8 @@ import {
   Layers,
   Building2,
   Sparkles,
+  Network,
+  Lock,
 } from "lucide-react";
 
 type MarketLayer = {
@@ -18,7 +20,6 @@ type MarketLayer = {
   value: string;
   scope: string;
   description: string;
-  sources: string;
   icon: React.ElementType;
   accent: string;
 };
@@ -27,33 +28,30 @@ const marketLayers: MarketLayer[] = [
   {
     id: "tam",
     label: "TAM",
-    value: "$22B+",
-    scope: "Global Energy Managed Services",
+    value: "~$15.5B",
+    scope: "Global Energy Management & Procurement Software",
     description:
-      "Total addressable spend on outsourced energy procurement, supply management, invoice validation, and trading advisory across large commercial, industrial, and multi-site enterprises.",
-    sources: "Guidehouse Insights, IDC Energy Insights, Wood Mackenzie (2024 to 2025)",
+      "Total global software spend on energy monitoring, utility bill management, carbon compliance indexing, and B2B energy procurement platforms. Excludes building automation hardware, smart thermostats, and physical grid components.",
     icon: Globe2,
     accent: "from-primary/20 to-transparent",
   },
   {
     id: "sam",
     label: "SAM",
-    value: "$5.2B",
-    scope: "AI-augmented Energy Managed Services for C&I portfolios",
+    value: "~$3.8B",
+    scope: "B2B Enterprise Bill Audit & Sourcing Software",
     description:
-      "Segment where RA+ competes today: tech-enabled energy procurement, supply optimization, invoice and tariff validation, and risk management for mid-market to large enterprise clients in North America and Europe.",
-    sources: "Guidehouse, internal triangulation",
+      "Mid-market to large industrial, manufacturing, corporate, and public sector organizations in deregulated US and Western European markets that use software to ingest bills, run tenders, and execute energy supply contracts.",
     icon: Target,
     accent: "from-primary/30 to-transparent",
   },
   {
     id: "som",
-    label: "SOM (5 yr)",
-    value: "$240M to $360M",
-    scope: "Realistic capture for RA+ as the judgement layer in energy",
+    label: "SOM (3 to 5 yr)",
+    value: "$150M to $250M ARR",
+    scope: "Target actionable market share",
     description:
-      "Revenue we can credibly capture by 2030 by combining recurring Energy Managed Services, RA+ platform subscriptions, and expert-in-the-loop premium tiers across existing geographies and named accounts.",
-    sources: "Bottom-up: installed base x ARPA uplift + new logo plan",
+      "Near-term capture available to a modern SaaS or tech-enabled vendor achieving 4 to 6 percent penetration across the key deregulated corridors in North America and Western Europe.",
     icon: Crosshair,
     accent: "from-primary/40 to-transparent",
   },
@@ -61,63 +59,52 @@ const marketLayers: MarketLayer[] = [
 
 const revenueStreams = [
   {
-    title: "Recurring Energy Managed Services",
-    pill: "Core",
-    mix: "55 to 60% of mix",
+    title: "SaaS Core License",
+    pill: "Recurring",
+    mix: "Per-meter / per-account / month",
+    yield: "$25 to $150 per utility connection point per month",
     description:
-      "Multi-year contracts for energy procurement, supply management, and invoice processing, repriced upward as automation absorbs scope.",
+      "Highly predictable software access fees. A client with 500 active facility meters generates $150K to $900K ARR in pure license revenue.",
     icon: Building2,
   },
   {
-    title: "RA+ Platform Subscription",
-    pill: "Software",
-    mix: "20 to 25% of mix",
+    title: "Transactional Brokerage Fees",
+    pill: "Volume",
+    mix: "Take-rate on energy transacted",
+    yield: "$0.0005 to $0.0025 per kWh or therm",
     description:
-      "Per-site or per-meter SaaS fee for self-serve clients who want the full AI surface, Sera briefings, and analytics without heavy advisory.",
+      "Linear scaling with client energy consumption. High-volume industrial usage drives immediate cash generation upon contract execution.",
     icon: Layers,
   },
   {
-    title: "Expert-in-the-Loop Premium",
-    pill: "Judgement layer",
-    mix: "15 to 20% of mix",
+    title: "Value-Share Hedges",
+    pill: "Performance",
+    mix: "Margin on verified savings",
+    yield: "10 to 20% of savings vs wholesale market averages",
     description:
-      "Retainer or outcome-based fee for human validation, risk translation, and executive communication on top of the platform, for clients who need a trusted advisor on complex calls.",
+      "High-margin upside captured during periods of pricing volatility and seasonal grid stress, aligning incentives with client outcomes.",
     icon: Sparkles,
-  },
-  {
-    title: "Outcome and Performance Fees",
-    pill: "Upside",
-    mix: "5 to 10% of mix",
-    description:
-      "Success fees tied to validated energy savings, dispute recoveries, and hedging performance milestones, captured through the same data fabric that powers the platform.",
-    icon: TrendingUp,
   },
 ];
 
-const businessImpact = [
+const valueDrivers = [
   {
-    metric: "ARPA uplift",
-    value: "1.6x to 2.2x",
+    title: "Data Network Effects",
     description:
-      "Per-account revenue expands as platform and expert tiers attach to existing Managed Services contracts.",
+      "Every utility invoice ingested and every supplier bid received enriches the platform. Over time the system predicts pricing spikes and offers anonymous peer benchmarks, lifting retention.",
+    icon: Network,
   },
   {
-    metric: "Gross margin trajectory",
-    value: "+8 to +12 pts",
+    title: "Low-Churn Infrastructure",
     description:
-      "Automation lifts blended gross margin from services-only baseline toward a hybrid SaaS plus services profile.",
+      "Switching invoice and procurement systems requires tedious manual data migration and renegotiated supplier integrations. Net revenue retention in this vertical typically runs 110 to 120%.",
+    icon: Lock,
   },
   {
-    metric: "Net revenue retention",
-    value: "115 to 125%",
+    title: "Operating Leverage",
     description:
-      "Recurring base compounds via platform attach, premium tiers, and outcome fees on the installed portfolio.",
-  },
-  {
-    metric: "New logo velocity",
-    value: "2x within 24 months",
-    description:
-      "Self-serve entry point shortens sales cycles for mid-market accounts that previously did not fit a full managed engagement.",
+      "Transactional and accounting workflows scale on a predictable, repeatable cost base, compounding margin as portfolio and meter count expand.",
+    icon: TrendingUp,
   },
 ];
 
@@ -136,11 +123,11 @@ export const MarketOpportunitySection = () => {
             Market Opportunity
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            Sizing the Prize for RA+
+            Pure-Play Energy Procurement & Invoice Management Software
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            A multi-billion-dollar energy managed services market is shifting toward AI-augmented
-            delivery. RA+ is positioned to capture the segment where automation meets expert judgement.
+            2026 projections for the software layer where RA+ competes: bill ingestion, tendering,
+            and supply execution across deregulated US and Western European markets.
           </p>
         </div>
 
@@ -164,28 +151,25 @@ export const MarketOpportunitySection = () => {
                   </div>
                   <div className="text-3xl sm:text-4xl font-bold text-foreground mb-1">{layer.value}</div>
                   <div className="text-sm font-semibold text-primary mb-3">{layer.scope}</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{layer.description}</p>
-                  <p className="text-[11px] text-muted-foreground/70 mt-auto pt-3 border-t border-border/40">
-                    Sources: {layer.sources}
-                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{layer.description}</p>
                 </CardContent>
               </Card>
             );
           })}
         </div>
 
-        {/* Revenue Streams */}
+        {/* Revenue Potential */}
         <div className="mb-20">
           <div className="text-center mb-10">
             <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
-              What It Means for Revenue
+              Revenue Potential & Business Model
             </h3>
             <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-              Four revenue streams compose the RA+ business model, blending recurring services,
-              software, and premium human judgement.
+              A focused transactional and accounting model unlocks predictable, repeatable revenue
+              with high operating leverage.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {revenueStreams.map((stream) => {
               const Icon = stream.icon;
               return (
@@ -201,7 +185,8 @@ export const MarketOpportunitySection = () => {
                       {stream.pill}
                     </Badge>
                     <h4 className="text-base font-bold text-foreground mb-1">{stream.title}</h4>
-                    <div className="text-xs font-semibold text-muted-foreground mb-3">{stream.mix}</div>
+                    <div className="text-xs font-semibold text-muted-foreground mb-2">{stream.mix}</div>
+                    <div className="text-sm font-semibold text-primary mb-3">{stream.yield}</div>
                     <p className="text-sm text-muted-foreground leading-relaxed">{stream.description}</p>
                   </CardContent>
                 </Card>
@@ -210,29 +195,35 @@ export const MarketOpportunitySection = () => {
           </div>
         </div>
 
-        {/* Business impact */}
+        {/* Operational value drivers */}
         <div>
           <div className="text-center mb-10">
             <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
-              Business Impact
+              Operational Value Drivers
             </h3>
             <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-              Targets that translate the market opportunity into a stronger P&L profile.
+              Structural advantages that compound retention, margin, and pricing power over time.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {businessImpact.map((item) => (
-              <Card key={item.metric} className="glass-card border-border/50 text-center">
-                <CardContent className="p-6">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center mx-auto mb-4">
-                    <DollarSign className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold text-primary mb-2">{item.value}</div>
-                  <h4 className="font-semibold text-foreground mb-1">{item.metric}</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid sm:grid-cols-3 gap-4">
+            {valueDrivers.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Card key={item.title} className="glass-card border-border/50">
+                  <CardContent className="p-6">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+          <div className="mt-6 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+            <DollarSign className="w-3.5 h-3.5 text-primary" />
+            <span>Net revenue retention benchmark: 110 to 120% in pure-play energy software.</span>
           </div>
         </div>
       </div>
