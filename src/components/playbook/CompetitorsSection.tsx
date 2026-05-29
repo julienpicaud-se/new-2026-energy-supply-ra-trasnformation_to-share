@@ -152,6 +152,48 @@ const competitors: Competitor[] = [
     verification:
       "Financial performance and capital figures sourced directly from the official demerger announcement (Octopus Energy Group to spin out Kraken at valuation of $8.65bn). Confirms the $1 Billion standalone investment round led by D1 Capital Partners, Fidelity International, and Ontario Teachers' Pension Plan, plus contracted revenue exceeding $500 Million ARR managing 70+ million accounts worldwide.",
   },
+  {
+    name: "EnergyCAP",
+    region: "US / Global",
+    icon: FileSpreadsheet,
+    category: "Accounting & ESG incumbents",
+    segment: "Finance and facilities teams needing utility bill accounting (corporate, public sector, higher-ed)",
+    delivery: "SaaS utility bill management with deep ERP integrations (SAP, Oracle, Workday)",
+    capabilities:
+      "Financial-grade utility bill auditing, AP automation, GL coding, chargebacks, ENERGY STAR and basic sustainability reporting. Backward-looking ledger of what was spent and consumed.",
+    scale: "10,000+ organisations · millions of bills processed annually · category leader in utility bill management",
+    sources: "EnergyCAP corporate marketing, investor briefings and customer reference programs.",
+    verification:
+      "Industry-wide 'confidence gap' research published by EnergyCAP confirms executives feel aligned on energy targets while facilities and finance teams remain overwhelmed by surging utility rates and billing complexity. Operates as a financial ledger of energy spend, not a market-execution layer.",
+  },
+  {
+    name: "IBM Envizi",
+    region: "Global",
+    icon: Leaf,
+    category: "Accounting & ESG incumbents",
+    segment: "CSO / CIO / CFO at large enterprises with mandatory ESG disclosure exposure",
+    delivery: "Enterprise SaaS bundled into IBM Sustainability and Supply Chain Intelligence suites",
+    capabilities:
+      "Scope 1/2/3 carbon accounting, ESG disclosure aligned to GHG Protocol, CDP, TCFD and CSRD, supply-chain emissions, energy and water consumption tracking. Compliance dashboard, not a procurement engine.",
+    scale: "Embedded across IBM's global enterprise base · acquired by IBM in 2022 · standardised on major carbon frameworks",
+    sources: "IBM Envizi product documentation, IBM Sustainability Software portfolio briefings, public ESG disclosure framework alignments.",
+    verification:
+      "Confirmed integration into IBM Supply Chain Intelligence Suite and alignment with leading global carbon frameworks, positioning Envizi as the mandatory compliance tool for CSO and CIO stakeholders. No native commodity desk, supplier auction or contract execution layer.",
+  },
+  {
+    name: "Spacewell Energy (Enersee / Dexma)",
+    region: "EU / Global",
+    icon: Activity,
+    category: "Hybrid tech-enabled",
+    segment: "Multi-site real-estate, retail and industrial portfolios focused on building-level efficiency",
+    delivery: "SaaS energy monitoring with ML-driven anomaly detection, part of Nemetschek's Spacewell suite",
+    capabilities:
+      "15-minute interval smart meter analytics, automated building audits, anomaly detection on HVAC and sub-meters, M&V workflows, energy efficiency benchmarking. Strong on operational waste, no native commodity sourcing.",
+    scale: "Tens of thousands of monitored buildings globally · audit-time reduction claims up to ~95% · backed by Nemetschek Group",
+    sources: "Spacewell / Dexma / Enersee product documentation, Nemetschek Group investor updates, case studies on building audit automation.",
+    verification:
+      "Public case studies confirm 15-minute interval smart meter ingestion and ML anomaly detection cutting manual building auditing time by up to ~95%. No native wholesale sourcing, supplier bidding or algorithmic hedging capability.",
+  },
 ];
 
 const categoryStyle: Record<Competitor["category"], string> = {
