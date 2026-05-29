@@ -235,6 +235,16 @@ function renderSectionSlide(pptx: PptxGenJS, group: string, id: string, label: s
       break;
     }
 
+    case "competitors":
+      addBullets(slide, [
+        "Pure SaaS / AI-first: Zentility (US, JenZen AI), onu.energy (DE, RL autopilot, €200M+ spend), EnergyMarketPrice (CH, Prophet™ forecasting, 250+ clients), Seelo / Eleneo (FR, PPA & decarbonisation)",
+        "Hybrid tech-enabled: Transparent Energy (US, live reverse auctions, $5.3B transacted), Conservice Optimyze (US, one-click buying validated by CEPs), ZTP / Kiveev (UK, flexible contract risk tools)",
+        "Adjacent (excluded): Kraken.tech (UK, $500M ARR, 70M utility accounts) sells to utilities, not corporate buyers",
+        "Most directly comparable to RA+: onu.energy, Seelo, EnergyMarketPrice, ZTP / Kiveev",
+        "RA+ moat: connected tariff, contract, meter and site context plus an expert judgement layer pure software players cannot reach",
+      ], { fontSize: 11 });
+      break;
+
     case "what-if-you-could": {
       slide.addText("The Vision · Powered by IDM 2.0", {
         x: 0.5, y: 1.55, w: 12.3, h: 0.4, fontSize: 13, italic: true, color: BRAND_GREEN,
