@@ -13,13 +13,21 @@ import {
   Sparkles,
   Trophy,
   AlertTriangle,
+  FileSpreadsheet,
+  Leaf,
+  Activity,
+  Swords,
 } from "lucide-react";
 
 type Competitor = {
   name: string;
   region: string;
   icon: React.ElementType;
-  category: "Pure SaaS / AI-first" | "Hybrid tech-enabled" | "Adjacent infrastructure";
+  category:
+    | "Pure SaaS / AI-first"
+    | "Hybrid tech-enabled"
+    | "Adjacent infrastructure"
+    | "Accounting & ESG incumbents";
   segment: string;
   delivery: string;
   capabilities: string;
