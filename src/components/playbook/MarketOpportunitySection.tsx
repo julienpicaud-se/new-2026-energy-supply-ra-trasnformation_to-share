@@ -27,32 +27,32 @@ const marketLayers: MarketLayer[] = [
   {
     id: "tam",
     label: "TAM",
-    value: "$28B+",
-    scope: "Global Energy & Sustainability Managed Services",
+    value: "$22B+",
+    scope: "Global Energy Managed Services",
     description:
-      "Total addressable spend on outsourced energy procurement, sustainability reporting, invoice management, and decarbonization advisory across large enterprises and multi-site portfolios.",
-    sources: "Verdantix, Guidehouse Insights, IDC Energy Insights (2024 to 2025)",
+      "Total addressable spend on outsourced energy procurement, supply management, invoice validation, and trading advisory across large commercial, industrial, and multi-site enterprises.",
+    sources: "Guidehouse Insights, IDC Energy Insights, Wood Mackenzie (2024 to 2025)",
     icon: Globe2,
     accent: "from-primary/20 to-transparent",
   },
   {
     id: "sam",
     label: "SAM",
-    value: "$6.5B",
-    scope: "AI-augmented Managed Services for commercial and industrial portfolios",
+    value: "$5.2B",
+    scope: "AI-augmented Energy Managed Services for C&I portfolios",
     description:
-      "Segment where RA+ competes today: tech-enabled energy procurement, invoice validation, ESG data assurance, and net-zero planning for mid-market to large enterprise clients in North America and Europe.",
-    sources: "Verdantix ESG & Sustainability, internal triangulation",
+      "Segment where RA+ competes today: tech-enabled energy procurement, supply optimization, invoice and tariff validation, and risk management for mid-market to large enterprise clients in North America and Europe.",
+    sources: "Guidehouse, internal triangulation",
     icon: Target,
     accent: "from-primary/30 to-transparent",
   },
   {
     id: "som",
     label: "SOM (5 yr)",
-    value: "$280M to $420M",
-    scope: "Realistic capture for RA+ as the judgement layer",
+    value: "$240M to $360M",
+    scope: "Realistic capture for RA+ as the judgement layer in energy",
     description:
-      "Revenue we can credibly capture by 2030 by combining recurring Managed Services, RA+ platform subscriptions, and expert-in-the-loop premium tiers across existing geographies and named accounts.",
+      "Revenue we can credibly capture by 2030 by combining recurring Energy Managed Services, RA+ platform subscriptions, and expert-in-the-loop premium tiers across existing geographies and named accounts.",
     sources: "Bottom-up: installed base x ARPA uplift + new logo plan",
     icon: Crosshair,
     accent: "from-primary/40 to-transparent",
@@ -61,11 +61,11 @@ const marketLayers: MarketLayer[] = [
 
 const revenueStreams = [
   {
-    title: "Recurring Managed Services",
+    title: "Recurring Energy Managed Services",
     pill: "Core",
     mix: "55 to 60% of mix",
     description:
-      "Multi-year contracts for procurement, invoice processing, and sustainability reporting, repriced upward as automation absorbs scope.",
+      "Multi-year contracts for energy procurement, supply management, and invoice processing, repriced upward as automation absorbs scope.",
     icon: Building2,
   },
   {
@@ -89,7 +89,7 @@ const revenueStreams = [
     pill: "Upside",
     mix: "5 to 10% of mix",
     description:
-      "Success fees tied to validated savings, dispute recoveries, and Scope 2 reduction milestones, captured through the same data fabric that powers the platform.",
+      "Success fees tied to validated energy savings, dispute recoveries, and hedging performance milestones, captured through the same data fabric that powers the platform.",
     icon: TrendingUp,
   },
 ];
@@ -139,8 +139,8 @@ export const MarketOpportunitySection = () => {
             Sizing the Prize for RA+
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            A multi-billion-dollar managed services market is shifting toward AI-augmented delivery.
-            RA+ is positioned to capture the segment where automation meets expert judgement.
+            A multi-billion-dollar energy managed services market is shifting toward AI-augmented
+            delivery. RA+ is positioned to capture the segment where automation meets expert judgement.
           </p>
         </div>
 
