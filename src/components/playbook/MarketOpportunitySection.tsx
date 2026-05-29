@@ -12,6 +12,11 @@ import {
   Sparkles,
   Network,
   Lock,
+  FileSpreadsheet,
+  Leaf,
+  Activity,
+  Calculator,
+  BookOpen,
 } from "lucide-react";
 
 type MarketLayer = {
