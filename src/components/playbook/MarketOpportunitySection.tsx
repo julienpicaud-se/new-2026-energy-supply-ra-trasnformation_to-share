@@ -28,10 +28,10 @@ const marketLayers: MarketLayer[] = [
   {
     id: "tam",
     label: "TAM",
-    value: "~$15.5B",
-    scope: "Global Energy Management & Procurement Software",
+    value: "~$6.3B",
+    scope: "Enterprise Energy Procurement & Utility Bill Management Software",
     description:
-      "Total global software spend on energy monitoring, utility bill management, carbon compliance indexing, and B2B energy procurement platforms. Excludes building automation hardware, smart thermostats, and physical grid components.",
+      "Synthesized software-only market model isolating utility invoice data ingestion, financial bill auditing, and operational energy analytics. Excludes building automation hardware, smart thermostats, and physical grid components.",
     icon: Globe2,
     accent: "from-primary/20 to-transparent",
   },
