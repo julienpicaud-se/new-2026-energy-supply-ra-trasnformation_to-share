@@ -13,13 +13,21 @@ import {
   Sparkles,
   Trophy,
   AlertTriangle,
+  FileSpreadsheet,
+  Leaf,
+  Activity,
+  Swords,
 } from "lucide-react";
 
 type Competitor = {
   name: string;
   region: string;
   icon: React.ElementType;
-  category: "Pure SaaS / AI-first" | "Hybrid tech-enabled" | "Adjacent infrastructure";
+  category:
+    | "Pure SaaS / AI-first"
+    | "Hybrid tech-enabled"
+    | "Adjacent infrastructure"
+    | "Accounting & ESG incumbents";
   segment: string;
   delivery: string;
   capabilities: string;
@@ -144,12 +152,55 @@ const competitors: Competitor[] = [
     verification:
       "Financial performance and capital figures sourced directly from the official demerger announcement (Octopus Energy Group to spin out Kraken at valuation of $8.65bn). Confirms the $1 Billion standalone investment round led by D1 Capital Partners, Fidelity International, and Ontario Teachers' Pension Plan, plus contracted revenue exceeding $500 Million ARR managing 70+ million accounts worldwide.",
   },
+  {
+    name: "EnergyCAP",
+    region: "US / Global",
+    icon: FileSpreadsheet,
+    category: "Accounting & ESG incumbents",
+    segment: "Finance and facilities teams needing utility bill accounting (corporate, public sector, higher-ed)",
+    delivery: "SaaS utility bill management with deep ERP integrations (SAP, Oracle, Workday)",
+    capabilities:
+      "Financial-grade utility bill auditing, AP automation, GL coding, chargebacks, ENERGY STAR and basic sustainability reporting. Backward-looking ledger of what was spent and consumed.",
+    scale: "10,000+ organisations · millions of bills processed annually · category leader in utility bill management",
+    sources: "EnergyCAP corporate marketing, investor briefings and customer reference programs.",
+    verification:
+      "Industry-wide 'confidence gap' research published by EnergyCAP confirms executives feel aligned on energy targets while facilities and finance teams remain overwhelmed by surging utility rates and billing complexity. Operates as a financial ledger of energy spend, not a market-execution layer.",
+  },
+  {
+    name: "IBM Envizi",
+    region: "Global",
+    icon: Leaf,
+    category: "Accounting & ESG incumbents",
+    segment: "CSO / CIO / CFO at large enterprises with mandatory ESG disclosure exposure",
+    delivery: "Enterprise SaaS bundled into IBM Sustainability and Supply Chain Intelligence suites",
+    capabilities:
+      "Scope 1/2/3 carbon accounting, ESG disclosure aligned to GHG Protocol, CDP, TCFD and CSRD, supply-chain emissions, energy and water consumption tracking. Compliance dashboard, not a procurement engine.",
+    scale: "Embedded across IBM's global enterprise base · acquired by IBM in 2022 · standardised on major carbon frameworks",
+    sources: "IBM Envizi product documentation, IBM Sustainability Software portfolio briefings, public ESG disclosure framework alignments.",
+    verification:
+      "Confirmed integration into IBM Supply Chain Intelligence Suite and alignment with leading global carbon frameworks, positioning Envizi as the mandatory compliance tool for CSO and CIO stakeholders. No native commodity desk, supplier auction or contract execution layer.",
+  },
+  {
+    name: "Spacewell Energy (Enersee / Dexma)",
+    region: "EU / Global",
+    icon: Activity,
+    category: "Hybrid tech-enabled",
+    segment: "Multi-site real-estate, retail and industrial portfolios focused on building-level efficiency",
+    delivery: "SaaS energy monitoring with ML-driven anomaly detection, part of Nemetschek's Spacewell suite",
+    capabilities:
+      "15-minute interval smart meter analytics, automated building audits, anomaly detection on HVAC and sub-meters, M&V workflows, energy efficiency benchmarking. Strong on operational waste, no native commodity sourcing.",
+    scale: "Tens of thousands of monitored buildings globally · audit-time reduction claims up to ~95% · backed by Nemetschek Group",
+    sources: "Spacewell / Dexma / Enersee product documentation, Nemetschek Group investor updates, case studies on building audit automation.",
+    verification:
+      "Public case studies confirm 15-minute interval smart meter ingestion and ML anomaly detection cutting manual building auditing time by up to ~95%. No native wholesale sourcing, supplier bidding or algorithmic hedging capability.",
+  },
 ];
 
 const categoryStyle: Record<Competitor["category"], string> = {
   "Pure SaaS / AI-first": "border-primary/40 bg-primary/5 text-primary",
   "Hybrid tech-enabled": "border-amber-500/40 bg-amber-500/5 text-amber-400",
   "Adjacent infrastructure": "border-muted-foreground/30 bg-muted/30 text-muted-foreground",
+  "Accounting & ESG incumbents": "border-emerald-500/40 bg-emerald-500/5 text-emerald-400",
 };
 
 const takeaways = [
@@ -306,6 +357,83 @@ export const CompetitorsSection = () => {
                 </Card>
               );
             })}
+          </div>
+        </div>
+
+        {/* Strategic Displacement Matrix */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 mb-3">
+              <Swords className="w-5 h-5 text-primary" />
+              <span className="text-primary text-xs font-semibold uppercase tracking-wider">
+                Strategic Displacement Matrix
+              </span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+              How RA+ outmaneuvers adjacent incumbents
+            </h3>
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+              EnergyCAP, IBM Envizi and Spacewell own large enterprise budgets, but none of them execute on
+              the wholesale market. Each row is the counter-pitch when RA+ meets them in a deal.
+            </p>
+          </div>
+
+          <div className="grid gap-4">
+            {[
+              {
+                type: "Pure Utility Accounting (EnergyCAP)",
+                hook: "Financial-grade auditing and seamless ERP general ledger pipelines.",
+                blindspot:
+                  "Total lack of wholesale market sourcing, supplier bidding networks or hedging. Tracks the financial bleeding, cannot stop it.",
+                pitch:
+                  "We don't just audit historical billing mistakes. We use live load data to structure future supplier contracts that lower your baseline rate.",
+              },
+              {
+                type: "Enterprise ESG Suites (IBM Envizi)",
+                hook: "Deep executive IT relationships and standardised Scope 1/2/3 carbon reporting bundled with IBM.",
+                blindspot:
+                  "Zero native commodity procurement desks or deregulated market expertise. Reports emissions, cannot price or contract the energy that creates them.",
+                pitch:
+                  "Keep IBM for static compliance reporting to the board. Use RA+ to run the live bidding marketplace that actually drives down your energy contract spend.",
+              },
+              {
+                type: "Real-Time Operational AI (Spacewell / Enersee)",
+                hook: "Instant 15-minute interval data and automated sub-meter anomaly alarms across building portfolios.",
+                blindspot:
+                  "Excellent at local facility waste, completely disconnected from wholesale grid trading and contract structuring.",
+                pitch:
+                  "Alarms only tell you that you're wasting power. RA+ pairs consumption shifts with market price curves to execute optimal spot-market purchases and hedges.",
+              },
+            ].map((row) => (
+              <Card key={row.type} className="bg-card border-border/50">
+                <CardContent className="p-6 grid md:grid-cols-4 gap-4">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
+                      Competitor type
+                    </p>
+                    <p className="text-sm font-semibold text-foreground leading-snug">{row.type}</p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                      Their strongest hook
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug">{row.hook}</p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-amber-400 font-semibold mb-1">
+                      Critical blindspot
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug">{row.blindspot}</p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
+                      RA+ counter-pitch
+                    </p>
+                    <p className="text-sm text-foreground/90 leading-snug italic">"{row.pitch}"</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
