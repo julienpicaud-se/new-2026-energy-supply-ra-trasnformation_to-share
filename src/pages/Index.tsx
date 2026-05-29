@@ -27,6 +27,7 @@ import { InvoiceProcessingVisionSection } from "@/components/playbook/InvoicePro
 import { EnergySupplyPersonasSection } from "@/components/playbook/EnergySupplyPersonasSection";
 import { HumanInTheLoopSection } from "@/components/playbook/HumanInTheLoopSection";
 import { CompetitorsSection } from "@/components/playbook/CompetitorsSection";
+import { MarketOpportunitySection } from "@/components/playbook/MarketOpportunitySection";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
@@ -51,6 +52,7 @@ const Index = () => {
       <KeyChallengesSection />
       <MarketEngagementSection />
       <CompetitorsSection />
+      <MarketOpportunitySection />
       <WhatIfYouCouldSection />
       <ServiceCatalogSection />
       <EngagementPlaysSection />
