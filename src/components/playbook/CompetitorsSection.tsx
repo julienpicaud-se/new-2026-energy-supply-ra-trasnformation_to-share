@@ -158,6 +158,7 @@ const categoryStyle: Record<Competitor["category"], string> = {
   "Pure SaaS / AI-first": "border-primary/40 bg-primary/5 text-primary",
   "Hybrid tech-enabled": "border-amber-500/40 bg-amber-500/5 text-amber-400",
   "Adjacent infrastructure": "border-muted-foreground/30 bg-muted/30 text-muted-foreground",
+  "Accounting & ESG incumbents": "border-emerald-500/40 bg-emerald-500/5 text-emerald-400",
 };
 
 const takeaways = [
