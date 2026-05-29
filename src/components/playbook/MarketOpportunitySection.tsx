@@ -62,6 +62,52 @@ const marketLayers: MarketLayer[] = [
   },
 ];
 
+type SubSegment = {
+  id: string;
+  label: string;
+  value: string;
+  description: string;
+  sources: string;
+  triangulation: string;
+  icon: React.ElementType;
+};
+
+const subSegments: SubSegment[] = [
+  {
+    id: "bill-audit",
+    label: "Financial-Grade Bill Auditing & Accounting",
+    value: "~$2.8B",
+    description:
+      "Pure utility invoice software engines that ingest bills, run AP automation, GL coding, chargebacks, and tenant recharging. Maps to platforms like EnergyCAP.",
+    sources: "Grand View Research: BEMS Software Market; Verdantix Real Estate & Built Environment Management Software Index.",
+    triangulation:
+      "Verdantix values the global built-environment software market at $8.2B. Utility Data Capture, Invoice Processing, and Tenant Utility Billing Recharging comprise roughly 34% of total software spend: 34% of $8.2B ≈ $2.78B.",
+    icon: FileSpreadsheet,
+  },
+  {
+    id: "esg-carbon",
+    label: "ESG & Carbon-Integrated Data Suites",
+    value: "~$1.5B",
+    description:
+      "Scope 2 emissions data streams, utility carbon logging, and environmental invoice indexing. The exact domain targeted by IBM Envizi and mandatory disclosure frameworks like CSRD.",
+    sources: "Verdantix: Market Size and Forecast: ESG Reporting Software.",
+    triangulation:
+      "Verdantix values the global ESG reporting software market at $1.3B baseline, tracking at 26% CAGR. After filtering out pure social sustainability, health and safety, and corporate governance, the energy-specific carbon expenditure sits at ~$1.5B.",
+    icon: Leaf,
+  },
+  {
+    id: "interval-analytics",
+    label: "Real-Time Interval Data Analytics",
+    value: "~$2.0B",
+    description:
+      "Continuous 15-minute smart meter interval monitoring, automated anomaly detection, and virtual asset load tracking. The domain of AI-native platforms like Spacewell Energy and Enersee.",
+    sources: "Precedence Research: Global EMS Software Segment Split; Verdantix: Industrial Data Management Software Intelligence.",
+    triangulation:
+      "Precedence Research isolates the software-only component of industrial and commercial energy management. Verdantix confirms rapid adoption of AI-driven real-time analytics for wholesale grid volatility. The strict software slice for interval monitoring and anomaly detection accounts for ~$2.0B globally.",
+    icon: Activity,
+  },
+];
+
 const revenueStreams = [
   {
     title: "SaaS Core License",
