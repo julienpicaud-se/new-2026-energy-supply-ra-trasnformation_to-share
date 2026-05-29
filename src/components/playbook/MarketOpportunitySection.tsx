@@ -373,6 +373,72 @@ export const MarketOpportunitySection = () => {
             <span>Net revenue retention benchmark: 110 to 120% in pure-play energy software.</span>
           </div>
         </div>
+
+        {/* Sources & Methodology */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <Card className="glass-card border-border/50">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-foreground">Sources & Methodology</h4>
+                  <p className="text-xs text-muted-foreground">
+                    Primary research firms used to triangulate the 2026 software-only TAM model.
+                  </p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  {
+                    title: "Verdantix",
+                    refs: "Real Estate & Built Environment Management Software Index; Market Size and Forecast: ESG Reporting Software; Industrial Data Management Software Intelligence.",
+                    note: "Anchors built-environment software ($8.2B) and ESG reporting software ($1.3B baseline, 26% CAGR).",
+                  },
+                  {
+                    title: "Grand View Research",
+                    refs: "Building Energy Management Systems (BEMS) Software Market Report.",
+                    note: "Validates the utility data capture, invoice processing, and tenant recharging share of built-environment software spend.",
+                  },
+                  {
+                    title: "Precedence Research",
+                    refs: "Global Energy Management Systems Software — Segment Split (Industrial & Commercial).",
+                    note: "Isolates the software-only component of interval data analytics and anomaly detection (~$2.0B).",
+                  },
+                  {
+                    title: "IEA & Eurostat",
+                    refs: "World Energy Outlook 2025; EU electricity & gas retail price datasets.",
+                    note: "Cross-checks deregulated US and Western European market sizing and tariff volatility assumptions.",
+                  },
+                  {
+                    title: "BloombergNEF",
+                    refs: "Corporate Energy Procurement & PPA Market Outlook.",
+                    note: "Reference for B2B sourcing volumes, take-rates, and value-share hedge benchmarks.",
+                  },
+                  {
+                    title: "Gartner & IDC",
+                    refs: "Market Guides for Energy & Sustainability Management Software; SaaS retention benchmarks.",
+                    note: "Supports the 110 to 120% net revenue retention benchmark and per-meter SaaS pricing ranges.",
+                  },
+                ].map((s) => (
+                  <div key={s.title} className="bg-card/60 rounded-lg p-4 border border-border/40">
+                    <p className="text-sm font-bold text-foreground mb-1">{s.title}</p>
+                    <p className="text-[11px] text-primary leading-snug mb-2">{s.refs}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{s.note}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-[11px] text-muted-foreground mt-5 leading-relaxed">
+                Methodology: figures reflect a synthesized software-only model. Hardware (smart meters,
+                BMS controllers, sub-metering devices) and physical grid infrastructure are excluded.
+                Sub-segment values are derived by filtering each research firm's broader umbrella down
+                to the line items mapping directly to bill ingestion, financial auditing, ESG/carbon
+                data, and interval analytics.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );
