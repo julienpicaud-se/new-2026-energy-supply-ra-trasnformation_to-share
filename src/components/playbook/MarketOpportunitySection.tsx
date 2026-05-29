@@ -209,6 +209,102 @@ export const MarketOpportunitySection = () => {
           })}
         </div>
 
+        {/* TAM Breakdown */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="text-center mb-10">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+              TAM Breakdown: How the ~$6.3B Is Synthesized
+            </h3>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
+              Extracted and consolidated from Verdantix, Grand View Research, and Precedence Research.
+              Large research firms often look at broader umbrellas; this model isolates the exact software
+              budgets spent on utility invoice ingestion, financial auditing, and operational analytics.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5 mb-10">
+            {subSegments.map((seg) => {
+              const Icon = seg.icon;
+              return (
+                <Card
+                  key={seg.id}
+                  className="glass-card border-border/50 hover:border-primary/40 transition-all duration-300"
+                >
+                  <CardContent className="p-5 flex flex-col h-full">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+                        <Icon className="w-4 h-4 text-primary" />
+                      </div>
+                      <Badge variant="outline" className="border-primary/30 text-primary text-[10px] uppercase tracking-wider">
+                        {seg.value}
+                      </Badge>
+                    </div>
+                    <h4 className="text-sm font-bold text-foreground mb-2">{seg.label}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">{seg.description}</p>
+                    <div className="mt-auto space-y-2">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-0.5">
+                          Core Sources
+                        </p>
+                        <p className="text-[11px] text-muted-foreground leading-snug">{seg.sources}</p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider text-primary font-semibold mb-0.5">
+                          Triangulation
+                        </p>
+                        <p className="text-[11px] text-muted-foreground leading-snug">{seg.triangulation}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+
+          <Card className="glass-card border-primary/30 bg-primary/5">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center">
+                  <Calculator className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-foreground">Core Data Integrity Summary</h4>
+                  <p className="text-xs text-muted-foreground">Stacking the three distinct software budget profiles</p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-4 mb-4">
+                <div className="bg-card/60 rounded-lg p-4 border border-border/40">
+                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Sub-Segment 1</p>
+                  <p className="text-sm font-semibold text-foreground mb-1">Utility Bill Auditing & Invoicing Software</p>
+                  <p className="text-lg font-bold text-primary">$2.8 Billion</p>
+                </div>
+                <div className="bg-card/60 rounded-lg p-4 border border-border/40">
+                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Sub-Segment 2</p>
+                  <p className="text-sm font-semibold text-foreground mb-1">Utility Carbon & ESG Data Platforms</p>
+                  <p className="text-lg font-bold text-primary">$1.5 Billion</p>
+                </div>
+                <div className="bg-card/60 rounded-lg p-4 border border-border/40">
+                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Sub-Segment 3</p>
+                  <p className="text-sm font-semibold text-foreground mb-1">Real-Time Meter Interval Analytics</p>
+                  <p className="text-lg font-bold text-primary">$2.0 Billion</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between pt-3 border-t border-border/40">
+                <p className="text-sm font-bold text-foreground">Total Functional TAM for Segment A</p>
+                <p className="text-2xl font-bold text-primary">~$6.3 Billion</p>
+              </div>
+              <p className="text-xs text-muted-foreground mt-3 leading-relaxed flex items-start gap-2">
+                <BookOpen className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                <span>
+                  This framework confirms that direct SaaS competitors are competing over a $6.3B corporate
+                  software pot focused heavily on capturing data, but lacking the transactional commodity
+                  execution power of an integrated procurement platform.
+                </span>
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Revenue Potential */}
         <div className="mb-20">
           <div className="text-center mb-10">
