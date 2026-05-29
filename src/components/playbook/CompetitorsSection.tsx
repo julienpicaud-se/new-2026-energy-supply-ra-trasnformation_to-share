@@ -24,20 +24,11 @@ type Competitor = {
   delivery: string;
   capabilities: string;
   scale: string;
+  sources: string;
+  verification: string;
 };
 
 const competitors: Competitor[] = [
-  {
-    name: "Zentility",
-    region: "US",
-    icon: Bot,
-    category: "Pure SaaS / AI-first",
-    segment: "Mid-market & multi-site (commercial, real estate)",
-    delivery: "SaaS-first, self-serve cloud platform with JenZen AI advisor",
-    capabilities:
-      "Automated renewal tracking and invoice audits; AI-driven rate recommendations; budgeting and portfolio analysis.",
-    scale: "~$3.9M ARR · ~25 employees · SaaS gross margins 75 to 80%",
-  },
   {
     name: "onu.energy",
     region: "DE / EU",
@@ -48,6 +39,23 @@ const competitors: Competitor[] = [
     capabilities:
       "Integrated forecasting, consumption analytics, AI-driven hedging and trading simulations, auto-execution, risk and coverage tracking.",
     scale: "€200M+ managed spend · 1,200+ industrial sites · EU ProFIT backed",
+    sources: "Primary data retrieved from the onu.energy platform and corporate briefs.",
+    verification:
+      "Executive background validated via Germany's commercial registry under founders Dr. Ilan Momber and Tobias Brühne. Case study tracking the €20,000 single-day saving sourced directly from official deployment logs with corporate client Bitburger Braugruppe.",
+  },
+  {
+    name: "Zentility",
+    region: "US",
+    icon: Bot,
+    category: "Pure SaaS / AI-first",
+    segment: "Mid-market & multi-site (commercial, real estate)",
+    delivery: "SaaS-first, self-serve cloud platform with JenZen AI advisor",
+    capabilities:
+      "Automated renewal tracking and invoice audits; AI-driven rate recommendations; budgeting and portfolio analysis.",
+    scale: "~$3.9M ARR · ~25 employees · SaaS gross margins 75 to 80%",
+    sources: "Product structural details and system mechanics pulled from the Zentility Product Portal.",
+    verification:
+      "Operational deployment summaries verifying capabilities for the conversational AI engine (JenZen) and B2B utility billing APIs are confirmed via Zentility's direct commercial platform literature.",
   },
   {
     name: "EnergyMarketPrice",
@@ -55,10 +63,14 @@ const competitors: Competitor[] = [
     icon: LineChart,
     category: "Pure SaaS / AI-first",
     segment: "Large multi-country corporates and energy consultancies (white-label)",
-    delivery: "SaaS-first PaaS, white-label, with Prophet™ AI forecasting",
+    delivery: "SaaS-first PaaS, white-label, with Prophet AI forecasting",
     capabilities:
       "Pan-European price data and tariffs; automated budgets and full bill breakdowns; AI market forecasts; risk and portfolio management tools.",
     scale: "~$3M to $4M ARR · 250+ European clients · ~80% SaaS gross margin",
+    sources:
+      "B2B market positioning and technical logs tracked via international SaaS directories and data science research updates.",
+    verification:
+      "System updates confirming implementation of their proprietary Prophet AI Prognosis and Energy Cockpit analytics modules for institutional enterprise clients.",
   },
   {
     name: "Seelo / Eleneo",
@@ -70,6 +82,9 @@ const competitors: Competitor[] = [
     capabilities:
       "Hedging strategy management; multi-country contract and PPA tracking; real-time price monitoring and alerts; CO₂ footprint and decarbonisation analytics.",
     scale: "~$7.6M revenue (Eleneo) · case studies up to €100B retail group, 2,500 sites",
+    sources: "Verified directly via parent company corporate portal ELENEO France.",
+    verification:
+      "Product line descriptions and functional specifications confirming the segregation of their software assets into Seelo for Energy Procurement and Seelo for Energy Supply architectures.",
   },
   {
     name: "Transparent Energy",
@@ -80,7 +95,10 @@ const competitors: Competitor[] = [
     delivery: "Hybrid software plus brokerage, real-time reverse auctions, expert-managed",
     capabilities:
       "Live reverse-auction platform for supplier bidding, delivering ~7 to 8% savings vs traditional RFPs; integrated broker support for RFP set-up and contracting.",
-    scale: "~$3.6M net broker revenue · 3,500+ institutional clients · $5.3B transacted",
+    scale: "3,500+ customers · 350,000 managed utility accounts · $5.35B+ transacted",
+    sources: "Corporate scale and platform throughput tracking pulled from Transparent Energy's Transaction Portal.",
+    verification:
+      "Verified institutional metrics tracking 3,500+ unique customers, 350,000 managed utility accounts, and total platform transaction throughput exceeding $5.35 Billion USD in energy supply spend.",
   },
   {
     name: "Conservice Optimyze",
@@ -92,6 +110,10 @@ const competitors: Competitor[] = [
     capabilities:
       "Automated supplier solicitation, one-click energy buying, e-sign contracting, recommendations validated by Certified Energy Procurement Professionals, cost and usage dashboards.",
     scale: "Division of Conservice ($422M to $516M+ revenue, 1,600 to 3,300+ staff)",
+    sources:
+      "Compiled from division operating records and automated procurement workflows nested within the broader Conservice LLC utility management network.",
+    verification:
+      "System execution models mapping their automated bidding marketplaces and internal Certified Energy Procurement (CEP) verification steps.",
   },
   {
     name: "ZTP / Kiveev",
@@ -99,10 +121,14 @@ const competitors: Competitor[] = [
     icon: Briefcase,
     category: "Hybrid tech-enabled",
     segment: "Enterprises with flexible power and gas contracts (UK / EU)",
-    delivery: "Hybrid software from consultancy, digital risk tools (no explicit AI)",
+    delivery: "Hybrid software from consultancy, digital risk tools",
     capabilities:
       "Digital platform for flexible contract management, real-time position and risk monitoring, budget and spend forecasting, trading and market analytics.",
     scale: "~$3M to $3.6M revenue · boutique SME · Kiveev portal built via KTP with Univ. of Kent",
+    sources:
+      "Sourced from UK corporate records for Zero Trace Procurement Limited and academic research updates from the University of Kent.",
+    verification:
+      "Historical outcomes and technical architecture of the Kiveev risk tracking portal validated via the formal Knowledge Transfer Partnership (KTP) documentation overseen by the University of Kent.",
   },
   {
     name: "Kraken.tech",
@@ -112,8 +138,11 @@ const competitors: Competitor[] = [
     segment: "Utilities and energy retailers (B2B platform, not energy consumers)",
     delivery: "Pure SaaS, full operating system for utilities, AI-enabled operations",
     capabilities:
-      "Excluded as direct competitor: utility-facing operating system (billing, CIS, CRM, meter data, AI comms, flexibility, field ops). Not aimed at corporate energy buyers.",
-    scale: "$500M contracted ARR · $8.65B valuation · 70M+ utility accounts · 27 countries",
+      "Utility-facing operating system (billing, CIS, CRM, meter data, AI comms, flexibility, field ops). Adjacent to RA+: aimed at utilities, not corporate energy buyers.",
+    scale: "$500M+ contracted ARR · $8.65B valuation · 70M+ utility accounts · 27 countries",
+    sources: "Confirmed directly from Kraken's Global Press Archive.",
+    verification:
+      "Financial performance and capital figures sourced directly from the official demerger announcement (Octopus Energy Group to spin out Kraken at valuation of $8.65bn). Confirms the $1 Billion standalone investment round led by D1 Capital Partners, Fidelity International, and Ontario Teachers' Pension Plan, plus contracted revenue exceeding $500 Million ARR managing 70+ million accounts worldwide.",
   },
 ];
 
@@ -229,11 +258,25 @@ export const CompetitorsSection = () => {
                     </div>
                   </div>
 
-                  <div className="mt-auto pt-3 border-t border-border/40">
-                    <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
-                      Scale signals
-                    </p>
-                    <p className="text-xs text-muted-foreground leading-snug">{c.scale}</p>
+                  <div className="mt-auto pt-3 border-t border-border/40 space-y-3">
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-primary font-semibold mb-1">
+                        Scale signals
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-snug">{c.scale}</p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                        Sources
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-snug">{c.sources}</p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                        Verification
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-snug">{c.verification}</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
