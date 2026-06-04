@@ -237,13 +237,58 @@ function renderSectionSlide(pptx: PptxGenJS, group: string, id: string, label: s
 
     case "competitors":
       addBullets(slide, [
-        "Pure SaaS / AI-first: Zentility (US, JenZen AI), onu.energy (DE, RL autopilot, €200M+ spend), EnergyMarketPrice (CH, Prophet™ forecasting, 250+ clients), Seelo / Eleneo (FR, PPA & decarbonisation)",
-        "Hybrid tech-enabled: Transparent Energy (US, live reverse auctions, $5.3B transacted), Conservice Optimyze (US, one-click buying validated by CEPs), ZTP / Kiveev (UK, flexible contract risk tools)",
-        "Adjacent (excluded): Kraken.tech (UK, $500M ARR, 70M utility accounts) sells to utilities, not corporate buyers",
-        "Most directly comparable to RA+: onu.energy, Seelo, EnergyMarketPrice, ZTP / Kiveev",
-        "RA+ moat: connected tariff, contract, meter and site context plus an expert judgement layer pure software players cannot reach",
+        "Pure SaaS / AI-first: onu.energy (DE, RL autopilot, €200M+ spend, 1,200+ sites), Zentility (US, JenZen AI, ~$3.9M ARR), EnergyMarketPrice (CH, Prophet AI, 250+ clients), Seelo / Eleneo (FR, PPA + decarbonisation)",
+        "Hybrid tech-enabled: Transparent Energy (US, live reverse auctions, $5.35B+ transacted, 350K accounts), Conservice Optimyze (US, one-click buying validated by CEPs), ZTP / Kiveev (UK, flexible contract risk)",
+        "Accounting & ESG incumbents: EnergyCAP (10K+ orgs, deep ERP-integrated bill auditing), IBM Envizi (Scope 1/2/3 ESG compliance), Spacewell Energy (15-min interval meter analytics, ML anomaly detection)",
+        "Adjacent (excluded): Kraken.tech (UK, $500M+ ARR, $8.65B valuation, 70M+ utility accounts) sells to utilities, not corporate buyers",
+        "RA+ moat: connected tariff, contract, meter and site context plus an expert judgement layer that pure software, ESG ledgers and brokers cannot reach",
       ], { fontSize: 11 });
       break;
+
+    case "market-opportunity": {
+      slide.addText("Utility Bill Auditing & Invoicing Software · 2026 pure-play TAM", {
+        x: 0.5, y: 1.55, w: 12.3, h: 0.4, fontSize: 13, italic: true, color: BRAND_GREEN,
+      });
+      // TAM hero
+      slide.addShape("rect" as PptxGenJS.ShapeType, {
+        x: 0.5, y: 2.05, w: 5.0, h: 4.6,
+        fill: { color: PANEL_BG }, line: { color: BRAND_GREEN, width: 1 },
+      });
+      slide.addText("TAM", { x: 0.7, y: 2.2, w: 4.6, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN, charSpacing: 2 });
+      slide.addText("~$2.8B", { x: 0.7, y: 2.55, w: 4.6, h: 1.2, fontSize: 54, bold: true, color: TEXT_WHITE });
+      slide.addText("Utility Bill Auditing & Invoicing Software", {
+        x: 0.7, y: 3.75, w: 4.6, h: 0.4, fontSize: 13, bold: true, color: BRAND_GREEN,
+      });
+      slide.addText(
+        "Software-only model isolating utility invoice ingestion, financial bill auditing, AP automation, GL coding, chargebacks, and tenant recharging. Excludes hardware, ESG suites and grid infrastructure.",
+        { x: 0.7, y: 4.2, w: 4.6, h: 2.3, fontSize: 10, color: TEXT_MUTED, valign: "top" }
+      );
+
+      // Triangulation
+      slide.addShape("rect" as PptxGenJS.ShapeType, {
+        x: 5.83, y: 2.05, w: 7.0, h: 2.2,
+        fill: { color: PANEL_BG }, line: { color: ACCENT_DIM, width: 1 },
+      });
+      slide.addText("Triangulation", { x: 6.03, y: 2.2, w: 6.6, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN, charSpacing: 2 });
+      slide.addText(
+        "Verdantix values the global built-environment software market at $8.2B. Utility Data Capture, Invoice Processing and Tenant Utility Billing Recharging are ~34% of total software spend: 34% of $8.2B ≈ $2.78B.",
+        { x: 6.03, y: 2.55, w: 6.6, h: 1.6, fontSize: 11, color: TEXT_WHITE, valign: "top" }
+      );
+
+      // Sources
+      slide.addShape("rect" as PptxGenJS.ShapeType, {
+        x: 5.83, y: 4.45, w: 7.0, h: 2.2,
+        fill: { color: PANEL_BG }, line: { color: ACCENT_DIM, width: 1 },
+      });
+      slide.addText("Sources & Methodology", { x: 6.03, y: 4.6, w: 6.6, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN, charSpacing: 2 });
+      const srcs = [
+        { text: "Verdantix — Real Estate & Built Environment Management Software Index ($8.2B anchor)", options: { bullet: { code: "25CF" }, color: TEXT_WHITE, paraSpaceAfter: 4 } },
+        { text: "Grand View Research — Building Energy Management Systems (BEMS) Software Market Report", options: { bullet: { code: "25CF" }, color: TEXT_WHITE, paraSpaceAfter: 4 } },
+        { text: "Excludes smart meters, BMS controllers, sub-metering hardware, ESG/carbon suites, physical grid", options: { bullet: { code: "25CF" }, color: TEXT_MUTED, paraSpaceAfter: 4 } },
+      ];
+      slide.addText(srcs, { x: 6.03, y: 4.95, w: 6.6, h: 1.65, fontSize: 10, valign: "top" });
+      break;
+    }
 
     case "what-if-you-could": {
       slide.addText("The Vision · Powered by IDM 2.0", {
