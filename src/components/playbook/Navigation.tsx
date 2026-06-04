@@ -183,15 +183,33 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
               <Maximize2 className="w-4 h-4" />
             </Button>
 
-            <Button
-              className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground gap-2 shadow-md shadow-primary/20"
-              size="sm"
-              onClick={handleExport}
-              disabled={isExporting}
-            >
-              <Download className="w-4 h-4" />
-              {isExporting ? "Exporting..." : "Export PPTX"}
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground gap-2 shadow-md shadow-primary/20"
+                  size="sm"
+                  disabled={isExporting || isExportingPdf}
+                >
+                  <Download className="w-4 h-4" />
+                  {isExporting
+                    ? "Exporting PPTX..."
+                    : isExportingPdf
+                    ? "Exporting PDF..."
+                    : "Export"}
+                  <ChevronDown className="w-3 h-3 opacity-70" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background border-border">
+                <DropdownMenuItem onClick={handleExport} disabled={isExporting} className="cursor-pointer">
+                  <FileDown className="w-4 h-4 mr-2" />
+                  Export PPTX
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={handleExportPdf} disabled={isExportingPdf} className="cursor-pointer">
+                  <FileDown className="w-4 h-4 mr-2" />
+                  Export PDF (high fidelity)
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             {/* Mobile Menu */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
