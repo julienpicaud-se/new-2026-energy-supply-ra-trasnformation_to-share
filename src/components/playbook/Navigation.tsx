@@ -308,6 +308,18 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     <Download className="w-4 h-4" />
                     {isExporting ? "Exporting..." : "Export PPTX"}
                   </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full gap-2"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      handleExportPdf();
+                    }}
+                    disabled={isExportingPdf}
+                  >
+                    <FileDown className="w-4 h-4" />
+                    {isExportingPdf ? "Exporting..." : "Export PDF"}
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
