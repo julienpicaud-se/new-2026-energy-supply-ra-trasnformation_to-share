@@ -171,9 +171,28 @@ function getBgColor(): string {
     const value = getComputedStyle(document.documentElement)
       .getPropertyValue("--background")
       .trim();
-    if (value && /^\d/.test(value)) return `hsl(${value})`;
+    if (value && /^\d/.test(value)) {
+      const parts = value
+        .replace(/%/g, "")
+        .split(/\s+/)
+        .map((v) => parseFloat(v));
+      if (parts.length >= 3) return hslToHex(parts[0], parts[1], parts[2]);
+    }
   } catch {
     /* ignore */
   }
   return "#0a0a0a";
+}
+
+function hslToHex(h: number, s: number, l: number): string {
+  s /= 100;
+  l /= 100;
+  const k = (n: number) => (n + h / 30) % 12;
+  const a = s * Math.min(l, 1 - l);
+  const f = (n: number) =>
+    Math.round(
+      255 * (l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1))))
+    );
+  const toHex = (v: number) => v.toString(16).padStart(2, "0");
+  return `#${toHex(f(0))}${toHex(f(8))}${toHex(f(4))}`;
 }
