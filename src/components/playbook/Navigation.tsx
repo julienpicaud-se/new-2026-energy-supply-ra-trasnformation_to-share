@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, FileDown, Map } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
+import { exportToPdf } from "@/lib/pdf-export";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import { playbookGroups, playbookFlow } from "@/data/playbook-flow";
 import {
