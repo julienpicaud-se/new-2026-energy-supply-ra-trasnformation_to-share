@@ -14,6 +14,7 @@ import {
   Gauge,
   CalendarRange,
   Workflow,
+  Globe2,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
