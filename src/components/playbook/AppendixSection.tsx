@@ -51,6 +51,14 @@ export const AppendixSection = () => {
 
   const items: AppendixItem[] = [
     {
+      id: "energy-360-vision",
+      category: "Product Vision",
+      categoryColor: "text-primary",
+      title: "360° Energy Vision, Onboarding & Scenario Modeling",
+      icon: Globe2,
+      content: <Energy360VisionAppendix />,
+    },
+    {
       id: "initiatives-by-domain",
       category: "Domain Reference",
       categoryColor: "text-primary",
@@ -246,14 +254,6 @@ export const AppendixSection = () => {
           </Accordion>
         </div>
       ),
-    },
-    {
-      id: "energy-360-vision",
-      category: "Product Vision",
-      categoryColor: "text-primary",
-      title: "360° Energy Vision, Onboarding & Scenario Modeling",
-      icon: Globe2,
-      content: <Energy360VisionAppendix />,
     },
     {
       id: "supporting-scorecard",
