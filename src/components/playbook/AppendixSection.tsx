@@ -26,6 +26,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { RoadmapTimeline } from "./RoadmapTimeline";
 import { InitiativesDomain } from "./InitiativesDomain";
+import { Energy360VisionAppendix } from "./Energy360VisionAppendix";
 
 const pillarIcons: Record<string, React.ElementType> = {
   Unified: Layers,
