@@ -70,6 +70,17 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
     }
   };
 
+  const handleExportPdf = async () => {
+    setIsExportingPdf(true);
+    try {
+      await exportToPdf();
+    } catch (error) {
+      console.error("PDF export failed:", error);
+    } finally {
+      setIsExportingPdf(false);
+    }
+  };
+
   const activeGroup = playbookFlow.find((s) => s.id === activeSection)?.group;
 
   return (
