@@ -248,6 +248,14 @@ export const AppendixSection = () => {
       ),
     },
     {
+      id: "energy-360-vision",
+      category: "Product Vision",
+      categoryColor: "text-primary",
+      title: "360° Energy Vision, Onboarding & Scenario Modeling",
+      icon: Globe2,
+      content: <Energy360VisionAppendix />,
+    },
+    {
       id: "supporting-scorecard",
       category: "Tracking Progress",
       categoryColor: "text-primary",
