@@ -14,6 +14,7 @@ import {
   Gauge,
   CalendarRange,
   Workflow,
+  Globe2,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
@@ -25,6 +26,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { RoadmapTimeline } from "./RoadmapTimeline";
 import { InitiativesDomain } from "./InitiativesDomain";
+import { Energy360VisionAppendix } from "./Energy360VisionAppendix";
 
 const pillarIcons: Record<string, React.ElementType> = {
   Unified: Layers,
@@ -244,6 +246,14 @@ export const AppendixSection = () => {
           </Accordion>
         </div>
       ),
+    },
+    {
+      id: "energy-360-vision",
+      category: "Product Vision",
+      categoryColor: "text-primary",
+      title: "360° Energy Vision, Onboarding & Scenario Modeling",
+      icon: Globe2,
+      content: <Energy360VisionAppendix />,
     },
     {
       id: "supporting-scorecard",
